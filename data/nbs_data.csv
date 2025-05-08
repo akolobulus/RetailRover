@@ -1,0 +1,16 @@
+indicator,value,period,data_type,source,timestamp
+Inflation Rate,22.41,May 2023,inflation,NBS,2025-05-08 07:50:36.666361
+Food Inflation,24.82,May 2023,inflation,NBS,2025-05-08 07:50:36.666363
+Core Inflation,20.06,May 2023,inflation,NBS,2025-05-08 07:50:36.666364
+GDP Growth Rate,2.31,Q1 2023,gdp,NBS,2025-05-08 07:50:36.666365
+Consumer Price Index,444.34,May 2023,cpi,NBS,2025-05-08 07:50:36.666366
+Food Price Index,492.15,May 2023,cpi,NBS,2025-05-08 07:50:36.666366
+Average Household Expenditure on Food,18000.0,2022,household,NBS,2025-05-08 07:50:36.666367
+Average Household Expenditure on Non-Food,22000.0,2022,household,NBS,2025-05-08 07:50:36.666369
+Import Value (₦ Billion),4875.93,Q1 2023,trade,NBS,2025-05-08 07:50:36.666370
+Export Value (₦ Billion),6217.62,Q1 2023,trade,NBS,2025-05-08 07:50:36.666371
+Household Consumption Growth,3.54,Q1 2023,household,NBS,2025-05-08 07:50:36.666372
+Food and Non-Alcoholic Beverages Inflation,25.84,May 2023,inflation,NBS,2025-05-08 07:50:36.666372
+Alcoholic Beverages Inflation,19.38,May 2023,inflation,NBS,2025-05-08 07:50:36.666373
+Clothing and Footwear Inflation,18.62,May 2023,inflation,NBS,2025-05-08 07:50:36.666373
+"Housing, Water, Electricity, Gas Inflation",16.67,May 2023,inflation,NBS,2025-05-08 07:50:36.666374
