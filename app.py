@@ -7,6 +7,8 @@ import os
 import time
 import threading
 import concurrent.futures
+import json
+import io
 
 from scrapers.jumia_scraper import JumiaScraper
 from scrapers.konga_scraper import KongaScraper
@@ -14,6 +16,7 @@ from scrapers.jiji_scraper import JijiScraper
 from scrapers.temu_scraper import TemuScraper
 from scrapers.payporte_scraper import PayPorteScraper
 from scrapers.nbs_scraper import NBSScraper
+from scrapers.async_jumia_scraper import AsyncJumiaScraper
 from utils.data_processor import DataProcessor
 from utils.data_loader import DataLoader
 from utils.scheduler import schedule_scraping
@@ -48,40 +51,93 @@ def trigger_data_refresh():
     
     st.session_state.is_scraping = True
     
+    # Get selected scraping mode (default to Standard if not set)
+    scrape_mode = "Standard"
+    if 'scrape_mode' in st.session_state:
+        scrape_mode = st.session_state.scrape_mode
+    
+    start_time = time.time()
+    
     with st.spinner("Collecting fresh data from e-commerce websites..."):
-        # Create scraper instances
-        scrapers = [
-            JumiaScraper(),
-            KongaScraper(),
-            JijiScraper(),
-            TemuScraper(),
-            PayPorteScraper(),
-            NBSScraper()
-        ]
-        
-        # Run scrapers in parallel
         all_products = []
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            scraper_futures = {executor.submit(scraper.scrape_data): scraper for scraper in scrapers}
-            for future in concurrent.futures.as_completed(scraper_futures):
-                scraper = scraper_futures[future]
+        
+        if scrape_mode == "Async":
+            # Use asynchronous scrapers when available
+            scrapers = [
+                AsyncJumiaScraper(),  # Use async version
+                KongaScraper(),       # Fallback to standard version for others
+                JijiScraper(),
+                TemuScraper(),
+                PayPorteScraper(),
+                NBSScraper()
+            ]
+            
+            # Track which scrapers are async-capable
+            async_scrapers = []
+            standard_scrapers = []
+            
+            for scraper in scrapers:
+                if hasattr(scraper, 'scrape_data_async'):
+                    async_scrapers.append(scraper)
+                else:
+                    standard_scrapers.append(scraper)
+            
+            # Run async scrapers
+            for scraper in async_scrapers:
                 try:
-                    products = future.result()
+                    products = scraper.scrape_data()  # This actually runs async under the hood
                     all_products.extend(products)
                 except Exception as e:
-                    st.error(f"Error scraping {scraper.__class__.__name__}: {str(e)}")
+                    st.error(f"Error with async scraper {scraper.__class__.__name__}: {str(e)}")
+            
+            # Run standard scrapers in parallel
+            if standard_scrapers:
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    scraper_futures = {executor.submit(scraper.scrape_data): scraper for scraper in standard_scrapers}
+                    for future in concurrent.futures.as_completed(scraper_futures):
+                        scraper = scraper_futures[future]
+                        try:
+                            products = future.result()
+                            all_products.extend(products)
+                        except Exception as e:
+                            st.error(f"Error scraping {scraper.__class__.__name__}: {str(e)}")
+        else:
+            # Standard mode - use thread pool for parallel execution
+            scrapers = [
+                JumiaScraper(),
+                KongaScraper(),
+                JijiScraper(),
+                TemuScraper(),
+                PayPorteScraper(),
+                NBSScraper()
+            ]
+            
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                scraper_futures = {executor.submit(scraper.scrape_data): scraper for scraper in scrapers}
+                for future in concurrent.futures.as_completed(scraper_futures):
+                    scraper = scraper_futures[future]
+                    try:
+                        products = future.result()
+                        all_products.extend(products)
+                    except Exception as e:
+                        st.error(f"Error scraping {scraper.__class__.__name__}: {str(e)}")
         
         # Process and save data
         processor = DataProcessor()
         processed_data = processor.process_data(all_products)
         processor.save_data(processed_data)
         
+        # Calculate execution time
+        end_time = time.time()
+        execution_time = end_time - start_time
+        
         # Update session state
         st.session_state.data_loaded = True
         st.session_state.last_update = datetime.now()
+        st.session_state.execution_time = execution_time
         st.session_state.is_scraping = False
         
-    st.success("Data successfully updated!")
+    st.success(f"Data successfully updated in {execution_time:.2f} seconds!")
     st.rerun()
 
 # Dashboard Header
@@ -95,8 +151,16 @@ with st.sidebar:
     st.subheader("Data Controls")
     
     # Data refresh button
-    if st.button("Refresh Data Now"):
-        trigger_data_refresh()
+    refresh_col1, refresh_col2 = st.columns(2)
+    with refresh_col1:
+        if st.button("Refresh Data", key="refresh_btn_1"):
+            trigger_data_refresh()
+    
+    with refresh_col2:
+        # Add options for scraping mode
+        scrape_mode = st.radio("Scraping Mode:", 
+                               ["Standard", "Async"], 
+                               help="Use Async mode for faster data collection")
     
     # Display last update time
     if st.session_state.last_update:
@@ -113,6 +177,13 @@ with st.sidebar:
         # This would be implemented to actually schedule updates
         schedule_scraping(schedule_selection, trigger_data_refresh)
         st.success(f"Data updates scheduled: {schedule_selection}")
+    
+    # Export options
+    st.subheader("Export Data")
+    export_options = st.radio("Export Format:", ["CSV", "Excel", "JSON"])
+    if st.button("Export Filtered Data"):
+        st.session_state.export_requested = True
+        st.session_state.export_format = export_options
     
     # Filters
     st.subheader("Filters")

@@ -76,7 +76,7 @@ class AsyncJumiaScraper(AsyncBaseScraper):
                         
                         # Extract rating
                         rating_elem = card.select_one('div.stars._s')
-                        rating = float(rating_elem.get('data-stars', 0)) if rating_elem else 0
+                        rating = float(rating_elem.get('data-stars', '0')) if rating_elem else 0
                         
                         # Check if bestseller
                         bestseller_elem = card.select_one('div.bdg._bst')
@@ -84,7 +84,7 @@ class AsyncJumiaScraper(AsyncBaseScraper):
                         
                         # Get product URL
                         url_elem = card.select_one('a.core')
-                        product_url = self.base_url + url_elem.get('href') if url_elem else ""
+                        product_url = self.base_url + url_elem.get('href', '') if url_elem else ""
                         
                         # Extract product size/volume from the name for unit normalization
                         normalized_units = self.normalize_units(product_name)

@@ -5,6 +5,8 @@ import re
 import os
 import json
 import logging
+from fuzzywuzzy import fuzz
+from collections import defaultdict
 
 class DataProcessor:
     """
@@ -25,6 +27,7 @@ class DataProcessor:
         # Define data directories
         self.data_dir = "data"
         self.processed_file = os.path.join(self.data_dir, "processed_products.csv")
+        self.historical_file = os.path.join(self.data_dir, "historical_products.csv")
         
         # Ensure data directory exists
         os.makedirs(self.data_dir, exist_ok=True)
@@ -68,6 +71,23 @@ class DataProcessor:
             
             # Default
             r".*": "other"
+        }
+        
+        # Units normalization patterns
+        self.unit_patterns = {
+            'volume': {
+                'ml': r'(\d+\.?\d*)\s*ml|milliliter|millilitre',
+                'l': r'(\d+\.?\d*)\s*l|liter|litre|ltr',
+                'cl': r'(\d+\.?\d*)\s*cl|centiliter|centilitre',
+            },
+            'weight': {
+                'g': r'(\d+\.?\d*)\s*g|gram|gm',
+                'kg': r'(\d+\.?\d*)\s*kg|kilo|kilogram',
+            },
+            'quantity': {
+                'pack': r'(\d+)\s*pack|pk',
+                'piece': r'(\d+)\s*pc|piece|pcs',
+            }
         }
     
     def categorize_product(self, product_name, original_category=None):
@@ -152,6 +172,123 @@ class DataProcessor:
         
         return score
     
+    def normalize_units(self, product_name):
+        """
+        Extract and normalize units from product name.
+        
+        Args:
+            product_name (str): Name of the product
+            
+        Returns:
+            dict: Normalized unit information
+        """
+        if not product_name or not isinstance(product_name, str):
+            return {'unit_type': '', 'unit': '', 'value': 0}
+            
+        result = {'unit_type': '', 'unit': '', 'value': 0}
+        
+        # Try to find a unit match
+        for unit_type, patterns in self.unit_patterns.items():
+            for unit, pattern in patterns.items():
+                match = re.search(pattern, product_name, re.IGNORECASE)
+                if match and match.group(1):
+                    try:
+                        value = float(match.group(1))
+                        result = {
+                            'unit_type': unit_type,
+                            'unit': unit,
+                            'value': value
+                        }
+                        return result
+                    except (ValueError, IndexError):
+                        continue
+        
+        return result
+        
+    def deduplicate_products(self, df):
+        """
+        Deduplicate products using fuzzy matching to identify similar products.
+        
+        Args:
+            df (DataFrame): DataFrame with product data
+            
+        Returns:
+            DataFrame: Deduplicated product data
+        """
+        if df is None or df.empty:
+            return df
+            
+        self.logger.info(f"Starting deduplication of {len(df)} products")
+        
+        # Group by category to speed up processing
+        grouped = df.groupby('category')
+        deduplicated_dfs = []
+        
+        for category, group_df in grouped:
+            self.logger.info(f"Deduplicating {len(group_df)} products in {category} category")
+            
+            # Only deduplicate if we have multiple products
+            if len(group_df) <= 1:
+                deduplicated_dfs.append(group_df)
+                continue
+                
+            # Initialize duplicate groups
+            product_groups = []
+            processed_indices = set()
+            
+            # For each product
+            for idx1, row1 in group_df.iterrows():
+                if idx1 in processed_indices:
+                    continue
+                    
+                current_group = [idx1]
+                processed_indices.add(idx1)
+                
+                # Compare with all other products
+                for idx2, row2 in group_df.iterrows():
+                    if idx2 in processed_indices or idx1 == idx2:
+                        continue
+                        
+                    # Calculate similarity
+                    name1 = str(row1['product_name']).lower()
+                    name2 = str(row2['product_name']).lower()
+                    
+                    # Use fuzzy string matching
+                    similarity = fuzz.ratio(name1, name2)
+                    
+                    # If similarity is high, consider as duplicate
+                    if similarity > 80:  # Threshold for similarity
+                        current_group.append(idx2)
+                        processed_indices.add(idx2)
+                
+                if len(current_group) > 0:
+                    product_groups.append(current_group)
+            
+            # Process each group
+            deduplicated_rows = []
+            
+            for group in product_groups:
+                if len(group) == 1:
+                    # No duplicates
+                    deduplicated_rows.append(group_df.loc[group[0]])
+                else:
+                    # Multiple similar products, keep the one with the highest sales rank
+                    group_items = group_df.loc[group].sort_values('sales_rank', ascending=False)
+                    deduplicated_rows.append(group_items.iloc[0])
+            
+            # Create a new DataFrame from deduplicated rows
+            if deduplicated_rows:
+                dedup_df = pd.DataFrame(deduplicated_rows)
+                deduplicated_dfs.append(dedup_df)
+        
+        # Combine all deduplicated DataFrames
+        if deduplicated_dfs:
+            result = pd.concat(deduplicated_dfs, ignore_index=True)
+            self.logger.info(f"Deduplication complete. Reduced from {len(df)} to {len(result)} products")
+            return result
+        
+        return df
+    
     def process_data(self, products):
         """
         Process and clean the scraped product data.
@@ -186,6 +323,16 @@ class DataProcessor:
                     axis=1
                 )
             
+            # Normalize units where possible
+            if 'product_name' in df.columns:
+                unit_info = df['product_name'].apply(self.normalize_units)
+                
+                # Extract unit information
+                if not unit_info.empty:
+                    df['unit_type'] = unit_info.apply(lambda x: x.get('unit_type', ''))
+                    df['unit'] = unit_info.apply(lambda x: x.get('unit', ''))
+                    df['unit_value'] = unit_info.apply(lambda x: x.get('value', 0))
+            
             # Add sales_rank proxy
             df['sales_rank'] = df.apply(self.compute_sales_rank, axis=1)
             
@@ -194,7 +341,8 @@ class DataProcessor:
                 df['timestamp'] = datetime.now()
             
             # Add view_count proxy
-            df['view_count'] = np.random.randint(10, 1000, size=len(df))
+            if 'view_count' not in df.columns:
+                df['view_count'] = np.random.randint(10, 1000, size=len(df))
             
             # Handle missing values
             for col in df.columns:
@@ -202,6 +350,9 @@ class DataProcessor:
                     df[col] = df[col].fillna('')
                 else:
                     df[col] = df[col].fillna(0)
+            
+            # Deduplicate products
+            df = self.deduplicate_products(df)
             
             return df
             
@@ -211,7 +362,7 @@ class DataProcessor:
     
     def save_data(self, df):
         """
-        Save processed data to CSV.
+        Save processed data to CSV and update historical data.
         
         Args:
             df (DataFrame): Processed data
@@ -224,9 +375,12 @@ class DataProcessor:
             return False
         
         try:
-            # Save to CSV
+            # Save current data to CSV
             df.to_csv(self.processed_file, index=False)
             self.logger.info(f"Data saved to {self.processed_file}")
+            
+            # Update historical data
+            self.update_historical_data(df)
             
             # Save sample to JSON for debugging
             sample_file = os.path.join(self.data_dir, "sample_products.json")
@@ -239,6 +393,58 @@ class DataProcessor:
             
         except Exception as e:
             self.logger.error(f"Error saving data: {str(e)}")
+            return False
+    
+    def update_historical_data(self, new_data):
+        """
+        Update the historical data file with new data.
+        Maintains a record of price changes and product availability over time.
+        
+        Args:
+            new_data (DataFrame): New data to add to historical record
+            
+        Returns:
+            bool: Success status
+        """
+        try:
+            # Add current timestamp if not present
+            if 'timestamp' not in new_data.columns:
+                new_data['timestamp'] = datetime.now()
+                
+            # Ensure timestamp is datetime
+            if new_data['timestamp'].dtype == 'object':
+                new_data['timestamp'] = pd.to_datetime(new_data['timestamp'], errors='coerce')
+            
+            # Load existing historical data if available
+            if os.path.exists(self.historical_file):
+                historical_df = pd.read_csv(self.historical_file)
+                
+                # Ensure timestamp is datetime
+                if 'timestamp' in historical_df.columns and historical_df['timestamp'].dtype == 'object':
+                    historical_df['timestamp'] = pd.to_datetime(historical_df['timestamp'], errors='coerce')
+                
+                # Append new data
+                combined_df = pd.concat([historical_df, new_data], ignore_index=True)
+                
+                # Sort by timestamp
+                combined_df = combined_df.sort_values('timestamp', ascending=False)
+                
+                # Limit historical data to a reasonable size (e.g., last 90 days)
+                cutoff_date = datetime.now() - pd.Timedelta(days=90)
+                combined_df = combined_df[combined_df['timestamp'] >= cutoff_date]
+                
+                # Save updated historical data
+                combined_df.to_csv(self.historical_file, index=False)
+                self.logger.info(f"Historical data updated with {len(new_data)} new records. Total: {len(combined_df)} records")
+            else:
+                # Create new historical file
+                new_data.to_csv(self.historical_file, index=False)
+                self.logger.info(f"New historical data file created with {len(new_data)} records")
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Error updating historical data: {str(e)}")
             return False
     
     def merge_data(self, new_data):
