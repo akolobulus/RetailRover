@@ -200,6 +200,29 @@ with st.sidebar:
             df = load_cached_data()
         
         if df is not None and not df.empty:
+            # Text search filter
+            search_query = st.text_input(
+                "Search Products:",
+                placeholder="Enter product name, brand, or keywords...",
+                help="Search by product name, description, or other attributes"
+            )
+            
+            # Advanced search options
+            with st.expander("Advanced Search Options", expanded=False):
+                search_mode = st.radio(
+                    "Search Mode:",
+                    ["Contains", "Fuzzy Match", "Exact Match"],
+                    horizontal=True,
+                    help="Contains: Find products containing search terms; Fuzzy Match: Find similar products with spelling variations; Exact Match: Find exact matches only"
+                )
+                
+                search_fields = st.multiselect(
+                    "Search Fields:",
+                    ["product_name", "description", "category", "brand", "all_fields"],
+                    default=["all_fields"],
+                    help="Select fields to search within"
+                )
+            
             # Category filter
             categories = ["All Categories"] + sorted(df["category"].unique().tolist())
             selected_category = st.selectbox("Product Category:", categories)
@@ -267,12 +290,83 @@ else:
         # Apply filters
         filtered_df = df.copy()
         
+        # Apply text search if provided
+        if 'search_query' in locals() and search_query:
+            search_terms = search_query.lower().strip()
+            
+            if 'search_mode' in locals():
+                search_mode_value = search_mode
+            else:
+                search_mode_value = "Contains"  # Default to contains
+                
+            if 'search_fields' in locals():
+                selected_fields = search_fields
+            else:
+                selected_fields = ["all_fields"]  # Default to all fields
+                
+            # Define fields to search based on selection
+            if "all_fields" in selected_fields:
+                search_columns = ["product_name", "description", "category", "brand"]
+            else:
+                search_columns = selected_fields
+                
+            # Filter based on selected search mode
+            if search_mode_value == "Contains":
+                # Simple contains search
+                search_mask = False
+                for col in search_columns:
+                    if col in filtered_df.columns:
+                        # Convert column to string and check if it contains the search term
+                        col_mask = filtered_df[col].astype(str).str.lower().str.contains(search_terms, na=False)
+                        search_mask = search_mask | col_mask
+                
+                filtered_df = filtered_df[search_mask]
+                
+            elif search_mode_value == "Fuzzy Match":
+                # Import necessary fuzzy matching library
+                from fuzzywuzzy import fuzz
+                
+                # Create a function to calculate similarity
+                def calculate_similarity(row):
+                    max_score = 0
+                    for col in search_columns:
+                        if col in row and pd.notna(row[col]):
+                            score = fuzz.partial_ratio(str(row[col]).lower(), search_terms)
+                            max_score = max(max_score, score)
+                    return max_score
+                
+                # Calculate similarity for each row
+                filtered_df['search_similarity'] = filtered_df.apply(calculate_similarity, axis=1)
+                
+                # Filter rows with similarity score above threshold (e.g., 70%)
+                filtered_df = filtered_df[filtered_df['search_similarity'] >= 70]
+                
+                # Sort by similarity (most similar first)
+                filtered_df = filtered_df.sort_values('search_similarity', ascending=False)
+                
+                # Remove the temporary similarity column
+                filtered_df = filtered_df.drop('search_similarity', axis=1)
+                
+            elif search_mode_value == "Exact Match":
+                # Exact match search
+                search_mask = False
+                for col in search_columns:
+                    if col in filtered_df.columns:
+                        # Convert column to string and check for exact matches
+                        col_mask = filtered_df[col].astype(str).str.lower() == search_terms
+                        search_mask = search_mask | col_mask
+                
+                filtered_df = filtered_df[search_mask]
+                
+        # Apply category filter
         if selected_category != "All Categories":
             filtered_df = filtered_df[filtered_df["category"] == selected_category]
         
+        # Apply price filter
         filtered_df = filtered_df[(filtered_df["price"] >= price_range[0]) & 
                                  (filtered_df["price"] <= price_range[1])]
         
+        # Apply source website filter
         if selected_source != "All Sources":
             filtered_df = filtered_df[filtered_df["source"] == selected_source]
         
@@ -625,9 +719,9 @@ else:
                            "which are showing increased consumer interest based on recent data.")
         
         # Website Content Scraper Section
-        st.subheader("Website Content Scraper")
+        st.subheader("Website Content Scraper & Analyzer")
         st.write("""
-        Use the Trafilatura scraper to extract clean text content from any website. 
+        Use the enhanced Trafilatura scraper to extract clean text content from any website and perform advanced analysis.
         This is useful for analyzing articles, blog posts, news, and other text-heavy content.
         """)
         
@@ -645,13 +739,27 @@ else:
                 height=80,
                 help="Provide custom names for each source. Leave blank to use default names."
             )
+            
+            # Add semantic search capability
+            semantic_search_query = st.text_input(
+                "Semantic Search (after extraction):",
+                help="Search extracted content using natural language. Example: 'information about inflation rates' or 'economic trends in Nigeria'"
+            )
         
         with scraper_col2:
             st.write("#### Options")
             save_content = st.checkbox("Save to file", value=True)
             file_format = st.radio("File format:", ["CSV", "JSON", "Both"])
+            
+            st.write("#### Analysis Options")
+            content_analysis = st.multiselect(
+                "Content Analysis:",
+                ["Extract Keywords", "Summarize", "Sentiment Analysis", "Topic Classification"],
+                default=["Extract Keywords"],
+                help="Select analysis to perform on extracted content"
+            )
         
-        if st.button("Extract Content"):
+        if st.button("Extract Content & Analyze"):
             if website_urls.strip():
                 urls = [url.strip() for url in website_urls.strip().split('\n') if url.strip()]
                 
@@ -669,14 +777,144 @@ else:
                             if results:
                                 st.success(f"Successfully extracted content from {len(results)} out of {len(urls)} websites.")
                                 
-                                # Display content preview
+                                # Store results in session state for future use
+                                st.session_state['extracted_content'] = results
+                                
+                                # Perform content analysis if selected
+                                if "Extract Keywords" in content_analysis:
+                                    # Simple keyword extraction using frequency counts
+                                    with st.spinner("Extracting keywords..."):
+                                        for i, result in enumerate(results):
+                                            content = result['content'].lower()
+                                            # Remove common stop words
+                                            stop_words = ["the", "and", "of", "to", "a", "in", "for", "is", "on", "that", "by", "this", "with", "i", "you", "it", "not", "or", "be", "are", "from", "at", "as", "your", "have", "more", "an", "was", "we", "will", "can", "us", "our", "if", "their", "been", "were"]
+                                            
+                                            # Split into words and count frequency
+                                            words = [word.strip('.,!?:;()[]{}""''') for word in content.split()]
+                                            word_freq = {}
+                                            for word in words:
+                                                if len(word) > 3 and word not in stop_words:  # Ignore short words and stop words
+                                                    if word in word_freq:
+                                                        word_freq[word] += 1
+                                                    else:
+                                                        word_freq[word] = 1
+                                            
+                                            # Sort by frequency and take top 10
+                                            top_keywords = sorted(word_freq.items(), key=lambda x: x[1], reverse=True)[:10]
+                                            results[i]['keywords'] = top_keywords
+                                
+                                # Perform sentiment analysis if selected
+                                if "Sentiment Analysis" in content_analysis:
+                                    with st.spinner("Analyzing sentiment..."):
+                                        for i, result in enumerate(results):
+                                            # Simple sentiment analysis based on positive and negative word counts
+                                            content = result['content'].lower()
+                                            
+                                            # Basic positive and negative word lists
+                                            positive_words = ["good", "great", "excellent", "positive", "wonderful", "best", "amazing", "love", "benefit", "success", "successful", "growth", "improve", "improved", "increasing", "profit", "profitable", "advantage", "quality", "efficient", "efficiency", "effective", "productivity", "innovative"]
+                                            negative_words = ["bad", "worst", "poor", "negative", "terrible", "hate", "problem", "fail", "failure", "decrease", "decreasing", "loss", "risk", "crisis", "deficit", "disadvantage", "difficult", "inefficient", "ineffective", "expensive", "costly", "complicated", "corrupt"]
+                                            
+                                            # Count positive and negative words
+                                            positive_count = sum(1 for word in content.split() if word.strip('.,!?:;()[]{}""''') in positive_words)
+                                            negative_count = sum(1 for word in content.split() if word.strip('.,!?:;()[]{}""''') in negative_words)
+                                            
+                                            # Calculate sentiment score
+                                            if positive_count + negative_count > 0:
+                                                sentiment_score = (positive_count - negative_count) / (positive_count + negative_count)
+                                            else:
+                                                sentiment_score = 0
+                                                
+                                            # Determine sentiment label
+                                            if sentiment_score > 0.1:
+                                                sentiment = "Positive"
+                                            elif sentiment_score < -0.1:
+                                                sentiment = "Negative"
+                                            else:
+                                                sentiment = "Neutral"
+                                                
+                                            results[i]['sentiment'] = sentiment
+                                            results[i]['sentiment_score'] = sentiment_score
+                                
+                                # Perform semantic search if provided
+                                if semantic_search_query:
+                                    with st.spinner("Performing semantic search..."):
+                                        search_results = []
+                                        
+                                        for result in results:
+                                            # Break content into smaller chunks for better search
+                                            chunks = []
+                                            content = result['content']
+                                            chunk_size = 1000  # Characters per chunk
+                                            
+                                            # Split content into chunks of around 1000 characters at paragraph breaks
+                                            paragraphs = content.split('\n\n')
+                                            current_chunk = ""
+                                            
+                                            for paragraph in paragraphs:
+                                                if len(current_chunk) + len(paragraph) <= chunk_size:
+                                                    current_chunk += paragraph + "\n\n"
+                                                else:
+                                                    if current_chunk:
+                                                        chunks.append(current_chunk.strip())
+                                                    current_chunk = paragraph + "\n\n"
+                                            
+                                            if current_chunk:
+                                                chunks.append(current_chunk.strip())
+                                            
+                                            # If no paragraph breaks or very long paragraphs
+                                            if not chunks:
+                                                for i in range(0, len(content), chunk_size):
+                                                    chunks.append(content[i:i+chunk_size])
+                                            
+                                            # For each chunk, calculate a simple relevance score based on term frequency
+                                            query_terms = semantic_search_query.lower().split()
+                                            for i, chunk in enumerate(chunks):
+                                                chunk_lower = chunk.lower()
+                                                # Count occurrences of query terms
+                                                term_matches = sum(chunk_lower.count(term) for term in query_terms)
+                                                relevance_score = term_matches / max(1, len(chunk.split()))
+                                                
+                                                # Only include chunks with matches
+                                                if term_matches > 0:
+                                                    search_results.append({
+                                                        'source_name': result['source_name'],
+                                                        'url': result['url'],
+                                                        'chunk': chunk,
+                                                        'relevance': relevance_score,
+                                                        'matches': term_matches
+                                                    })
+                                        
+                                        # Sort by relevance
+                                        search_results = sorted(search_results, key=lambda x: x['relevance'], reverse=True)
+                                        
+                                        # Display search results
+                                        if search_results:
+                                            st.subheader(f"Search Results for: '{semantic_search_query}'")
+                                            for i, result in enumerate(search_results[:5]):  # Show top 5 results
+                                                with st.expander(f"Result {i+1} from {result['source_name']} (Relevance: {result['relevance']:.2f})"):
+                                                    st.write(result['chunk'])
+                                                    st.write(f"**Source:** {result['source_name']} | **URL:** {result['url']}")
+                                        else:
+                                            st.info(f"No matches found for '{semantic_search_query}'")
+                                
+                                # Display content preview with analysis
                                 for i, result in enumerate(results):
                                     with st.expander(f"{result['source_name']} ({result['word_count']} words)"):
+                                        # Display preview content
                                         st.write("#### Content Preview")
                                         preview = result['content'][:500] + "..." if len(result['content']) > 500 else result['content']
                                         st.write(preview)
                                         st.write(f"**URL:** {result['url']}")
                                         st.write(f"**Total Characters:** {result['character_count']}")
+                                        
+                                        # Display analysis results
+                                        if "Extract Keywords" in content_analysis and 'keywords' in result:
+                                            st.write("#### Top Keywords")
+                                            keywords_df = pd.DataFrame(result['keywords'], columns=["Keyword", "Frequency"])
+                                            st.dataframe(keywords_df, use_container_width=True)
+                                        
+                                        if "Sentiment Analysis" in content_analysis and 'sentiment' in result:
+                                            st.write(f"#### Sentiment Analysis: **{result['sentiment']}** (Score: {result['sentiment_score']:.2f})")
                                 
                                 # Save files if requested
                                 if save_content:
@@ -684,15 +922,29 @@ else:
                                     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                                     
                                     if file_format in ["CSV", "Both"]:
-                                        df = pd.DataFrame([{
-                                            "source_name": r["source_name"],
-                                            "url": r["url"],
-                                            "content_preview": r["content"][:500] + "..." if len(r["content"]) > 500 else r["content"],
-                                            "word_count": r["word_count"],
-                                            "character_count": r["character_count"],
-                                            "timestamp": r["timestamp"]
-                                        } for r in results])
+                                        # Create DataFrame with analysis results if available
+                                        df_data = []
+                                        for r in results:
+                                            entry = {
+                                                "source_name": r["source_name"],
+                                                "url": r["url"],
+                                                "content_preview": r["content"][:500] + "..." if len(r["content"]) > 500 else r["content"],
+                                                "word_count": r["word_count"],
+                                                "character_count": r["character_count"],
+                                                "timestamp": r["timestamp"]
+                                            }
+                                            
+                                            # Add analysis fields if available
+                                            if 'sentiment' in r:
+                                                entry["sentiment"] = r["sentiment"]
+                                                entry["sentiment_score"] = r["sentiment_score"]
+                                            
+                                            if 'keywords' in r:
+                                                entry["top_keywords"] = ", ".join([k for k, v in r["keywords"][:5]])
+                                            
+                                            df_data.append(entry)
                                         
+                                        df = pd.DataFrame(df_data)
                                         csv_file = f"data/scraped_content_{timestamp}.csv"
                                         df.to_csv(csv_file, index=False)
                                         
@@ -707,12 +959,9 @@ else:
                                         )
                                     
                                     if file_format in ["JSON", "Both"]:
+                                        # Include all data including analysis results
                                         json_data = json.dumps([{
-                                            "source_name": r["source_name"],
-                                            "url": r["url"],
-                                            "content": r["content"],
-                                            "word_count": r["word_count"],
-                                            "character_count": r["character_count"],
+                                            **r,
                                             "timestamp": r["timestamp"].isoformat() if hasattr(r["timestamp"], "isoformat") else str(r["timestamp"])
                                         } for r in results], indent=2)
                                         
