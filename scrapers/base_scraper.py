@@ -5,6 +5,7 @@ from abc import ABC, abstractmethod
 import time
 import random
 import logging
+from typing import List, Dict, Any, Optional, Union
 
 class BaseScraper(ABC):
     """
@@ -116,7 +117,7 @@ class BaseScraper(ABC):
             return 0.0
     
     @abstractmethod
-    def scrape_data(self):
+    def scrape_data(self) -> List[Dict[str, Any]]:
         """
         Main method to scrape data from a website.
         Must be implemented by all concrete scraper classes.

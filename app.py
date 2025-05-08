@@ -11,6 +11,8 @@ import concurrent.futures
 from scrapers.jumia_scraper import JumiaScraper
 from scrapers.konga_scraper import KongaScraper
 from scrapers.jiji_scraper import JijiScraper
+from scrapers.temu_scraper import TemuScraper
+from scrapers.payporte_scraper import PayPorteScraper
 from scrapers.nbs_scraper import NBSScraper
 from utils.data_processor import DataProcessor
 from utils.data_loader import DataLoader
@@ -52,6 +54,8 @@ def trigger_data_refresh():
             JumiaScraper(),
             KongaScraper(),
             JijiScraper(),
+            TemuScraper(),
+            PayPorteScraper(),
             NBSScraper()
         ]
         
