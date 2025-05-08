@@ -18,10 +18,15 @@ from scrapers.payporte_scraper import PayPorteScraper
 from scrapers.nbs_scraper import NBSScraper
 from scrapers.async_jumia_scraper import AsyncJumiaScraper
 from scrapers.trafilatura_scraper import TrafilaturaScraper
+# Use the factory for centralized scraper management
+from scrapers.factory import scrape_all, scrape_by_category
 from utils.data_processor import DataProcessor
 from utils.data_loader import DataLoader
+from utils.recommendation_engine import get_top_recommendations, get_trending_recommendations, get_similar_products
 from utils.scheduler import schedule_scraping
 from visualizations.charts import create_sales_trend_chart, create_category_comparison_chart, create_price_distribution_chart
+# Import source configurations
+from config.sources import get_all_sources, get_sources_by_category
 
 # Page configuration
 st.set_page_config(
