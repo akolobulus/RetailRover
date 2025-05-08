@@ -3,6 +3,7 @@ import random
 import pandas as pd
 from datetime import datetime
 from scrapers.base_scraper import BaseScraper
+from typing import List, Dict, Any, Optional, Union
 
 class TemuScraper(BaseScraper):
     """
@@ -64,9 +65,11 @@ class TemuScraper(BaseScraper):
                         product_url = ""
                         url_elem = card.select_one("a.product-link")
                         if url_elem and url_elem.has_attr("href"):
-                            product_url = url_elem["href"]
-                            if not product_url.startswith("http"):
-                                product_url = self.base_url + product_url
+                            href = url_elem["href"]
+                            if isinstance(href, str) and not href.startswith("http"):
+                                product_url = self.base_url + href
+                            else:
+                                product_url = href
                         
                         # Extract rating if available
                         rating = 0
@@ -118,7 +121,7 @@ class TemuScraper(BaseScraper):
         
         return products
     
-    def scrape_data(self):
+    def scrape_data(self) -> List[Dict[str, Any]]:
         """
         Scrape product data from all categories.
         
