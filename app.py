@@ -402,7 +402,7 @@ else:
             st.metric("Data Sources", total_sources)
         
         # Top selling products section
-        tab_best, tab_trending = st.tabs(["Top Sellers", "Trending Products"])
+        tab_best, tab_trending, tab_recommended = st.tabs(["Top Sellers", "Trending Products", "Recommended Products"])
         
         with tab_best:
             st.subheader("Top Selling Products")
@@ -423,6 +423,74 @@ else:
                 top_products[["product_name", "category", "price", "source"]],
                 use_container_width=True
             )
+            
+        with tab_recommended:
+            st.subheader("Recommended Products")
+            
+            # Generate recommendations using the recommendation engine
+            recommendations = get_top_recommendations(filtered_df)
+            
+            if not recommendations.empty:
+                # Group recommendations by category for better display
+                categories = recommendations['category'].unique()
+                
+                for category in categories:
+                    with st.expander(f"{category} Recommendations", expanded=True):
+                        category_recs = recommendations[recommendations['category'] == category]
+                        
+                        # Display recommendations in a dataframe
+                        st.dataframe(
+                            category_recs[[
+                                "product_name", "price", "rating", 
+                                "review_count", "site_count", "score", "source"
+                            ]].sort_values("score", ascending=False),
+                            column_config={
+                                "product_name": "Product",
+                                "price": st.column_config.NumberColumn("Price (₦)", format="₦%.2f"),
+                                "rating": st.column_config.NumberColumn("Rating", format="%.1f"),
+                                "review_count": "Reviews",
+                                "site_count": "Site Count",
+                                "score": st.column_config.ProgressColumn(
+                                    "Score", 
+                                    help="Recommendation score based on ratings, reviews, and cross-site popularity",
+                                    format="%.2f",
+                                    min_value=0,
+                                    max_value=1
+                                ),
+                                "source": "Source"
+                            },
+                            use_container_width=True
+                        )
+                        
+                        # Show visual representation of top 5 products in this category
+                        if len(category_recs) > 0:
+                            st.write("##### Top 5 Recommended Products Score Comparison")
+                            chart_data = category_recs.head(5)
+                            
+                            fig = px.bar(
+                                chart_data,
+                                x="product_name",
+                                y="score",
+                                color="score",
+                                color_continuous_scale=px.colors.sequential.Viridis,
+                                labels={"product_name": "Product", "score": "Recommendation Score"},
+                                title=f"Top Recommended Products in {category}"
+                            )
+                            fig.update_layout(xaxis_tickangle=-45)
+                            st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.info("Not enough data available to generate personalized recommendations. Try refreshing data or adjusting filters.")
+                st.markdown("""
+                Recommendations are based on:
+                - Product ratings
+                - Number of reviews
+                - Cross-site popularity (appearing on multiple e-commerce sites)
+                - Discount availability
+                """)
+                
+                # Button to trigger data collection for better recommendations
+                if st.button("Collect More Data for Better Recommendations"):
+                    trigger_data_refresh()
         
         with tab_trending:
             st.subheader("Trending Products (Week-over-Week Changes)")
