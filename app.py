@@ -17,6 +17,7 @@ from scrapers.temu_scraper import TemuScraper
 from scrapers.payporte_scraper import PayPorteScraper
 from scrapers.nbs_scraper import NBSScraper
 from scrapers.async_jumia_scraper import AsyncJumiaScraper
+from scrapers.trafilatura_scraper import TrafilaturaScraper
 from utils.data_processor import DataProcessor
 from utils.data_loader import DataLoader
 from utils.scheduler import schedule_scraping
@@ -301,25 +302,112 @@ else:
             total_sources = filtered_df["source"].nunique()
             st.metric("Data Sources", total_sources)
         
-        # Top selling products
-        st.subheader("Top Selling Products")
+        # Top selling products section
+        tab_best, tab_trending = st.tabs(["Top Sellers", "Trending Products"])
         
-        # Assuming "sales_rank" or "popularity" field exists in the dataset
-        # If not available, we can use other metrics as proxy for popularity
-        if "sales_rank" in filtered_df.columns:
-            top_products = filtered_df.sort_values("sales_rank").head(10)
-        else:
-            # Use view count or another proxy metric
-            if "view_count" in filtered_df.columns:
-                top_products = filtered_df.sort_values("view_count", ascending=False).head(10)
+        with tab_best:
+            st.subheader("Top Selling Products")
+            
+            # Assuming "sales_rank" or "popularity" field exists in the dataset
+            # If not available, we can use other metrics as proxy for popularity
+            if "sales_rank" in filtered_df.columns:
+                top_products = filtered_df.sort_values("sales_rank").head(10)
             else:
-                # If no proxy available, just show some products
-                top_products = filtered_df.head(10)
+                # Use view count or another proxy metric
+                if "view_count" in filtered_df.columns:
+                    top_products = filtered_df.sort_values("view_count", ascending=False).head(10)
+                else:
+                    # If no proxy available, just show some products
+                    top_products = filtered_df.head(10)
+            
+            st.dataframe(
+                top_products[["product_name", "category", "price", "source"]],
+                use_container_width=True
+            )
         
-        st.dataframe(
-            top_products[["product_name", "category", "price", "source"]],
-            use_container_width=True
-        )
+        with tab_trending:
+            st.subheader("Trending Products (Week-over-Week Changes)")
+            
+            # Look for historical data to perform trend analysis
+            try:
+                # Try to load historical data if available
+                historical_file = os.path.join("data", "historical_products.csv")
+                if os.path.exists(historical_file):
+                    historical_df = pd.read_csv(historical_file)
+                    
+                    # Ensure timestamp is datetime for comparison
+                    if 'timestamp' in historical_df.columns:
+                        historical_df['timestamp'] = pd.to_datetime(historical_df['timestamp'], errors='coerce')
+                        
+                        # Get data from current week and previous week
+                        now = datetime.now()
+                        one_week_ago = now - timedelta(days=7)
+                        two_weeks_ago = now - timedelta(days=14)
+                        
+                        current_week = historical_df[(historical_df['timestamp'] >= one_week_ago) & 
+                                                   (historical_df['timestamp'] <= now)]
+                        previous_week = historical_df[(historical_df['timestamp'] >= two_weeks_ago) & 
+                                                    (historical_df['timestamp'] < one_week_ago)]
+                        
+                        if not current_week.empty and not previous_week.empty:
+                            # Group by product and get average metrics
+                            current_week_agg = current_week.groupby(['product_name', 'category', 'source'])[['price', 'view_count']].mean().reset_index()
+                            previous_week_agg = previous_week.groupby(['product_name', 'category', 'source'])[['price', 'view_count']].mean().reset_index()
+                            
+                            # Merge to compare changes
+                            trending_df = pd.merge(current_week_agg, previous_week_agg, 
+                                               on=['product_name', 'category', 'source'], 
+                                               suffixes=('_current', '_previous'))
+                            
+                            # Calculate changes
+                            trending_df['price_change'] = trending_df['price_current'] - trending_df['price_previous']
+                            trending_df['price_change_percent'] = (trending_df['price_change'] / trending_df['price_previous']) * 100
+                            trending_df['view_count_change'] = trending_df['view_count_current'] - trending_df['view_count_previous']
+                            trending_df['view_count_change_percent'] = (trending_df['view_count_change'] / trending_df['view_count_previous']) * 100
+                            
+                            # Sort by view count change to show trending products
+                            trending_df = trending_df.sort_values('view_count_change_percent', ascending=False)
+                            
+                            # Display the trending products
+                            st.dataframe(
+                                trending_df[['product_name', 'category', 'source', 'price_current', 
+                                           'price_change_percent', 'view_count_change_percent']].head(10),
+                                column_config={
+                                    "product_name": "Product",
+                                    "category": "Category",
+                                    "source": "Source",
+                                    "price_current": st.column_config.NumberColumn("Current Price (₦)", format="₦%.2f"),
+                                    "price_change_percent": st.column_config.NumberColumn("Price Change %", format="%.2f%%"),
+                                    "view_count_change_percent": st.column_config.NumberColumn("Popularity Change %", format="%.2f%%")
+                                },
+                                use_container_width=True
+                            )
+                            
+                            # Visualize trending categories
+                            st.subheader("Trending Categories")
+                            
+                            category_trend = trending_df.groupby('category')['view_count_change_percent'].mean().reset_index()
+                            category_trend = category_trend.sort_values('view_count_change_percent', ascending=False)
+                            
+                            fig = px.bar(
+                                category_trend,
+                                x='category',
+                                y='view_count_change_percent',
+                                title="Category Week-over-Week Growth",
+                                color='view_count_change_percent',
+                                color_continuous_scale=px.colors.sequential.Viridis,
+                                labels={'category': 'Category', 'view_count_change_percent': 'Popularity Growth (%)'}
+                            )
+                            st.plotly_chart(fig, use_container_width=True)
+                        else:
+                            st.info("Not enough historical data available for trend analysis. Please check back after collecting data for at least two weeks.")
+                    else:
+                        st.info("Historical data missing timestamp information. Unable to perform trend analysis.")
+                else:
+                    st.info("No historical data available yet. Trend analysis will be available once more data is collected over time.")
+            except Exception as e:
+                st.error(f"Error performing trend analysis: {str(e)}")
+                st.info("Trend analysis feature requires historical data collection over time.")
         
         # Visualizations section
         st.subheader("Product Analytics")
@@ -411,6 +499,63 @@ else:
                 st.image("https://pixabay.com/get/g52e3749a0241b746b6be544b39d03e4eda0e1d1f9c502718cea020a2f3ecf61bbd0fd82f753dc1eb3068eada057f7eef007c45e3a1406270d449e2bf4e17f225_1280.jpg", 
                          caption="Sample Product Sales Chart")
         
+        # Handle export functionality if requested
+        if 'export_requested' in st.session_state and st.session_state.export_requested:
+            export_format = st.session_state.export_format if 'export_format' in st.session_state else "CSV"
+            
+            # Create download button based on format
+            if export_format == "CSV":
+                csv = filtered_df.to_csv(index=False)
+                st.download_button(
+                    label="Download CSV File",
+                    data=csv,
+                    file_name=f"ecommerce_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                    mime="text/csv"
+                )
+            elif export_format == "Excel":
+                buffer = io.BytesIO()
+                with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
+                    filtered_df.to_excel(writer, sheet_name="Products", index=False)
+                    # Get the sheet to add some formatting
+                    workbook = writer.book
+                    worksheet = writer.sheets["Products"]
+                    
+                    # Add column formatting
+                    money_fmt = workbook.add_format({'num_format': '₦#,##0.00'})
+                    date_fmt = workbook.add_format({'num_format': 'yyyy-mm-dd'})
+                    
+                    # Apply formatting to specific columns
+                    if 'price' in filtered_df.columns:
+                        price_col = filtered_df.columns.get_loc('price')
+                        worksheet.set_column(price_col, price_col, 12, money_fmt)
+                    
+                    if 'timestamp' in filtered_df.columns:
+                        date_col = filtered_df.columns.get_loc('timestamp')
+                        worksheet.set_column(date_col, date_col, 18, date_fmt)
+                    
+                    # Set column widths
+                    worksheet.set_column(0, 0, 40)  # Product name column wider
+                    worksheet.set_column(1, len(filtered_df.columns), 15)  # Other columns
+
+                excel_data = buffer.getvalue()
+                st.download_button(
+                    label="Download Excel File",
+                    data=excel_data,
+                    file_name=f"ecommerce_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx",
+                    mime="application/vnd.ms-excel"
+                )
+            elif export_format == "JSON":
+                json_data = filtered_df.to_json(orient="records", date_format="iso")
+                st.download_button(
+                    label="Download JSON File",
+                    data=json_data,
+                    file_name=f"ecommerce_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+                    mime="application/json"
+                )
+            
+            # Reset export requested flag
+            st.session_state.export_requested = False
+        
         # NBS Data Integration Section
         st.subheader("National Bureau of Statistics (NBS) Insights")
         
@@ -478,6 +623,117 @@ else:
                     # Check if any category has shown significant growth
                     st.info("**Market Trend**: Monitor the growth in the beverages and detergents categories, " +
                            "which are showing increased consumer interest based on recent data.")
+        
+        # Website Content Scraper Section
+        st.subheader("Website Content Scraper")
+        st.write("""
+        Use the Trafilatura scraper to extract clean text content from any website. 
+        This is useful for analyzing articles, blog posts, news, and other text-heavy content.
+        """)
+        
+        scraper_col1, scraper_col2 = st.columns([3, 1])
+        
+        with scraper_col1:
+            website_urls = st.text_area(
+                "Enter website URLs (one per line):",
+                height=100,
+                help="Enter one or more website URLs to extract their main content."
+            )
+            
+            source_names = st.text_area(
+                "Optional: Source names (one per line, matching the order of URLs):",
+                height=80,
+                help="Provide custom names for each source. Leave blank to use default names."
+            )
+        
+        with scraper_col2:
+            st.write("#### Options")
+            save_content = st.checkbox("Save to file", value=True)
+            file_format = st.radio("File format:", ["CSV", "JSON", "Both"])
+        
+        if st.button("Extract Content"):
+            if website_urls.strip():
+                urls = [url.strip() for url in website_urls.strip().split('\n') if url.strip()]
+                
+                if source_names.strip():
+                    names = [name.strip() for name in source_names.strip().split('\n') if name.strip()]
+                else:
+                    names = None
+                
+                if urls:
+                    with st.spinner(f"Extracting content from {len(urls)} websites..."):
+                        try:
+                            scraper = TrafilaturaScraper()
+                            results = scraper.scrape_urls(urls, names)
+                            
+                            if results:
+                                st.success(f"Successfully extracted content from {len(results)} out of {len(urls)} websites.")
+                                
+                                # Display content preview
+                                for i, result in enumerate(results):
+                                    with st.expander(f"{result['source_name']} ({result['word_count']} words)"):
+                                        st.write("#### Content Preview")
+                                        preview = result['content'][:500] + "..." if len(result['content']) > 500 else result['content']
+                                        st.write(preview)
+                                        st.write(f"**URL:** {result['url']}")
+                                        st.write(f"**Total Characters:** {result['character_count']}")
+                                
+                                # Save files if requested
+                                if save_content:
+                                    os.makedirs("data", exist_ok=True)
+                                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                                    
+                                    if file_format in ["CSV", "Both"]:
+                                        df = pd.DataFrame([{
+                                            "source_name": r["source_name"],
+                                            "url": r["url"],
+                                            "content_preview": r["content"][:500] + "..." if len(r["content"]) > 500 else r["content"],
+                                            "word_count": r["word_count"],
+                                            "character_count": r["character_count"],
+                                            "timestamp": r["timestamp"]
+                                        } for r in results])
+                                        
+                                        csv_file = f"data/scraped_content_{timestamp}.csv"
+                                        df.to_csv(csv_file, index=False)
+                                        
+                                        with open(csv_file, "r") as f:
+                                            csv_data = f.read()
+                                        
+                                        st.download_button(
+                                            label="Download CSV",
+                                            data=csv_data,
+                                            file_name=f"scraped_content_{timestamp}.csv",
+                                            mime="text/csv"
+                                        )
+                                    
+                                    if file_format in ["JSON", "Both"]:
+                                        json_data = json.dumps([{
+                                            "source_name": r["source_name"],
+                                            "url": r["url"],
+                                            "content": r["content"],
+                                            "word_count": r["word_count"],
+                                            "character_count": r["character_count"],
+                                            "timestamp": r["timestamp"].isoformat() if hasattr(r["timestamp"], "isoformat") else str(r["timestamp"])
+                                        } for r in results], indent=2)
+                                        
+                                        json_file = f"data/scraped_content_{timestamp}.json"
+                                        with open(json_file, "w") as f:
+                                            f.write(json_data)
+                                        
+                                        st.download_button(
+                                            label="Download JSON",
+                                            data=json_data,
+                                            file_name=f"scraped_content_{timestamp}.json",
+                                            mime="application/json"
+                                        )
+                            else:
+                                st.warning("No content could be extracted from the provided URLs.")
+                        except Exception as e:
+                            st.error(f"Error extracting content: {str(e)}")
+                else:
+                    st.warning("Please enter at least one valid URL.")
+            else:
+                st.warning("Please enter at least one URL to extract content from.")
         
         # Footer with image
         st.image("https://pixabay.com/get/ga877dd855b45dbf691b4b465ad2580265f36b94d6cdc2dcad5462c2ad9145fec9bc9b1b991cea36e912de183a1d18c751f9ad194f00c88d08755fb8e07bb51f6_1280.jpg", 

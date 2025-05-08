@@ -16,4 +16,5 @@ dependencies = [
     "selenium>=4.32.0",
     "streamlit>=1.45.0",
     "trafilatura>=2.0.0",
+    "xlsxwriter>=3.2.3",
 ]
