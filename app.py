@@ -9,6 +9,7 @@ import threading
 import concurrent.futures
 import json
 import io
+import numpy as np
 
 from scrapers.jumia_scraper import JumiaScraper
 from scrapers.konga_scraper import KongaScraper
@@ -27,6 +28,10 @@ from utils.scheduler import schedule_scraping
 from visualizations.charts import create_sales_trend_chart, create_category_comparison_chart, create_price_distribution_chart
 # Import source configurations
 from config.sources import get_all_sources, get_sources_by_category
+# Import advanced analytics modules
+from utils.ml_price_predictor import PricePredictor
+from utils.review_analyzer import ReviewAnalyzer
+from utils.geo_insights import GeoInsights
 
 # Page configuration
 st.set_page_config(
@@ -176,13 +181,31 @@ with st.sidebar:
     
     # Scheduling options
     st.subheader("Scheduled Updates")
-    schedule_options = ["Disabled", "Hourly", "Daily", "Weekly"]
-    schedule_selection = st.selectbox("Schedule data updates:", schedule_options)
+    schedule_options = ["Disabled", "Real-time", "Hourly", "Daily", "Weekly"]
     
-    if schedule_selection != "Disabled":
-        # This would be implemented to actually schedule updates
-        schedule_scraping(schedule_selection, trigger_data_refresh)
-        st.success(f"Data updates scheduled: {schedule_selection}")
+    # Get current schedule from session state
+    current_schedule = st.session_state.get("schedule", "Disabled")
+    schedule_selection = st.selectbox(
+        "Schedule data updates:", 
+        schedule_options,
+        index=schedule_options.index(current_schedule) if current_schedule in schedule_options else 0
+    )
+    
+    # Only update if selection changed
+    if schedule_selection != current_schedule:
+        st.session_state.schedule = schedule_selection
+        
+        if schedule_selection != "Disabled":
+            # Implement real-time or scheduled updates
+            schedule_scraping(schedule_selection, trigger_data_refresh)
+            
+            if schedule_selection == "Real-time":
+                st.success("✅ Real-time statistics enabled (updates every 5 minutes)")
+            else:
+                st.success(f"✅ Data updates scheduled: {schedule_selection}")
+        else:
+            # Show info message when disabled
+            st.info("Scheduled updates disabled")
     
     # Export options
     st.subheader("Export Data")
@@ -592,7 +615,7 @@ else:
         # Visualizations section
         st.subheader("Product Analytics")
         
-        tab1, tab2, tab3 = st.tabs(["Category Distribution", "Price Analysis", "Trend Analysis"])
+        tab1, tab2, tab3, tab4 = st.tabs(["Category Distribution", "Price Analysis", "Trend Analysis", "Advanced Analytics"])
         
         with tab1:
             col1, col2 = st.columns(2)
