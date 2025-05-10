@@ -56,7 +56,9 @@ def schedule_scraping(schedule_type, scrape_function):
     stop_flag.clear()
     
     # Set interval based on schedule type
-    if schedule_type == "Hourly":
+    if schedule_type == "Real-time":
+        interval_seconds = 300  # 5 minutes for real-time updates
+    elif schedule_type == "Hourly":
         interval_seconds = 3600  # 1 hour
     elif schedule_type == "Daily":
         interval_seconds = 86400  # 24 hours

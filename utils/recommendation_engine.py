@@ -29,21 +29,31 @@ def calculate_score(row):
     score = 0
     
     # Rating component (40% weight)
-    if pd.notna(row.get('rating')):
+    if 'rating' in row and pd.notna(row['rating']):
         # Normalize rating to 0-1 scale (assuming ratings are 0-5)
         score += (row['rating'] / 5) * 0.4
     
     # Review count component (30% weight)
-    if pd.notna(row.get('review_count')):
+    if 'review_count' in row and pd.notna(row['review_count']):
         # Cap review count at 100 and normalize
         normalized_reviews = min(row['review_count'], 100) / 100
         score += normalized_reviews * 0.3
+    elif 'view_count' in row and pd.notna(row['view_count']):
+        # Use view_count as fallback if review_count is unavailable
+        normalized_views = min(row['view_count'], 1000) / 1000
+        score += normalized_views * 0.3
+    else:
+        # Default popularity score if neither review_count nor view_count available
+        score += 0.15  # Add half the possible weight
     
     # Site count component (30% weight)
-    if pd.notna(row.get('site_count')):
+    if 'site_count' in row and pd.notna(row['site_count']):
         # Normalize site count by dividing by 5 (assume max is 5 sites)
         normalized_sites = min(row['site_count'], 5) / 5
         score += normalized_sites * 0.3
+    else:
+        # Create a site_count field if it doesn't exist
+        score += 0.1  # Add a third of the possible weight
         
     # Discount factor if available (bonus 10%)
     if pd.notna(row.get('discount_percentage')) and row['discount_percentage'] > 0:
@@ -51,11 +61,19 @@ def calculate_score(row):
         normalized_discount = min(row['discount_percentage'], 80) / 80
         score += normalized_discount * 0.1
     
-    # Availability factor (penalty if not in stock)
-    if pd.notna(row.get('availability')):
+    # Availability factor (emphasize high stock items as requested)
+    if 'availability' in row and pd.notna(row['availability']):
         availability = str(row['availability']).lower()
         if 'out of stock' in availability or 'sold out' in availability:
-            score *= 0.5  # 50% penalty for out of stock items
+            score *= 0.1  # 90% penalty for out of stock items
+        elif 'limited stock' in availability or 'low stock' in availability:
+            score *= 0.7  # 30% penalty for limited stock
+        elif 'in stock' in availability or 'available' in availability:
+            score *= 1.3  # 30% boost for in-stock items
+        
+        # Special boost for "most stock" or high inventory items
+        if 'high stock' in availability or 'plenty' in availability or 'most stock' in availability:
+            score *= 1.5  # 50% boost for items with high inventory levels
     
     return score
 

@@ -438,26 +438,39 @@ else:
                     with st.expander(f"{category} Recommendations", expanded=True):
                         category_recs = recommendations[recommendations['category'] == category]
                         
-                        # Display recommendations in a dataframe
+                        # Display recommendations in a dataframe - safely handle column selection
+                        display_columns = ["product_name", "price", "score", "source"]
+                        
+                        # Add optional columns if they exist
+                        if "rating" in category_recs.columns:
+                            display_columns.append("rating")
+                        if "review_count" in category_recs.columns:
+                            display_columns.append("review_count")
+                        if "view_count" in category_recs.columns:
+                            display_columns.append("view_count")
+                        if "site_count" in category_recs.columns:
+                            display_columns.append("site_count")
+                        if "availability" in category_recs.columns:
+                            display_columns.append("availability")
+                            
                         st.dataframe(
-                            category_recs[[
-                                "product_name", "price", "rating", 
-                                "review_count", "site_count", "score", "source"
-                            ]].sort_values("score", ascending=False),
+                            category_recs[display_columns].sort_values("score", ascending=False),
                             column_config={
                                 "product_name": "Product",
                                 "price": st.column_config.NumberColumn("Price (₦)", format="₦%.2f"),
-                                "rating": st.column_config.NumberColumn("Rating", format="%.1f"),
-                                "review_count": "Reviews",
-                                "site_count": "Site Count",
                                 "score": st.column_config.ProgressColumn(
                                     "Score", 
-                                    help="Recommendation score based on ratings, reviews, and cross-site popularity",
+                                    help="Recommendation score based on ratings, reviews, and stock availability",
                                     format="%.2f",
                                     min_value=0,
-                                    max_value=1
+                                    max_value=2
                                 ),
-                                "source": "Source"
+                                "source": "Source",
+                                **({"rating": st.column_config.NumberColumn("Rating", format="%.1f")} if "rating" in display_columns else {}),
+                                **({"review_count": "Reviews"} if "review_count" in display_columns else {}),
+                                **({"view_count": "Views"} if "view_count" in display_columns else {}),
+                                **({"site_count": "Site Count"} if "site_count" in display_columns else {}),
+                                **({"availability": "Stock Status"} if "availability" in display_columns else {})
                             },
                             use_container_width=True
                         )
