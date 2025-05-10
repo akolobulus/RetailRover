@@ -701,6 +701,319 @@ else:
                 st.warning("Time-based trend data not available. Please refresh data to collect time information.")
                 st.image("https://pixabay.com/get/g52e3749a0241b746b6be544b39d03e4eda0e1d1f9c502718cea020a2f3ecf61bbd0fd82f753dc1eb3068eada057f7eef007c45e3a1406270d449e2bf4e17f225_1280.jpg", 
                          caption="Sample Product Sales Chart")
+                         
+        with tab4:
+            st.subheader("Advanced Analytics")
+            
+            # Create tabs for different advanced analytics
+            advanced_tab1, advanced_tab2, advanced_tab3 = st.tabs([
+                "Price Prediction", "Sentiment Analysis", "Geographic Insights"
+            ])
+            
+            with advanced_tab1:
+                st.subheader("Price Prediction")
+                st.write("Predict future price trends for Nigerian e-commerce products")
+                
+                # Create predictor instance
+                price_predictor = PricePredictor(filtered_df)
+                
+                # Training options
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    # Train model button
+                    if st.button("Train Price Prediction Model"):
+                        with st.spinner("Training price prediction model..."):
+                            if price_predictor.train():
+                                st.success("Price prediction model trained successfully")
+                            else:
+                                st.warning("Insufficient data for price prediction. Historical data is needed.")
+                
+                with col2:
+                    # Prediction options
+                    prediction_days = st.slider("Prediction Period (Days)", 
+                                             min_value=7, max_value=90, value=30, step=7)
+                
+                # Generate predictions
+                if st.button("Generate Price Predictions"):
+                    with st.spinner("Generating predictions..."):
+                        predictions = price_predictor.predict_prices(filtered_df, days_ahead=prediction_days)
+                        
+                        if predictions is not None:
+                            # Show predictions
+                            st.write(f"### Predicted Prices ({prediction_days} days ahead)")
+                            
+                            # Display in a dataframe with custom formatting
+                            st.dataframe(
+                                predictions[[
+                                    "product_name", "category", "price", 
+                                    "predicted_price", "price_trend", "confidence"
+                                ]],
+                                column_config={
+                                    "product_name": "Product",
+                                    "category": "Category",
+                                    "price": st.column_config.NumberColumn("Current Price (₦)", format="₦%.2f"),
+                                    "predicted_price": st.column_config.NumberColumn("Predicted Price (₦)", format="₦%.2f"),
+                                    "price_trend": st.column_config.TextColumn("Price Trend", help="Predicted price direction"),
+                                    "confidence": st.column_config.ProgressColumn(
+                                        "Prediction Confidence",
+                                        help="Confidence level in the prediction",
+                                        format="%.2f",
+                                        min_value=0,
+                                        max_value=1
+                                    )
+                                },
+                                use_container_width=True
+                            )
+                            
+                            # Show predictions visualized by category
+                            st.write("### Price Trend Visualization")
+                            
+                            # Create a category selector
+                            categories = predictions['category'].unique()
+                            if len(categories) > 0:
+                                selected_cat = st.selectbox(
+                                    "Select Category for Price Trend Visualization",
+                                    categories
+                                )
+                                
+                                # Filter for selected category
+                                cat_predictions = predictions[predictions['category'] == selected_cat]
+                                
+                                # Create a bar chart comparing current and predicted prices
+                                fig = px.bar(
+                                    cat_predictions,
+                                    x="product_name",
+                                    y=["price", "predicted_price"],
+                                    barmode="group",
+                                    labels={"value": "Price (₦)", "variable": "Price Type"},
+                                    color_discrete_map={"price": "#00FF00", "predicted_price": "#AAFFAA"},
+                                    title=f"Current vs Predicted Prices for {selected_cat}"
+                                )
+                                fig.update_layout(xaxis_tickangle=-45)
+                                st.plotly_chart(fig, use_container_width=True)
+                        else:
+                            st.warning("Unable to generate predictions. Try refreshing data.")
+                
+                # Add explanation
+                with st.expander("About Price Prediction"):
+                    st.write("""
+                    The price prediction model analyzes historical price data to identify trends and 
+                    seasonal patterns in Nigerian e-commerce prices. Predictions incorporate:
+                    
+                    - Historical price trends by category
+                    - Seasonal pricing patterns
+                    - Market volatility by product type
+                    - Cross-site pricing comparisons
+                    
+                    Predictions are more accurate with more historical data. Real-time data collection
+                    improves model accuracy over time.
+                    """)
+            
+            with advanced_tab2:
+                st.subheader("Review Sentiment Analysis")
+                st.write("Analyze customer sentiment and identify key aspects in product reviews")
+                
+                # Create analyzer instance
+                review_analyzer = ReviewAnalyzer()
+                
+                # Example reviews if none in dataset
+                sample_reviews_df = None
+                
+                # Check if reviews are available
+                if 'review_text' in filtered_df.columns:
+                    reviews_df = filtered_df
+                else:
+                    # Create sample reviews for demonstration
+                    st.info("No review data found in the current dataset. Using sample reviews for demonstration.")
+                    
+                    # Create sample data
+                    sample_data = {
+                        'product_name': ['Samsung TV', 'iPhone 13', 'LG Refrigerator', 'HP Laptop', 'Sony Headphones'],
+                        'category': ['Electronics', 'Phones', 'Appliances', 'Computers', 'Audio'],
+                        'review_text': [
+                            "Great TV with excellent picture quality. The colors are vibrant and the smart features work well.",
+                            "Battery life is disappointing but camera quality is amazing. Expensive for what you get.",
+                            "Very spacious fridge but it makes strange noises sometimes. Energy efficient though.",
+                            "Fast performance but keyboard feels cheap. Not bad for the price.",
+                            "Sound quality is superb but they're not very comfortable for long periods."
+                        ]
+                    }
+                    sample_reviews_df = pd.DataFrame(sample_data)
+                    reviews_df = sample_reviews_df
+                
+                # Button to trigger analysis
+                if st.button("Analyze Product Reviews"):
+                    with st.spinner("Analyzing reviews..."):
+                        analyzed_reviews = review_analyzer.analyze_reviews(reviews_df)
+                        
+                        if analyzed_reviews is not None:
+                            # Show sentiment distribution
+                            st.write("### Review Sentiment Distribution")
+                            
+                            # Calculate sentiment distribution
+                            if 'sentiment' in analyzed_reviews.columns:
+                                sentiment_counts = analyzed_reviews['sentiment'].value_counts()
+                                
+                                # Create pie chart of sentiments
+                                fig = px.pie(
+                                    values=sentiment_counts.values,
+                                    names=sentiment_counts.index,
+                                    title="Review Sentiment Distribution",
+                                    color_discrete_sequence=px.colors.sequential.Viridis,
+                                    hole=0.4
+                                )
+                                st.plotly_chart(fig, use_container_width=True)
+                            
+                            # Show aspects analyzed
+                            if 'primary_aspect' in analyzed_reviews.columns:
+                                st.write("### Most Discussed Aspects in Reviews")
+                                
+                                # Extract primary aspects
+                                aspect_counts = analyzed_reviews['primary_aspect'].value_counts()
+                                
+                                if not aspect_counts.empty:
+                                    # Create horizontal bar chart of aspects
+                                    fig = px.bar(
+                                        x=aspect_counts.values,
+                                        y=aspect_counts.index,
+                                        orientation='h',
+                                        title="Most Mentioned Product Aspects",
+                                        labels={"x": "Mention Count", "y": "Aspect"},
+                                        color=aspect_counts.values,
+                                        color_continuous_scale=px.colors.sequential.Viridis
+                                    )
+                                    st.plotly_chart(fig, use_container_width=True)
+                            
+                            # Show sample reviews with sentiment
+                            st.write("### Sample Reviews with Sentiment Analysis")
+                            for i, (_, review) in enumerate(analyzed_reviews.sample(min(5, len(analyzed_reviews))).iterrows()):
+                                sentiment_color = "green" if review.get('sentiment_score', 0) > 0.2 else "red" if review.get('sentiment_score', 0) < -0.2 else "gray"
+                                st.markdown(f"""
+                                **Product**: {review.get('product_name', 'Unknown')}  
+                                **Sentiment**: <span style="color:{sentiment_color}">{review.get('sentiment', 'Unknown')}</span> ({review.get('sentiment_score', 0):.2f})  
+                                **Primary Aspect**: {review.get('primary_aspect', 'Unknown')}  
+                                **Review**: _{review.get('review_text', '')}_ 
+                                """, unsafe_allow_html=True)
+                                st.markdown("---")
+                        else:
+                            st.warning("No reviews available to analyze.")
+                
+                # Add explanation of sentiment analysis
+                with st.expander("About Sentiment Analysis"):
+                    st.write("""
+                    The sentiment analysis system evaluates customer reviews to determine:
+                    
+                    - Overall sentiment (positive, neutral, negative)
+                    - Key aspects discussed in reviews (quality, price, shipping, etc.)
+                    - Sentiment toward specific product aspects
+                    - Common complaints and praise points
+                    
+                    The analysis considers Nigerian-specific terms and aspects like power compatibility
+                    and local delivery concerns.
+                    """)
+            
+            with advanced_tab3:
+                st.subheader("Geographic Insights")
+                st.write("Analyze e-commerce data by Nigerian states and regions")
+                
+                # Create geo insights instance
+                geo_insights = GeoInsights()
+                
+                # Example location data for demonstration
+                if 'location' not in filtered_df.columns:
+                    st.info("No location data found in the dataset. Using sample location data for demonstration.")
+                    
+                    # Create sample data with Nigerian locations
+                    locations = [
+                        'Lagos', 'Abuja', 'Port Harcourt', 'Kano', 'Ibadan', 
+                        'Kaduna', 'Benin City', 'Enugu', 'Aba', 'Onitsha'
+                    ]
+                    
+                    # Add location to a copy of filtered_df
+                    geo_data = filtered_df.copy()
+                    geo_data['location'] = np.random.choice(locations, size=len(geo_data))
+                else:
+                    geo_data = filtered_df
+                
+                # Button to process location data
+                if st.button("Generate Geographic Insights"):
+                    with st.spinner("Processing location data..."):
+                        # Enrich data with normalized locations
+                        enriched_data = geo_insights.enrich_location_data(geo_data)
+                        geo_insights.load_order_data(enriched_data)
+                        
+                        # Display map of Nigeria with data distribution
+                        st.write("### E-commerce Data Distribution Across Nigeria")
+                        
+                        # Show distribution by region or state
+                        distribution_level = st.radio("Distribution Level", ["Region", "State"])
+                        
+                        if distribution_level == "Region":
+                            # Get regional distribution
+                            region_dist = geo_insights.get_regional_distribution()
+                            
+                            if region_dist is not None and not region_dist.empty:
+                                # Create map visualization
+                                st.write("#### Distribution by Nigerian Region")
+                                
+                                # Create pie chart of regions
+                                fig = px.pie(
+                                    region_dist,
+                                    values='value',
+                                    names='region',
+                                    title="Order Distribution by Region",
+                                    color_discrete_sequence=px.colors.sequential.Viridis
+                                )
+                                st.plotly_chart(fig, use_container_width=True)
+                        else:
+                            # Get state distribution
+                            state_dist = geo_insights.get_state_distribution()
+                            
+                            if state_dist is not None and not state_dist.empty:
+                                # Create map visualization
+                                st.write("#### Distribution by Nigerian State")
+                                
+                                # Create choropleth visualization of Nigeria
+                                fig = px.choropleth(
+                                    state_dist,
+                                    locations='state',
+                                    locationmode='country names',
+                                    color='value',
+                                    color_continuous_scale="Viridis",
+                                    title="Order Distribution by State"
+                                )
+                                st.plotly_chart(fig, use_container_width=True)
+                        
+                        # Show top cities
+                        st.write("### Top Nigerian Cities for E-commerce")
+                        top_cities = geo_insights.get_top_cities(top_n=10)
+                        
+                        if top_cities is not None and not top_cities.empty:
+                            # Create bar chart of cities
+                            fig = px.bar(
+                                top_cities,
+                                x='city',
+                                y='value',
+                                color='state',
+                                title="Top 10 Nigerian Cities for E-commerce",
+                                labels={"city": "City", "value": "Order Count", "state": "State"}
+                            )
+                            st.plotly_chart(fig, use_container_width=True)
+                
+                # Add explanation of geographic analysis
+                with st.expander("About Geographic Insights"):
+                    st.write("""
+                    The geographic insights analysis helps understand the Nigerian e-commerce market 
+                    across different regions and states. The analysis provides:
+                    
+                    - Distribution of orders/products across the six Nigerian regions
+                    - Most active cities for e-commerce
+                    - Product category preferences by region
+                    - Delivery time analysis by location (when data is available)
+                    
+                    This helps sellers and marketers understand regional preferences and opportunities.
+                    """)
         
         # Handle export functionality if requested
         if 'export_requested' in st.session_state and st.session_state.export_requested:
