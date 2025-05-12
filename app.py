@@ -154,7 +154,47 @@ def trigger_data_refresh():
     st.rerun()
 
 # Dashboard Header
-st.title("📊 Nigerian E-commerce Analytics Dashboard")
+# Create RetailRover NG logo using inline SVG
+rover_logo = """
+<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .title { font: bold 30px sans-serif; fill: #2E8B57; }
+        .tagline { font: italic 14px sans-serif; fill: #333; }
+        .cart { fill: #2E8B57; }
+        .analytics { fill: #25A55F; }
+    </style>
+    
+    <!-- Shopping cart icon -->
+    <path class="cart" d="M30,20 L45,20 L53,45 L25,45 Z" />
+    <circle class="cart" cx="33" cy="50" r="4" />
+    <circle class="cart" cx="45" cy="50" r="4" />
+    
+    <!-- Analytics bars -->
+    <rect class="analytics" x="60" y="30" width="5" height="15" />
+    <rect class="analytics" x="70" y="25" width="5" height="20" />
+    <rect class="analytics" x="80" y="20" width="5" height="25" />
+    
+    <!-- Text -->
+    <text x="95" y="35" class="title">RetailRover NG</text>
+    <text x="95" y="50" class="tagline">Where data meets retail instinct</text>
+</svg>
+"""
+
+# Display the custom logo
+st.markdown(rover_logo, unsafe_allow_html=True)
+
+# Title is still included for SEO and accessibility but will be hidden with CSS
+st.markdown("""
+<style>
+    .main-header {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+""", unsafe_allow_html=True)
+st.title("RetailRover NG")  # This will be hidden
 
 # Define theme toggle function
 def toggle_theme():
@@ -171,12 +211,12 @@ headless = true
 address = "0.0.0.0"
 port = 5000
 
-# Dark Theme
+# Dark Theme (Green)
 [theme]
-primaryColor = "#00FF00"
-backgroundColor = "#0E1117"
-secondaryBackgroundColor = "#262730"
-textColor = "#FAFAFA"
+primaryColor = "#3CBC8D"  # Mint Green
+backgroundColor = "#1E2B38"  # Dark Blue-Green
+secondaryBackgroundColor = "#2C3E50"  # Dark Slate
+textColor = "#ECFDF5"  # Light Mint
 font = "sans serif"
 """)
     else:
@@ -188,12 +228,12 @@ headless = true
 address = "0.0.0.0"
 port = 5000
 
-# Light Theme
+# Light Theme (Green)
 [theme]
-primaryColor = "#4480c4"
+primaryColor = "#2E8B57"  # Sea Green
 backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F0F2F6"
-textColor = "#262730"
+secondaryBackgroundColor = "#F0F7F4"  # Light Mint
+textColor = "#2C3E50"  # Dark Blue Gray
 font = "sans serif"
 """)
     # Force the app to rerun to apply new theme
@@ -503,14 +543,18 @@ else:
             st.subheader("Recommended Products")
             
             # Generate recommendations using the recommendation engine
+            # Ensure we get a good number of recommendations per category
             recommendations = get_top_recommendations(filtered_df)
             
             if not recommendations.empty:
                 # Group recommendations by category for better display
                 categories = recommendations['category'].unique()
                 
+                # Make sure we have all categories represented
+                st.info("Showing top 5 products for each category with recommended retail prices")
+                
                 for category in categories:
-                    with st.expander(f"{category} Recommendations", expanded=True):
+                    with st.expander(f"{category.title()} Recommendations", expanded=True):
                         category_recs = recommendations[recommendations['category'] == category]
                         
                         # Display recommendations in a dataframe - safely handle column selection
