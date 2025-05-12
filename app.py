@@ -201,7 +201,7 @@ font = "sans serif"
 
 # Sidebar
 with st.sidebar:
-    st.image("https://pixabay.com/get/g237713afa5a679cda403ee34c9213bd3a6908aa56dd192203e6c60db9653859da2c0030573806ca3db116a367b3349dee0d5fed51d277d01c8643e99ae26ada2_1280.jpg", 
+    st.image("https://cdn.pixabay.com/photo/2018/08/18/13/26/interface-3614766_1280.png", 
              caption="E-commerce Analytics")
     
     # Theme toggle
@@ -354,10 +354,10 @@ if not st.session_state.data_loaded:
     
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://pixabay.com/get/g6cf44a1e2425e3dc720a2425250366451ecf164e0a5c19bbf72b13a880de2963d23a90cc241b3a7f5f7288d637faa98caa1c81d10ce26cb6547c0947727de3e6_1280.jpg", 
+        st.image("https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_1280.jpg", 
                  caption="E-commerce Analytics Dashboard")
     with col2:
-        st.image("https://pixabay.com/get/gb84e115062aafe90b32b4a822ca6bf54a2c155985b5dea6b63c69f1d664593ccdd125351e0274da3145628375707ca7533ec7cec8feb399cd49cdf3fcb1c82cd_1280.jpg", 
+        st.image("https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_1280.png", 
                  caption="Product Sales Charts")
     
     if st.button("Start Data Collection"):
@@ -759,7 +759,7 @@ else:
                 st.plotly_chart(category_chart, use_container_width=True)
             else:
                 st.warning("Time-based trend data not available. Please refresh data to collect time information.")
-                st.image("https://pixabay.com/get/g52e3749a0241b746b6be544b39d03e4eda0e1d1f9c502718cea020a2f3ecf61bbd0fd82f753dc1eb3068eada057f7eef007c45e3a1406270d449e2bf4e17f225_1280.jpg", 
+                st.image("https://cdn.pixabay.com/photo/2020/05/30/17/18/shopping-5239333_1280.jpg", 
                          caption="Sample Product Sales Chart")
                          
         with tab4:
@@ -1467,7 +1467,7 @@ else:
                 st.warning("Please enter at least one URL to extract content from.")
         
         # Footer with image
-        st.image("https://pixabay.com/get/ga877dd855b45dbf691b4b465ad2580265f36b94d6cdc2dcad5462c2ad9145fec9bc9b1b991cea36e912de183a1d18c751f9ad194f00c88d08755fb8e07bb51f6_1280.jpg", 
+        st.image("https://cdn.pixabay.com/photo/2021/01/12/20/47/smartphone-5912686_1280.jpg", 
                  caption="Data Visualization Interface")
     
     except Exception as e:
