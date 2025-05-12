@@ -17,16 +17,20 @@ class EcommerceScraper(BaseScraper):
     the site-specific attributes and methods.
     """
     
-    def __init__(self):
+    def __init__(self, source_name=None, base_url=None):
         """
         Initialize the scraper with default values.
         Override these values in concrete scraper implementations.
+        
+        Args:
+            source_name (str, optional): Name of the source for dynamic instantiation
+            base_url (str, optional): Base URL for the source for dynamic instantiation
         """
         super().__init__()
         
         # Site-specific attributes to override in concrete classes
-        self.site_name = "GenericEcommerce"
-        self.base_url = "https://example.com"
+        self.site_name = source_name if source_name else "GenericEcommerce"
+        self.base_url = base_url if base_url else "https://example.com"
         self.categories = {
             "electronics": "/electronics",
             "fashion": "/fashion",
