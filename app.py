@@ -1518,7 +1518,7 @@ else:
                 st.warning("Please enter at least one URL to extract content from.")
         
         # Footer with image
-        st.image("https://cdn.pixabay.com/photo/2021/01/12/20/47/smartphone-5912686_1280.jpg", 
+        st.image("https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_1280.png", 
                  caption="Data Visualization Interface")
     
     except Exception as e:

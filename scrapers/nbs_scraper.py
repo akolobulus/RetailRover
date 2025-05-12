@@ -98,20 +98,23 @@ class NBSScraper(BaseScraper):
         report_title = ""
         report_date = ""
         
-        # New 2025 NBS website structure - find the publication title
-        title_elem = soup.select_one(".publication-title h1")
+        # Use more generic selectors for any NBS website structure
+        title_elem = soup.select_one(".publication-title h1, h1, .page-title, .title")
         if title_elem:
             report_title = title_elem.get_text(strip=True)
             self.logger.info(f"Found report: {report_title}")
         
-        # Try to get publication date
-        date_elem = soup.select_one(".publication-info .date")
+        # Try to get publication date from any possible location
+        date_elem = soup.select_one(".publication-info .date, .date, .meta-date, time, .publication-date")
         if date_elem:
             report_date = date_elem.get_text(strip=True)
         
-        # Look for tables in the main content area
-        content_area = soup.select_one(".publication-content") or soup
-        tables = content_area.select("table")
+        # Get current date if no date found
+        if not report_date:
+            report_date = datetime.now().strftime("%B %Y")
+        
+        # Look for tables in the entire document
+        tables = soup.select("table, .table")
         
         self.logger.info(f"Found {len(tables)} tables on the page")
         
