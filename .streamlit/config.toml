@@ -3,9 +3,16 @@ headless = true
 address = "0.0.0.0"
 port = 5000
 
+# Default Light Theme
 [theme]
-primaryColor = "#00FF00"
-backgroundColor = "#000000"
-secondaryBackgroundColor = "#121212"
-textColor = "#FFFFFF"
+primaryColor = "#4480c4"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
 font = "sans serif"
+
+# Dark Theme (accessed via theme switcher in app)
+# primaryColor = "#00FF00"
+# backgroundColor = "#000000"
+# secondaryBackgroundColor = "#121212"
+# textColor = "#FFFFFF"

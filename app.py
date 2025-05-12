@@ -48,6 +48,8 @@ if 'last_update' not in st.session_state:
     st.session_state.last_update = None
 if 'is_scraping' not in st.session_state:
     st.session_state.is_scraping = False
+if 'theme' not in st.session_state:
+    st.session_state.theme = "light"  # Default theme is light
 
 # Load data
 @st.cache_data(ttl=3600)
@@ -154,10 +156,60 @@ def trigger_data_refresh():
 # Dashboard Header
 st.title("📊 Nigerian E-commerce Analytics Dashboard")
 
+# Define theme toggle function
+def toggle_theme():
+    """
+    Toggle between light and dark themes.
+    """
+    # Update the session state
+    if st.session_state.theme == "light":
+        st.session_state.theme = "dark"
+        # Apply dark theme settings
+        with open(".streamlit/config.toml", "w") as f:
+            f.write("""[server]
+headless = true
+address = "0.0.0.0"
+port = 5000
+
+# Dark Theme
+[theme]
+primaryColor = "#00FF00"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#262730"
+textColor = "#FAFAFA"
+font = "sans serif"
+""")
+    else:
+        st.session_state.theme = "light"
+        # Apply light theme settings
+        with open(".streamlit/config.toml", "w") as f:
+            f.write("""[server]
+headless = true
+address = "0.0.0.0"
+port = 5000
+
+# Light Theme
+[theme]
+primaryColor = "#4480c4"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+font = "sans serif"
+""")
+    # Force the app to rerun to apply new theme
+    st.rerun()
+
 # Sidebar
 with st.sidebar:
     st.image("https://pixabay.com/get/g237713afa5a679cda403ee34c9213bd3a6908aa56dd192203e6c60db9653859da2c0030573806ca3db116a367b3349dee0d5fed51d277d01c8643e99ae26ada2_1280.jpg", 
              caption="E-commerce Analytics")
+    
+    # Theme toggle
+    theme_col1, theme_col2 = st.columns([3, 1])
+    with theme_col1:
+        st.write("Theme: " + ("Light" if st.session_state.theme == "light" else "Dark"))
+    with theme_col2:
+        st.button("🔄 Toggle", on_click=toggle_theme, help="Switch between light and dark mode")
     
     st.subheader("Data Controls")
     
@@ -464,6 +516,10 @@ else:
                         # Display recommendations in a dataframe - safely handle column selection
                         display_columns = ["product_name", "price", "score", "source"]
                         
+                        # Add recommended price column if it exists
+                        if "recommended_price" in category_recs.columns:
+                            display_columns.append("recommended_price")
+                            
                         # Add optional columns if they exist
                         if "rating" in category_recs.columns:
                             display_columns.append("rating")
@@ -480,7 +536,7 @@ else:
                             category_recs[display_columns].sort_values("score", ascending=False),
                             column_config={
                                 "product_name": "Product",
-                                "price": st.column_config.NumberColumn("Price (₦)", format="₦%.2f"),
+                                "price": st.column_config.NumberColumn("Current Price (₦)", format="₦%.2f"),
                                 "score": st.column_config.ProgressColumn(
                                     "Score", 
                                     help="Recommendation score based on ratings, reviews, and stock availability",
@@ -489,6 +545,10 @@ else:
                                     max_value=2
                                 ),
                                 "source": "Source",
+                                **({"recommended_price": st.column_config.NumberColumn("Recommended Price (₦)", 
+                                                                                     format="₦%.2f",
+                                                                                     help="Recommended retail price based on market average")} 
+                                   if "recommended_price" in display_columns else {}),
                                 **({"rating": st.column_config.NumberColumn("Rating", format="%.1f")} if "rating" in display_columns else {}),
                                 **({"review_count": "Reviews"} if "review_count" in display_columns else {}),
                                 **({"view_count": "Views"} if "view_count" in display_columns else {}),

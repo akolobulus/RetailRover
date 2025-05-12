@@ -307,12 +307,13 @@ def get_trending_recommendations(current_df, previous_df, top_n=5):
         trending_recommendations = trending_recommendations[result_columns]
         
         # Rename columns for clarity
-        trending_recommendations = trending_recommendations.rename(columns={
+        rename_dict = {
             'price_current': 'price',
             'rating_current': 'rating',
             'review_count_current': 'review_count',
             'site_count_current': 'site_count'
-        })
+        }
+        trending_recommendations = trending_recommendations.rename(columns=rename_dict)
         
         logger.info(f"Generated trending recommendations for {len(trending_recommendations['category'].unique())} categories")
         return trending_recommendations
@@ -349,10 +350,15 @@ def get_similar_products(df, product_name, num_similar=5):
             all_products = df['product_name'].tolist()
             
             # Find closest match
-            match, score = process.extractOne(product_name, all_products)
-            
-            if score >= 80:  # 80% similarity threshold
-                target_product = df[df['product_name'] == match]
+            result = process.extractOne(product_name, all_products)
+            if result and len(result) >= 2:
+                match, score = result
+                
+                if score >= 80:  # 80% similarity threshold
+                    target_product = df[df['product_name'] == match]
+                else:
+                    logger.warning(f"No similar product found for {product_name}")
+                    return pd.DataFrame()
             else:
                 logger.warning(f"No similar product found for {product_name}")
                 return pd.DataFrame()
