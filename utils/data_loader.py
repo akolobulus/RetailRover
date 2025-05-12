@@ -61,8 +61,17 @@ class DataLoader:
         # Categories
         categories = ['beverages', 'soft-drinks', 'detergents', 'snacks', 'personal-care', 'food']
         
-        # Sources (e-commerce sites)
-        sources = ['Jumia', 'Konga', 'Jiji']
+        # Get all e-commerce sources from configuration
+        try:
+            from config.sources import get_all_sources
+            all_source_configs = get_all_sources()
+            sources = [source['name'] for source in all_source_configs]
+            self.logger.info(f"Using {len(sources)} sources from configuration")
+        except Exception as e:
+            self.logger.warning(f"Failed to load sources from config: {str(e)}. Using defaults.")
+            # Fallback to basic sources
+            sources = ['Jumia', 'Konga', 'Jiji', 'PayPorte', 'Slot', 'Temu', 'Fouani', 'AjeboMarket', 'FoodCo', 
+                      'ZikelCosmetics', 'BedmateFurniture', 'LaternaBooks', 'OneHealthNG', 'Autochek', 'Kusnap', 'NBS']
         
         # Sample product names by category
         product_templates = {

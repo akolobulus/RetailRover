@@ -35,15 +35,44 @@ def get_scraper_by_name(name: str) -> Optional[BaseScraper]:
             
         scraper_class_name = source_config["scraper"]
         
-        # Try to import from scrapers module
-        module = importlib.import_module(f"scrapers.{scraper_class_name.lower()}")
-        scraper_class = getattr(module, scraper_class_name)
+        try:
+            # Try to import specific scraper implementation
+            module = importlib.import_module(f"scrapers.{scraper_class_name.lower()}")
+            scraper_class = getattr(module, scraper_class_name)
+            
+            # Instantiate and return
+            scraper = scraper_class()
+            logger.info(f"Successfully loaded dedicated scraper for {name}")
+            return scraper
+            
+        except (ImportError, AttributeError) as e:
+            logger.warning(f"Specific scraper for {name} not found: {str(e)}")
+            logger.info(f"Using generic template scraper for {name}")
+            
+            # Import generic scraper template as fallback
+            try:
+                # Try async template first
+                from scrapers.async_ecommerce_scraper_template import AsyncEcommerceScraper
+                
+                # Create a class on the fly with the correct name
+                scraper_class = type(scraper_class_name, (AsyncEcommerceScraper,), {
+                    "source_name": name,
+                    "base_url": source_config["url"],
+                })
+                return scraper_class()
+                
+            except ImportError:
+                # Fall back to regular template
+                from scrapers.ecommerce_scraper_template import EcommerceScraper
+                
+                # Create a class on the fly with the correct name
+                scraper_class = type(scraper_class_name, (EcommerceScraper,), {
+                    "source_name": name,
+                    "base_url": source_config["url"],
+                })
+                return scraper_class()
         
-        # Instantiate and return
-        scraper = scraper_class()
-        return scraper
-        
-    except (ImportError, AttributeError) as e:
+    except Exception as e:
         logger.error(f"Failed to load scraper for {name}: {str(e)}")
         return None
 
