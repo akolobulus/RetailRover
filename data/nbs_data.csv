@@ -1,16 +1,16 @@
 indicator,value,period,data_type,source,timestamp
-Inflation Rate,22.41,May 2023,inflation,NBS,2025-05-12 16:51:31.249871
-Food Inflation,24.82,May 2023,inflation,NBS,2025-05-12 16:51:31.249874
-Core Inflation,20.06,May 2023,inflation,NBS,2025-05-12 16:51:31.249875
-GDP Growth Rate,2.31,Q1 2023,gdp,NBS,2025-05-12 16:51:31.249876
-Consumer Price Index,444.34,May 2023,cpi,NBS,2025-05-12 16:51:31.249877
-Food Price Index,492.15,May 2023,cpi,NBS,2025-05-12 16:51:31.249877
-Average Household Expenditure on Food,18000.0,2022,household,NBS,2025-05-12 16:51:31.249878
-Average Household Expenditure on Non-Food,22000.0,2022,household,NBS,2025-05-12 16:51:31.249880
-Import Value (₦ Billion),4875.93,Q1 2023,trade,NBS,2025-05-12 16:51:31.249881
-Export Value (₦ Billion),6217.62,Q1 2023,trade,NBS,2025-05-12 16:51:31.249888
-Household Consumption Growth,3.54,Q1 2023,household,NBS,2025-05-12 16:51:31.249889
-Food and Non-Alcoholic Beverages Inflation,25.84,May 2023,inflation,NBS,2025-05-12 16:51:31.249889
-Alcoholic Beverages Inflation,19.38,May 2023,inflation,NBS,2025-05-12 16:51:31.249890
-Clothing and Footwear Inflation,18.62,May 2023,inflation,NBS,2025-05-12 16:51:31.249890
-"Housing, Water, Electricity, Gas Inflation",16.67,May 2023,inflation,NBS,2025-05-12 16:51:31.249891
+Inflation Rate,22.41,May 2023,inflation,NBS,2025-05-12 16:53:12.218433
+Food Inflation,24.82,May 2023,inflation,NBS,2025-05-12 16:53:12.218435
+Core Inflation,20.06,May 2023,inflation,NBS,2025-05-12 16:53:12.218436
+GDP Growth Rate,2.31,Q1 2023,gdp,NBS,2025-05-12 16:53:12.218436
+Consumer Price Index,444.34,May 2023,cpi,NBS,2025-05-12 16:53:12.218436
+Food Price Index,492.15,May 2023,cpi,NBS,2025-05-12 16:53:12.218437
+Average Household Expenditure on Food,18000.0,2022,household,NBS,2025-05-12 16:53:12.218437
+Average Household Expenditure on Non-Food,22000.0,2022,household,NBS,2025-05-12 16:53:12.218440
+Import Value (₦ Billion),4875.93,Q1 2023,trade,NBS,2025-05-12 16:53:12.218441
+Export Value (₦ Billion),6217.62,Q1 2023,trade,NBS,2025-05-12 16:53:12.218442
+Household Consumption Growth,3.54,Q1 2023,household,NBS,2025-05-12 16:53:12.218442
+Food and Non-Alcoholic Beverages Inflation,25.84,May 2023,inflation,NBS,2025-05-12 16:53:12.218443
+Alcoholic Beverages Inflation,19.38,May 2023,inflation,NBS,2025-05-12 16:53:12.218443
+Clothing and Footwear Inflation,18.62,May 2023,inflation,NBS,2025-05-12 16:53:12.218444
+"Housing, Water, Electricity, Gas Inflation",16.67,May 2023,inflation,NBS,2025-05-12 16:53:12.218445

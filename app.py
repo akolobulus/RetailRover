@@ -35,8 +35,8 @@ from utils.geo_insights import GeoInsights
 
 # Page configuration
 st.set_page_config(
-    page_title="Nigerian E-commerce Analytics Dashboard",
-    page_icon="📊",
+    page_title="RetailRover NG",
+    page_icon="🛒",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -195,6 +195,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 st.title("RetailRover NG")  # This will be hidden
+st.markdown("<h4 style='margin-top:-25px; color: #2E8B57; font-style: italic;'>Where data meets retail instinct</h4>", unsafe_allow_html=True)
 
 # Define theme toggle function
 def toggle_theme():
