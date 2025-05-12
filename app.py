@@ -154,34 +154,12 @@ def trigger_data_refresh():
     st.rerun()
 
 # Dashboard Header
-# Create RetailRover NG logo using inline SVG
-rover_logo = """
-<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        .title { font: bold 30px sans-serif; fill: #2E8B57; }
-        .tagline { font: italic 14px sans-serif; fill: #333; }
-        .cart { fill: #2E8B57; }
-        .analytics { fill: #25A55F; }
-    </style>
-    
-    <!-- Shopping cart icon -->
-    <path class="cart" d="M30,20 L45,20 L53,45 L25,45 Z" />
-    <circle class="cart" cx="33" cy="50" r="4" />
-    <circle class="cart" cx="45" cy="50" r="4" />
-    
-    <!-- Analytics bars -->
-    <rect class="analytics" x="60" y="30" width="5" height="15" />
-    <rect class="analytics" x="70" y="25" width="5" height="20" />
-    <rect class="analytics" x="80" y="20" width="5" height="25" />
-    
-    <!-- Text -->
-    <text x="95" y="35" class="title">RetailRover NG</text>
-    <text x="95" y="50" class="tagline">Where data meets retail instinct</text>
-</svg>
-"""
+# Create RetailRover NG header with title and tagline using regular Streamlit components
+st.markdown("<h1 style='color: #2E8B57; margin-bottom: 0;'>RetailRover NG</h1>", unsafe_allow_html=True)
+st.markdown("<p style='color: #333; font-style: italic; margin-top: 0;'>Where data meets retail instinct</p>", unsafe_allow_html=True)
 
-# Display the custom logo
-st.markdown(rover_logo, unsafe_allow_html=True)
+# Add decorative line below the header
+st.markdown("<hr style='height: 3px; background-color: #2E8B57; border: none; margin: 0 0 20px 0;'>", unsafe_allow_html=True)
 
 # Title is still included for SEO and accessibility but will be hidden with CSS
 st.markdown("""
@@ -614,20 +592,40 @@ else:
                         
                         # Show visual representation of top 5 products in this category
                         if len(category_recs) > 0:
-                            st.write("##### Top 5 Recommended Products Score Comparison")
+                            st.subheader("Top 5 Recommended Products Score Comparison")
                             chart_data = category_recs.head(5)
                             
-                            fig = px.bar(
-                                chart_data,
-                                x="product_name",
-                                y="score",
-                                color="score",
-                                color_continuous_scale=px.colors.sequential.Viridis,
-                                labels={"product_name": "Product", "score": "Recommendation Score"},
-                                title=f"Top Recommended Products in {category}"
-                            )
-                            fig.update_layout(xaxis_tickangle=-45)
-                            st.plotly_chart(fig, use_container_width=True)
+                            # Only attempt to create chart if we have valid data
+                            if not chart_data.empty and "product_name" in chart_data.columns and "score" in chart_data.columns:
+                                try:
+                                    # Ensure product names are string type to avoid issues
+                                    chart_data["product_name"] = chart_data["product_name"].astype(str)
+                                    
+                                    # Create a simpler bar chart with fixed color instead of gradient
+                                    fig = px.bar(
+                                        chart_data,
+                                        x="product_name",
+                                        y="score",
+                                        text="score",  # Show scores as text on bars
+                                        labels={"product_name": "Product", "score": "Score"},
+                                        title=f"Top Products in {category}"
+                                    )
+                                    
+                                    # Apply more basic styling
+                                    fig.update_layout(
+                                        xaxis_tickangle=-45,
+                                        showlegend=False,
+                                        coloraxis_showscale=False,
+                                    )
+                                    
+                                    # Display the chart
+                                    st.plotly_chart(fig, use_container_width=True)
+                                except Exception as e:
+                                    st.error(f"Unable to display chart visualization. Error: {e}")
+                                    # Fallback to plain table
+                                    st.dataframe(chart_data[["product_name", "score", "recommended_price"]])
+                            else:
+                                st.warning("Not enough data to generate visualization for this category.")
             else:
                 st.info("Not enough data available to generate personalized recommendations. Try refreshing data or adjusting filters.")
                 st.markdown("""
@@ -1002,13 +1000,23 @@ else:
                             # Show sample reviews with sentiment
                             st.write("### Sample Reviews with Sentiment Analysis")
                             for i, (_, review) in enumerate(analyzed_reviews.sample(min(5, len(analyzed_reviews))).iterrows()):
-                                sentiment_color = "green" if review.get('sentiment_score', 0) > 0.2 else "red" if review.get('sentiment_score', 0) < -0.2 else "gray"
-                                st.markdown(f"""
-                                **Product**: {review.get('product_name', 'Unknown')}  
-                                **Sentiment**: <span style="color:{sentiment_color}">{review.get('sentiment', 'Unknown')}</span> ({review.get('sentiment_score', 0):.2f})  
-                                **Primary Aspect**: {review.get('primary_aspect', 'Unknown')}  
-                                **Review**: _{review.get('review_text', '')}_ 
-                                """, unsafe_allow_html=True)
+                                # Display review information with cleaner approach
+                                st.markdown(f"**Product**: {review.get('product_name', 'Unknown')}")
+                                
+                                # Handle sentiment display
+                                sentiment = review.get('sentiment', 'Unknown')
+                                score = review.get('sentiment_score', 0)
+                                
+                                # Use colored badges based on sentiment score
+                                if score > 0.2:
+                                    st.success(f"**Sentiment**: {sentiment} ({score:.2f})")
+                                elif score < -0.2:
+                                    st.error(f"**Sentiment**: {sentiment} ({score:.2f})")
+                                else:
+                                    st.info(f"**Sentiment**: {sentiment} ({score:.2f})")
+                                    
+                                st.markdown(f"**Primary Aspect**: {review.get('primary_aspect', 'Unknown')}")
+                                st.markdown(f"**Review**: _{review.get('review_text', '')}_")
                                 st.markdown("---")
                         else:
                             st.warning("No reviews available to analyze.")
