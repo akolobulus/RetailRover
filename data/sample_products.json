@@ -1,0 +1,67 @@
+[
+  {
+    "product_name": "Sample Product 7484",
+    "price": 5823.707347366267,
+    "category": "snacks",
+    "source": "NEPC",
+    "timestamp": "2025-04-21 17:46:44.612860",
+    "discount_percent": 10,
+    "is_bestseller": true,
+    "rating": 3.5,
+    "view_count": 47,
+    "sales_rank": 33,
+    "url": "https://www.nepc.com/products/20772"
+  },
+  {
+    "product_name": "Sample Product 6230",
+    "price": 5093.87567884727,
+    "category": "snacks",
+    "source": "AvenueMall",
+    "timestamp": "2025-04-14 17:46:44.612894",
+    "discount_percent": 0,
+    "is_bestseller": true,
+    "rating": 3.5,
+    "view_count": 763,
+    "sales_rank": 19,
+    "url": "https://www.avenuemall.com/products/54820"
+  },
+  {
+    "product_name": "Sample Product 2960",
+    "price": 4692.196093347106,
+    "category": "soft-drinks",
+    "source": "VConnect",
+    "timestamp": "2025-05-02 17:46:44.612908",
+    "discount_percent": 15,
+    "is_bestseller": true,
+    "rating": 2.4,
+    "view_count": 121,
+    "sales_rank": 100,
+    "url": "https://www.vconnect.com/products/23756"
+  },
+  {
+    "product_name": "Sample Product 6531",
+    "price": 9154.968743291109,
+    "category": "food",
+    "source": "Slot",
+    "timestamp": "2025-05-08 17:46:44.612917",
+    "discount_percent": 10,
+    "is_bestseller": false,
+    "rating": 2.4,
+    "view_count": 636,
+    "sales_rank": 100,
+    "url": "https://www.slot.com/products/33855"
+  },
+  {
+    "product_name": "Sample Product 8505",
+    "price": 1119.1222045518903,
+    "category": "detergents",
+    "source": "NBS",
+    "timestamp": "2025-05-04 17:46:44.612929",
+    "discount_percent": 15,
+    "is_bestseller": false,
+    "rating": 3.5,
+    "view_count": 652,
+    "sales_rank": 48,
+    "url": "https://www.nbs.com/products/20331"
+  }
+]
