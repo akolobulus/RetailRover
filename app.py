@@ -154,9 +154,15 @@ def trigger_data_refresh():
     st.rerun()
 
 # Dashboard Header
-# Create RetailRover NG header with title and tagline using regular Streamlit components
-st.markdown("<h1 style='color: #2E8B57; margin-bottom: 0;'>RetailRover NG</h1>", unsafe_allow_html=True)
-st.markdown("<p style='color: #333; font-style: italic; margin-top: 0;'>Where data meets retail instinct</p>", unsafe_allow_html=True)
+header_col1, header_col2 = st.columns([1, 5])
+
+with header_col1:
+    st.image("static/images/retailrover_logo.png", width=80)
+    
+with header_col2:
+    # Create RetailRover NG header with title and tagline using regular Streamlit components
+    st.markdown("<h1 style='color: #2E8B57; margin-bottom: 0;'>RetailRover NG</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='color: #333; font-style: italic; margin-top: 0;'>Where data meets retail instinct</p>", unsafe_allow_html=True)
 
 # Add decorative line below the header
 st.markdown("<hr style='height: 3px; background-color: #2E8B57; border: none; margin: 0 0 20px 0;'>", unsafe_allow_html=True)
@@ -220,8 +226,8 @@ font = "sans serif"
 
 # Sidebar
 with st.sidebar:
-    st.image("https://cdn.pixabay.com/photo/2018/08/18/13/26/interface-3614766_1280.png", 
-             caption="E-commerce Analytics")
+    st.image("static/images/retailrover_logo.png", 
+             caption="RetailRover NG", width=150)
     
     # Theme toggle
     theme_col1, theme_col2 = st.columns([3, 1])
