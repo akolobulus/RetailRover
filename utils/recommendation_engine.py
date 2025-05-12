@@ -79,14 +79,14 @@ def calculate_score(row):
 
 def get_top_recommendations(df, top_n=5):
     """
-    Get top product recommendations per category.
+    Get top product recommendations per category with recommended retail price.
     
     Args:
         df (DataFrame): Product data
         top_n (int): Number of recommendations per category
         
     Returns:
-        DataFrame: Top recommendations per category
+        DataFrame: Top recommendations per category with recommended price
     """
     if df.empty:
         logger.warning("Empty dataframe provided to recommendation engine")
@@ -135,10 +135,29 @@ def get_top_recommendations(df, top_n=5):
                 
                 groups.append(group)
             
-            # Update site_count for each group
+            # Update site_count and calculate recommended price for each group
             for group in groups:
                 if len(group) > 1:
                     group_df.loc[group, 'site_count'] = len(group)
+                    
+                    # Calculate recommended selling price based on group
+                    prices = group_df.loc[group, 'price'].values
+                    if len(prices) > 0:
+                        # Calculate average price for the product across sources
+                        avg_price = np.mean(prices)
+                        
+                        # Recommended retail price: average + 5% margin
+                        # Note: This is a simple approach; more complex pricing models could be used
+                        recommended_price = avg_price * 1.05  # 5% markup
+                        
+                        # Set the recommended price for all products in this group
+                        group_df.loc[group, 'recommended_price'] = recommended_price
+                else:
+                    # For products that appear on only one site,
+                    # set recommended price to current price + 5% markup
+                    product_id = group[0]
+                    original_price = group_df.loc[product_id, 'price']
+                    group_df.loc[product_id, 'recommended_price'] = original_price * 1.05
             
             return group_df
         
@@ -149,11 +168,35 @@ def get_top_recommendations(df, top_n=5):
         # Fallback method if fuzzywuzzy not available
         logger.warning("fuzzywuzzy not available. Using exact matching for site count.")
         df_copy['site_count'] = df_copy.groupby(['product_name', 'category'])['source'].transform('nunique')
+        
+        # Calculate recommended price for each product group
+        def calculate_recommended_price(group):
+            avg_price = group['price'].mean()
+            recommended_price = avg_price * 1.05  # 5% markup
+            return pd.Series({'recommended_price': recommended_price})
+        
+        # Apply the price calculation to each product group
+        recommended_prices = df_copy.groupby(['product_name', 'category']).apply(calculate_recommended_price)
+        
+        # Merge the recommended prices back to the main dataframe
+        df_copy = pd.merge(
+            df_copy, 
+            recommended_prices.reset_index(), 
+            on=['product_name', 'category'],
+            how='left'
+        )
     
     # Calculate recommendation score
     df_copy['score'] = df_copy.apply(calculate_score, axis=1)
     
-    # Get top recommendations per category
+    # Ensure all products have a recommended price (fallback to original price + 5% if missing)
+    if 'recommended_price' not in df_copy.columns:
+        df_copy['recommended_price'] = df_copy['price'] * 1.05
+    else:
+        # Fill any missing values
+        df_copy['recommended_price'] = df_copy['recommended_price'].fillna(df_copy['price'] * 1.05)
+    
+    # Get top recommendations per category (always exactly top_n=5 per category)
     top_recommendations = df_copy.groupby('category').apply(
         lambda group: group.sort_values(by='score', ascending=False).head(top_n)
     ).reset_index(drop=True)
@@ -161,7 +204,7 @@ def get_top_recommendations(df, top_n=5):
     # Sort by score descending
     top_recommendations = top_recommendations.sort_values(by=['category', 'score'], ascending=[True, False])
     
-    logger.info(f"Generated recommendations for {len(top_recommendations['category'].unique())} categories")
+    logger.info(f"Generated recommendations for {len(top_recommendations['category'].unique())} categories with recommended prices")
     return top_recommendations
 
 def get_trending_recommendations(current_df, previous_df, top_n=5):
