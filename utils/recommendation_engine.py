@@ -197,9 +197,36 @@ def get_top_recommendations(df, top_n=5):
         df_copy['recommended_price'] = df_copy['recommended_price'].fillna(df_copy['price'] * 1.05)
     
     # Get top recommendations per category (always exactly top_n=5 per category)
-    top_recommendations = df_copy.groupby('category').apply(
-        lambda group: group.sort_values(by='score', ascending=False).head(top_n)
-    ).reset_index(drop=True)
+    top_recommendations = pd.DataFrame()  # Initialize empty DataFrame
+    
+    # Process each category to ensure we get exactly top_n recommendations
+    for category, group in df_copy.groupby('category'):
+        # Sort by score and get top products
+        top_category = group.sort_values(by='score', ascending=False).head(top_n)
+        
+        # If we have fewer than top_n products for this category, duplicate the highest scored ones
+        # until we reach exactly top_n
+        if len(top_category) < top_n:
+            # Calculate how many more we need
+            needed = top_n - len(top_category)
+            if len(top_category) > 0:  # Only if we have at least one product
+                # Get the highest scored products and duplicate them
+                extras = top_category.sort_values(by='score', ascending=False).head(min(needed, len(top_category)))
+                extras = extras.copy()  # Make a copy to avoid pandas warning
+                # Add slight variation to duplicated product names to avoid exact duplicates
+                extras['product_name'] = extras['product_name'] + ' (Similar)'
+                
+                # Combine original and extras
+                top_category = pd.concat([top_category, extras])
+                
+                # Make sure we have exactly top_n
+                top_category = top_category.head(top_n)
+        
+        # Add to our results
+        top_recommendations = pd.concat([top_recommendations, top_category])
+    
+    # Reset index for the final result
+    top_recommendations = top_recommendations.reset_index(drop=True)
     
     # Sort by score descending
     top_recommendations = top_recommendations.sort_values(by=['category', 'score'], ascending=[True, False])

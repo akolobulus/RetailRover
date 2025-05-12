@@ -544,8 +544,11 @@ else:
             st.subheader("Recommended Products")
             
             # Generate recommendations using the recommendation engine
-            # Ensure we get a good number of recommendations per category
-            recommendations = get_top_recommendations(filtered_df)
+            # Ensure we get a good number of recommendations per category (top 5 per category)
+            recommendations = get_top_recommendations(filtered_df, top_n=5)
+            
+            # Add info banner to explain recommendations
+            st.info("Showing top 5 products for each category with recommended retail prices (5% markup from average market price)")
             
             if not recommendations.empty:
                 # Group recommendations by category for better display
@@ -559,11 +562,12 @@ else:
                         category_recs = recommendations[recommendations['category'] == category]
                         
                         # Display recommendations in a dataframe - safely handle column selection
-                        display_columns = ["product_name", "price", "score", "source"]
+                        # Always include 'recommended_price' in display columns
+                        display_columns = ["product_name", "price", "recommended_price", "score", "source"]
                         
-                        # Add recommended price column if it exists
-                        if "recommended_price" in category_recs.columns:
-                            display_columns.append("recommended_price")
+                        # Ensure recommended_price exists (fallback to 5% markup if not present)
+                        if "recommended_price" not in category_recs.columns:
+                            category_recs['recommended_price'] = category_recs['price'] * 1.05
                             
                         # Add optional columns if they exist
                         if "rating" in category_recs.columns:
@@ -590,10 +594,12 @@ else:
                                     max_value=2
                                 ),
                                 "source": "Source",
-                                **({"recommended_price": st.column_config.NumberColumn("Recommended Price (₦)", 
-                                                                                     format="₦%.2f",
-                                                                                     help="Recommended retail price based on market average")} 
-                                   if "recommended_price" in display_columns else {}),
+                                "recommended_price": st.column_config.NumberColumn(
+                                    "Recommended Retail Price (₦)", 
+                                    format="₦%.2f",
+                                    help="Suggested retail price with 5% markup over market average",
+                                    step=10,
+                                ),
                                 **({"rating": st.column_config.NumberColumn("Rating", format="%.1f")} if "rating" in display_columns else {}),
                                 **({"review_count": "Reviews"} if "review_count" in display_columns else {}),
                                 **({"view_count": "Views"} if "view_count" in display_columns else {}),

@@ -1,8 +1,10 @@
-# Nigerian E-commerce Analytics Dashboard
+# RetailRover NG: Nigerian E-commerce Analytics Dashboard
 
-A comprehensive data analytics pipeline and visualization dashboard that scrapes Nigerian e-commerce websites to identify fast-selling products across categories. The system provides actionable market insights through an interactive Streamlit dashboard.
+*Where data meets retail instinct*
 
-![Dashboard Screenshot](https://pixabay.com/get/g6cf44a1e2425e3dc720a2425250366451ecf164e0a5c19bbf72b13a880de2963d23a90cc241b3a7f5f7288d637faa98caa1c81d10ce26cb6547c0947727de3e6_1280.jpg)
+A comprehensive data analytics pipeline and visualization dashboard that scrapes Nigerian e-commerce websites to identify fast-selling products across categories. The system provides actionable market insights through an interactive Streamlit dashboard with retail price recommendations.
+
+![Dashboard Screenshot](https://cdn.pixabay.com/photo/2019/10/16/09/09/ecommerce-4554313_1280.jpg)
 
 ## Project Overview
 
@@ -80,16 +82,24 @@ The recommendation system uses several metrics to identify promising products:
 - **Discount Factor**: Bonus for products on sale (10% bonus)
 - **Availability**: Penalty for out-of-stock items (50% reduction)
 
-Products are ranked within their categories to provide targeted recommendations.
+Products are ranked within their categories to provide targeted recommendations. The system also calculates a recommended retail price for each product based on a 5% markup from the average market price across all sources.
+
+For each category, the dashboard shows the top 5 recommended products with:
+- Current market price 
+- Recommended retail price
+- Product rating and source
+- Cross-site popularity metrics
 
 ### Dashboard
 
-Built with Streamlit, the dashboard offers:
+Built with Streamlit, RetailRover NG dashboard offers:
 
+- Sleek green-themed interface with both light and dark mode support
 - Real-time data collection and processing
 - Advanced filtering by category, price, source, and time period
 - Interactive visualizations using Plotly
 - Text search with multiple modes (contains, fuzzy match, exact match)
+- Product recommendations with suggested retail prices (5% markup)
 - Export capabilities in CSV, Excel, and JSON formats
 - Website content scraping for market reports and news analysis
 
