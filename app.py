@@ -330,12 +330,12 @@ with st.sidebar:
             min_price = float(df["price"].min())
             max_price = float(df["price"].max())
             # Ensure price slider has valid step value for the min/max range
-            price_step = max(1, (max_price - min_price) // 100)  # Create at most 100 steps
+            price_step = max(1.0, float(max_price - min_price) / 100.0)  # Create at most 100 steps
             price_range = st.slider(
                 "Price Range (₦):",
-                min_value=min_price,
-                max_value=max_price,
-                value=(min_price, max_price),
+                min_value=float(min_price),
+                max_value=float(max_price),
+                value=(float(min_price), float(max_price)),
                 step=price_step
             )
             
