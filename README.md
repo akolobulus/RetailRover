@@ -4,7 +4,7 @@
 
 A comprehensive data analytics pipeline and visualization dashboard that scrapes Nigerian e-commerce websites to identify fast-selling products across categories. The system provides actionable market insights through an interactive Streamlit dashboard with retail price recommendations.
 
-![Dashboard Screenshot](https://cdn.pixabay.com/photo/2019/10/16/09/09/ecommerce-4554313_1280.jpg)
+![Dashboard Screenshot](https://github.com/akolobulus/RetailRover/blob/main/1f9a0f9b-5cb2-448b-aa2b-6526f21481e4%20(1).jpg)
 
 ## Project Overview
 
