@@ -1,501 +1,501 @@
 product_name,price,category,source,timestamp,discount_percent,is_bestseller,rating,view_count,sales_rank,url
-Sample Product 7484,5823.707347366267,snacks,NEPC,2025-04-21 17:46:44.612860,10,True,3.5,47,33,https://www.nepc.com/products/20772
-Sample Product 6230,5093.87567884727,snacks,AvenueMall,2025-04-14 17:46:44.612894,0,True,3.5,763,19,https://www.avenuemall.com/products/54820
-Sample Product 2960,4692.196093347106,soft-drinks,VConnect,2025-05-02 17:46:44.612908,15,True,2.4,121,100,https://www.vconnect.com/products/23756
-Sample Product 6531,9154.968743291109,food,Slot,2025-05-08 17:46:44.612917,10,False,2.4,636,100,https://www.slot.com/products/33855
-Sample Product 8505,1119.1222045518903,detergents,NBS,2025-05-04 17:46:44.612929,15,False,3.5,652,48,https://www.nbs.com/products/20331
-Sample Product 5597,8015.100610652913,personal-care,NBS,2025-04-17 17:46:44.612941,0,True,3.3,92,57,https://www.nbs.com/products/95242
-Sample Product 1501,4110.109143218268,food,Kusnap,2025-04-19 17:46:44.612952,15,False,3.1,55,6,https://www.kusnap.com/products/31959
-Sample Product 3732,4421.253197274409,soft-drinks,DreamsFurnitures,2025-04-14 17:46:44.612963,5,True,1.6,546,36,https://www.dreamsfurnitures.com/products/23900
-Sample Product 2817,5450.334061933946,beverages,TechpointMarketplace,2025-04-27 17:46:44.612988,5,True,1.7,732,30,https://www.techpointmarketplace.com/products/88537
-Sample Product 7503,4053.0387651376477,soft-drinks,JijiCars,2025-05-11 17:46:44.612998,15,False,2.8,82,65,https://www.jijicars.com/products/99166
-Sample Product 7285,8389.857839789802,fashion,JustFones,2025-05-01 17:46:44.613005,20,True,3.0,953,93,https://www.justfones.com/products/29369
-Sample Product 3948,3939.6666684681772,health,Proshare,2025-05-08 17:46:44.613011,5,True,3.2,177,75,https://www.proshare.com/products/15383
-Sample Product 9494,3738.8352904596622,soft-drinks,Ofadaa,2025-05-11 17:46:44.613017,20,False,2.4,521,69,https://www.ofadaa.com/products/69324
-Sample Product 6375,9466.521298765767,fashion,SuperMart,2025-04-13 17:46:44.613023,10,False,1.8,917,24,https://www.supermart.com/products/27708
-Sample Product 8691,8863.6364324867,fashion,BedmateFurniture,2025-05-03 17:46:44.613030,15,True,3.5,525,67,https://www.bedmatefurniture.com/products/42938
-Sample Product 8781,3481.721952886597,detergents,Obeezi,2025-05-03 17:46:44.613041,0,False,2.0,838,76,https://www.obeezi.com/products/13192
-Sample Product 7930,9498.804547191785,beverages,Shopaholic,2025-04-14 17:46:44.613053,20,False,3.5,374,78,https://www.shopaholic.com/products/49566
-Sample Product 4889,2321.690532849635,electronics,OneHealthNG,2025-04-14 17:46:44.613063,20,False,3.3,406,56,https://www.onehealthng.com/products/91177
-Sample Product 7185,2613.2505901953587,fashion,Tofa,2025-04-16 17:46:44.613070,10,True,2.4,737,80,https://www.tofa.com/products/60013
-Sample Product 4680,7587.661195758932,automotive,LaternaBooks,2025-04-12 17:46:44.613079,0,False,4.6,926,40,https://www.laternabooks.com/products/78161
-Sample Product 2726,4876.984484364034,automotive,RuffnTumbleKids,2025-04-30 17:46:44.613084,0,True,1.6,761,6,https://www.ruffntumblekids.com/products/80169
-Sample Product 8047,7417.353864593119,health,SMEdenMarket,2025-04-22 17:46:44.613090,5,True,4.4,809,60,https://www.smedenmarket.com/products/89602
-Sample Product 1752,8720.581546139792,books,Jumia,2025-04-27 17:46:44.613095,5,True,4.2,980,28,https://www.jumia.com/products/72845
-Sample Product 7209,7570.351444025507,beverages,LaternaBooks,2025-04-24 17:46:44.613101,10,False,2.5,145,59,https://www.laternabooks.com/products/25349
-Sample Product 9869,2318.364437743354,electronics,PointekOnline,2025-04-18 17:46:44.613106,0,False,3.2,876,97,https://www.pointekonline.com/products/57182
-Sample Product 4043,814.9807205773625,snacks,MyChopChop,2025-04-26 17:46:44.613112,10,False,3.7,996,6,https://www.mychopchop.com/products/41030
-Sample Product 9246,5844.012823848577,automotive,Kusnap,2025-04-22 17:46:44.613118,15,True,3.4,580,25,https://www.kusnap.com/products/79408
-Sample Product 4099,8172.200779545537,automotive,JijiCars,2025-04-19 17:46:44.613125,15,True,2.2,808,75,https://www.jijicars.com/products/83059
-Sample Product 6784,6085.768738842473,soft-drinks,ZikelCosmetics,2025-05-01 17:46:44.613135,10,True,4.0,907,75,https://www.zikelcosmetics.com/products/43533
-Sample Product 1268,5499.502913292936,health,Tofa,2025-04-22 17:46:44.613146,10,False,1.9,799,88,https://www.tofa.com/products/10129
-Sample Product 9645,2107.2284940688724,food,DreamsFurnitures,2025-04-21 17:46:44.613152,20,False,5.0,531,31,https://www.dreamsfurnitures.com/products/48547
-Sample Product 2467,808.591611677858,soft-drinks,PointekOnline,2025-04-28 17:46:44.613158,15,False,4.8,246,58,https://www.pointekonline.com/products/17741
-Sample Product 7435,1318.3900395687442,electronics,Proshare,2025-04-16 17:46:44.613164,15,True,4.4,319,48,https://www.proshare.com/products/91115
-Sample Product 3699,4688.860160772513,fashion,Fouani,2025-04-23 17:46:44.613170,0,True,2.5,842,33,https://www.fouani.com/products/24495
-Sample Product 8815,6894.584933378498,electronics,LifemateNigeria,2025-04-17 17:46:44.613175,10,False,4.4,243,63,https://www.lifematenigeria.com/products/40520
-Sample Product 2854,2915.037236124278,books,Obeezi,2025-05-04 17:46:44.613181,0,False,1.6,396,32,https://www.obeezi.com/products/74835
-Sample Product 8293,6619.810908975308,snacks,TheLadyMaker,2025-04-30 17:46:44.613186,0,True,4.1,970,7,https://www.theladymaker.com/products/52617
-Sample Product 9971,7773.810566934122,automotive,BookvilleWorld,2025-04-25 17:46:44.613192,0,True,4.7,710,79,https://www.bookvilleworld.com/products/22434
-Sample Product 8097,4205.261137097268,books,AvenueMall,2025-04-25 17:46:44.613197,5,True,3.4,329,17,https://www.avenuemall.com/products/45031
-Sample Product 4738,3718.616395523448,soft-drinks,PayPorte,2025-04-15 17:46:44.613204,0,True,3.8,326,82,https://www.payporte.com/products/46920
-Sample Product 9383,6350.6393982859845,electronics,OneHealthNG,2025-04-17 17:46:44.613213,5,True,2.1,190,31,https://www.onehealthng.com/products/78266
-Sample Product 4901,8416.773957257297,health,Obeezi,2025-04-30 17:46:44.613224,10,False,4.1,571,83,https://www.obeezi.com/products/65387
-Sample Product 3351,1094.0899561425163,furniture,FoodCo,2025-04-23 17:46:44.613231,20,False,2.6,492,7,https://www.foodco.com/products/67042
-Sample Product 3184,8936.43648617975,detergents,LaternaBooks,2025-04-23 17:46:44.613236,15,True,3.4,197,55,https://www.laternabooks.com/products/48161
-Sample Product 9095,4394.202040939996,books,Kara,2025-04-28 17:46:44.613242,0,True,2.7,586,13,https://www.kara.com/products/19463
-Sample Product 3674,9059.535482681136,furniture,JijiCars,2025-05-11 17:46:44.613248,5,False,1.9,676,73,https://www.jijicars.com/products/55668
-Sample Product 9142,9145.384990700813,food,BusinessDay,2025-04-15 17:46:44.613253,10,False,1.5,228,12,https://www.businessday.com/products/40524
-Sample Product 1007,6093.24949000254,automotive,AvenueMall,2025-05-08 17:46:44.613259,15,True,1.8,653,86,https://www.avenuemall.com/products/82168
-Sample Product 2800,7727.648868823948,detergents,PoloAvenue,2025-04-30 17:46:44.613264,10,False,4.6,240,36,https://www.poloavenue.com/products/88367
-Sample Product 8257,6757.353360893615,food,Autochek,2025-04-17 17:46:44.613271,5,True,4.8,581,21,https://www.autochek.com/products/76906
-Sample Product 5887,6775.724340175992,detergents,TheLadyMaker,2025-04-27 17:46:44.613276,10,False,4.9,506,58,https://www.theladymaker.com/products/80048
-Sample Product 9257,2404.8659003022267,automotive,AjeboMarket,2025-05-10 17:46:44.613282,5,False,1.8,994,28,https://www.ajebomarket.com/products/74921
-Sample Product 2042,4040.341492552419,fashion,Jiji,2025-04-12 17:46:44.613287,15,False,1.4,198,76,https://www.jiji.com/products/15888
-Sample Product 7054,5494.763458456584,detergents,MyMedicines,2025-05-08 17:46:44.613296,10,False,4.1,326,85,https://www.mymedicines.com/products/45141
-Sample Product 9124,4720.23414756914,beverages,ParktelOnline,2025-04-20 17:46:44.613307,5,False,4.4,322,55,https://www.parktelonline.com/products/29969
-Sample Product 6977,8541.253592738209,personal-care,BusinessDay,2025-04-22 17:46:44.613314,20,True,3.9,676,79,https://www.businessday.com/products/34809
-Sample Product 4356,9404.630311250081,furniture,BookvilleWorld,2025-04-22 17:46:44.613320,15,False,2.6,661,75,https://www.bookvilleworld.com/products/86336
-Sample Product 7776,7299.466400315142,food,Autochek,2025-05-02 17:46:44.613326,15,True,4.3,251,60,https://www.autochek.com/products/13279
-Sample Product 2831,6388.134111344136,automotive,TechpointMarketplace,2025-04-29 17:46:44.613331,0,False,2.0,769,54,https://www.techpointmarketplace.com/products/10588
-Sample Product 7961,2901.810650965548,automotive,Proshare,2025-04-12 17:46:44.613338,5,True,3.9,275,23,https://www.proshare.com/products/72741
-Sample Product 4681,1820.1313887154963,furniture,MedPlusNig,2025-04-24 17:46:44.613344,20,True,4.1,523,42,https://www.medplusnig.com/products/66685
-Sample Product 7005,1843.153770452961,food,LaternaBooks,2025-05-01 17:46:44.613349,20,False,2.6,466,50,https://www.laternabooks.com/products/39624
-Sample Product 5198,9512.204348142035,furniture,BookvilleWorld,2025-04-14 17:46:44.613354,15,True,2.0,861,33,https://www.bookvilleworld.com/products/28732
-Sample Product 2435,7268.625300591638,furniture,BedmateFurniture,2025-04-23 17:46:44.613359,5,False,4.8,400,24,https://www.bedmatefurniture.com/products/86994
-Sample Product 1253,5572.864754806846,automotive,MedPlusNig,2025-04-13 17:46:44.613365,20,True,1.9,843,61,https://www.medplusnig.com/products/68015
-Sample Product 6659,3236.594927932503,personal-care,Proshare,2025-04-24 17:46:44.613374,0,True,2.0,474,78,https://www.proshare.com/products/24578
-Sample Product 7786,5732.514731375251,fashion,TheLadyMaker,2025-04-26 17:46:44.613388,15,False,4.7,36,39,https://www.theladymaker.com/products/63598
-Sample Product 1339,3549.9216250147265,health,Konga,2025-04-18 17:46:44.613395,10,False,4.5,550,92,https://www.konga.com/products/43568
-Sample Product 5434,8169.833579482238,furniture,AjeboMarket,2025-04-30 17:46:44.613403,15,False,2.9,803,54,https://www.ajebomarket.com/products/24978
-Sample Product 2600,1059.2926878906478,beverages,Fouani,2025-04-15 17:46:44.613413,0,True,4.0,422,36,https://www.fouani.com/products/87336
-Sample Product 1627,8656.759271204715,books,OneHealthNG,2025-04-12 17:46:44.613418,20,False,1.2,354,35,https://www.onehealthng.com/products/57044
-Sample Product 4970,2935.7483354056653,health,SuperMart,2025-04-28 17:46:44.613424,15,True,3.1,321,84,https://www.supermart.com/products/84198
-Sample Product 2457,2988.310966667691,soft-drinks,ZRTales,2025-04-24 17:46:44.613429,20,True,3.5,809,54,https://www.zrtales.com/products/61868
-Sample Product 8948,6293.107313293333,detergents,Konga,2025-04-17 17:46:44.613435,5,False,5.0,794,63,https://www.konga.com/products/12716
-Sample Product 5002,6397.369248494775,soft-drinks,PoloAvenue,2025-04-24 17:46:44.613440,15,False,2.0,388,73,https://www.poloavenue.com/products/99610
-Sample Product 4917,2472.8333968587604,detergents,PoloAvenue,2025-05-09 17:46:44.613447,20,False,5.0,323,1,https://www.poloavenue.com/products/22232
-Sample Product 7919,3599.8241434121846,fashion,ZRTales,2025-04-30 17:46:44.613453,0,True,5.0,415,52,https://www.zrtales.com/products/67751
-Sample Product 4690,3391.0899710688864,health,ZRTales,2025-04-22 17:46:44.613464,5,True,3.7,864,58,https://www.zrtales.com/products/97677
-Sample Product 3171,9928.899997933471,books,NEPC,2025-04-18 17:46:44.613475,15,False,1.7,606,35,https://www.nepc.com/products/27990
-Sample Product 3378,8406.829259990434,furniture,RuffnTumbleKids,2025-04-19 17:46:44.613483,20,False,3.8,487,89,https://www.ruffntumblekids.com/products/56412
-Sample Product 6714,8358.353297340574,health,DreamsFurnitures,2025-04-23 17:46:44.613488,0,False,1.2,802,84,https://www.dreamsfurnitures.com/products/54040
-Sample Product 4841,4330.174157331961,beverages,Kara,2025-05-10 17:46:44.613494,5,False,1.2,619,97,https://www.kara.com/products/21472
-Sample Product 2833,4780.805729688309,fashion,ZRTales,2025-04-12 17:46:44.613500,20,True,4.8,290,93,https://www.zrtales.com/products/92746
-Sample Product 4584,5741.441244059924,health,PricePally,2025-04-24 17:46:44.613506,10,True,4.9,894,38,https://www.pricepally.com/products/97885
-Sample Product 3666,3922.6505356981756,snacks,MedPlusNig,2025-05-09 17:46:44.613523,10,False,1.4,366,67,https://www.medplusnig.com/products/58302
-Sample Product 5991,7548.73111628811,fashion,JustFones,2025-05-04 17:46:44.613535,5,False,3.6,412,70,https://www.justfones.com/products/28746
-Sample Product 3940,9905.235796339506,soft-drinks,GZ-Supplies,2025-04-21 17:46:44.613545,0,False,4.0,504,23,https://www.gz-supplies.com/products/55305
-Sample Product 7489,6570.5221741387795,detergents,HealthPlusNigeria,2025-05-09 17:46:44.613556,0,False,4.5,207,32,https://www.healthplusnigeria.com/products/91925
-Sample Product 2214,4663.291284259458,snacks,NEPC,2025-05-03 17:46:44.613566,5,False,4.9,370,100,https://www.nepc.com/products/89147
-Sample Product 2331,3041.954385795753,food,Fouani,2025-04-13 17:46:44.613580,20,True,1.3,959,39,https://www.fouani.com/products/62105
-Sample Product 7349,8288.091112976916,fashion,ZikelCosmetics,2025-05-02 17:46:44.613590,5,False,3.7,683,93,https://www.zikelcosmetics.com/products/90825
-Sample Product 6590,2311.5847364163837,personal-care,FoodCo,2025-04-18 17:46:44.613600,0,False,2.0,605,30,https://www.foodco.com/products/41198
-Sample Product 9047,5019.013669893676,furniture,JijiCars,2025-04-26 17:46:44.613609,5,False,3.3,908,5,https://www.jijicars.com/products/92281
-Sample Product 5794,4886.022868089992,furniture,Proshare,2025-04-25 17:46:44.613622,20,False,4.0,682,32,https://www.proshare.com/products/45920
-Sample Product 1344,4653.28959641978,snacks,JijiCars,2025-04-20 17:46:44.613631,5,True,4.1,261,32,https://www.jijicars.com/products/20740
-Sample Product 1832,8516.750493071864,automotive,Ofadaa,2025-05-04 17:46:44.613640,15,False,4.2,999,67,https://www.ofadaa.com/products/16263
-Sample Product 5837,8795.293246117693,automotive,GZ-Supplies,2025-04-22 17:46:44.613654,15,False,1.7,791,79,https://www.gz-supplies.com/products/92891
-Sample Product 2707,5771.175528792565,beverages,BedmateFurniture,2025-04-14 17:46:44.613663,10,False,2.5,750,11,https://www.bedmatefurniture.com/products/12277
-Sample Product 2279,698.3374572343458,electronics,JustFones,2025-04-20 17:46:44.613673,15,False,1.2,212,56,https://www.justfones.com/products/10206
-Sample Product 8900,5117.905522653615,fashion,VConnect,2025-04-13 17:46:44.613685,15,True,2.7,909,34,https://www.vconnect.com/products/82897
-Sample Product 1343,4529.841019817293,food,ParktelOnline,2025-04-19 17:46:44.613697,20,False,1.1,869,45,https://www.parktelonline.com/products/11124
-Sample Product 3405,9579.103366378115,books,MyChopChop,2025-04-29 17:46:44.613707,0,False,4.7,195,84,https://www.mychopchop.com/products/70067
-Sample Product 3648,8583.953329975098,automotive,Ofadaa,2025-04-15 17:46:44.613716,5,True,2.0,140,74,https://www.ofadaa.com/products/80239
-Sample Product 4225,505.617959798996,automotive,FoodCo,2025-04-27 17:46:44.613726,20,True,1.6,119,5,https://www.foodco.com/products/94634
-Sample Product 7001,4968.192448981456,furniture,ZikelCosmetics,2025-04-24 17:46:44.613734,10,False,2.3,936,48,https://www.zikelcosmetics.com/products/82730
-Sample Product 8851,7017.732242611794,beverages,TheLadyMaker,2025-04-14 17:46:44.613743,10,False,3.0,512,68,https://www.theladymaker.com/products/52417
-Sample Product 6799,8125.049644192942,soft-drinks,SuperMart,2025-05-01 17:46:44.613751,10,False,2.0,850,2,https://www.supermart.com/products/88111
-Sample Product 9041,3267.929352957657,detergents,PoloAvenue,2025-05-07 17:46:44.613760,20,False,2.4,57,70,https://www.poloavenue.com/products/51705
-Sample Product 1126,8489.662752587832,fashion,MyChopChop,2025-04-29 17:46:44.613769,10,False,2.0,579,90,https://www.mychopchop.com/products/63646
-Sample Product 8601,4418.329513421415,electronics,Slot,2025-04-14 17:46:44.613781,20,False,4.8,470,31,https://www.slot.com/products/28307
-Sample Product 5734,6117.087608772774,fashion,LifemateNigeria,2025-05-10 17:46:44.613792,0,True,4.7,335,78,https://www.lifematenigeria.com/products/85428
-Sample Product 2292,2891.5804254003115,books,Tofa,2025-05-04 17:46:44.613812,5,True,1.6,339,84,https://www.tofa.com/products/93391
-Sample Product 3712,8056.365840492235,snacks,BookvilleWorld,2025-04-17 17:46:44.613821,10,True,3.6,210,6,https://www.bookvilleworld.com/products/93898
-Sample Product 7558,3385.221042835809,health,AvenueMall,2025-05-11 17:46:44.613830,10,True,2.4,772,21,https://www.avenuemall.com/products/95013
-Sample Product 5114,7249.471517486441,food,AjeboMarket,2025-05-01 17:46:44.613839,5,False,4.4,270,55,https://www.ajebomarket.com/products/75784
-Sample Product 2472,4120.144929597735,snacks,OneHealthNG,2025-04-12 17:46:44.613847,20,False,4.9,814,48,https://www.onehealthng.com/products/74688
-Sample Product 8771,4094.374846736902,electronics,ChrisVicMall,2025-05-12 17:46:44.613856,20,True,3.3,977,34,https://www.chrisvicmall.com/products/35768
-Sample Product 8340,2392.4619305238984,soft-drinks,PointekOnline,2025-04-28 17:46:44.613868,10,False,1.6,267,60,https://www.pointekonline.com/products/96128
-Sample Product 3792,4061.7953696130944,detergents,NEPC,2025-04-25 17:46:44.613876,20,True,1.8,620,80,https://www.nepc.com/products/55601
-Sample Product 8000,8298.963990669108,electronics,Ofadaa,2025-05-07 17:46:44.613888,0,False,3.9,373,17,https://www.ofadaa.com/products/53693
-Sample Product 5795,8224.841152487628,furniture,Nairametrics,2025-04-12 17:46:44.613896,10,True,4.9,149,29,https://www.nairametrics.com/products/12940
-Sample Product 6362,7855.4445472985735,detergents,NBS,2025-05-05 17:46:44.613905,15,True,4.5,286,44,https://www.nbs.com/products/20459
-Sample Product 8105,3215.4140491975104,fashion,BedmateFurniture,2025-05-11 17:46:44.613913,20,True,2.0,768,16,https://www.bedmatefurniture.com/products/80508
-Sample Product 4832,2292.3445685497068,furniture,Proshare,2025-04-15 17:46:44.613923,5,False,4.7,501,81,https://www.proshare.com/products/16511
-Sample Product 5073,5695.977572558138,snacks,PointekOnline,2025-04-24 17:46:44.613931,15,True,2.7,218,43,https://www.pointekonline.com/products/38559
-Sample Product 9695,1779.7562570281273,fashion,JijiCars,2025-04-20 17:46:44.613942,0,True,1.1,635,6,https://www.jijicars.com/products/23855
-Sample Product 7452,6889.673664366018,soft-drinks,HealthPlusNigeria,2025-05-05 17:46:44.613951,0,False,3.5,989,85,https://www.healthplusnigeria.com/products/99677
-Sample Product 6917,5390.114324173186,soft-drinks,Jumia,2025-04-26 17:46:44.613960,10,True,1.0,478,53,https://www.jumia.com/products/40820
-Sample Product 2635,9919.514167069843,food,OneHealthNG,2025-05-01 17:46:44.613970,20,False,2.2,735,86,https://www.onehealthng.com/products/32976
-Sample Product 9276,1035.486562580686,personal-care,BedmateFurniture,2025-04-30 17:46:44.614051,20,False,4.1,556,35,https://www.bedmatefurniture.com/products/24288
-Sample Product 2960,5271.758264675757,food,SuperMart,2025-04-26 17:46:44.614062,0,True,2.4,733,78,https://www.supermart.com/products/22588
-Sample Product 3837,2186.6013621861066,electronics,ZikelCosmetics,2025-05-07 17:46:44.614071,20,True,3.6,675,73,https://www.zikelcosmetics.com/products/14339
-Sample Product 8174,4136.227453273707,snacks,PointekOnline,2025-05-01 17:46:44.614080,15,True,1.1,467,41,https://www.pointekonline.com/products/35337
-Sample Product 1357,8757.476141064075,electronics,SMEdenMarket,2025-05-09 17:46:44.614089,5,False,3.2,595,17,https://www.smedenmarket.com/products/60507
-Sample Product 1868,4917.987314727242,electronics,SuperMart,2025-04-17 17:46:44.614098,5,True,1.8,751,25,https://www.supermart.com/products/85642
-Sample Product 5637,1360.9305470357851,books,AvenueMall,2025-04-26 17:46:44.614106,15,True,1.2,15,15,https://www.avenuemall.com/products/42220
-Sample Product 1696,3264.665190469141,electronics,TechpointMarketplace,2025-04-22 17:46:44.614115,15,False,2.5,969,13,https://www.techpointmarketplace.com/products/18839
-Sample Product 1936,4388.358323389213,health,SuperMart,2025-04-19 17:46:44.614134,15,False,3.8,823,87,https://www.supermart.com/products/68960
-Sample Product 4955,2646.1294954623577,automotive,FoodCo,2025-05-10 17:46:44.614143,5,True,3.3,777,23,https://www.foodco.com/products/93470
-Sample Product 8448,6148.319345287996,automotive,LifemateNigeria,2025-04-17 17:46:44.614155,0,False,3.0,509,16,https://www.lifematenigeria.com/products/86123
-Sample Product 7744,7984.624379630847,beverages,Proshare,2025-05-09 17:46:44.614163,20,False,2.4,616,6,https://www.proshare.com/products/24250
-Sample Product 4195,754.9140906150583,furniture,ZikelCosmetics,2025-05-11 17:46:44.614172,15,True,3.2,925,62,https://www.zikelcosmetics.com/products/47456
-Sample Product 4587,8814.415913572177,food,JustFones,2025-04-12 17:46:44.614181,0,False,3.1,457,34,https://www.justfones.com/products/58565
-Sample Product 3273,9995.497462270929,furniture,MyMedicines,2025-04-24 17:46:44.614190,0,True,2.7,268,1,https://www.mymedicines.com/products/90438
-Sample Product 4206,6865.340972172662,food,LaternaBooks,2025-04-12 17:46:44.614199,15,True,4.3,415,22,https://www.laternabooks.com/products/57245
-Sample Product 1870,3482.766420201095,snacks,CSSBookshops,2025-04-12 17:46:44.614211,5,False,4.6,362,18,https://www.cssbookshops.com/products/29825
-Sample Product 6678,7096.138289034316,fashion,MyChopChop,2025-05-04 17:46:44.614221,20,False,1.7,407,34,https://www.mychopchop.com/products/71638
-Sample Product 9366,8249.901493123838,health,NEPC,2025-04-18 17:46:44.614230,10,False,4.6,452,80,https://www.nepc.com/products/65755
-Sample Product 6595,8894.445710528387,health,BookvilleWorld,2025-05-11 17:46:44.614239,15,True,2.4,242,59,https://www.bookvilleworld.com/products/50435
-Sample Product 4399,6146.191822147774,automotive,BusinessDay,2025-04-22 17:46:44.614250,20,True,5.0,105,97,https://www.businessday.com/products/50689
-Sample Product 5120,2345.917107159693,detergents,3CHub,2025-05-01 17:46:44.614259,0,True,4.3,202,98,https://www.3chub.com/products/31930
-Sample Product 4121,9289.593398370647,personal-care,ZRTales,2025-04-13 17:46:44.614268,0,False,3.1,101,2,https://www.zrtales.com/products/79653
-Sample Product 3949,9926.847893677837,food,Fouani,2025-05-09 17:46:44.614277,5,False,2.7,881,71,https://www.fouani.com/products/68828
-Sample Product 3148,1291.5314644905882,health,DreamsFurnitures,2025-04-22 17:46:44.614285,20,False,3.5,606,62,https://www.dreamsfurnitures.com/products/75167
-Sample Product 1868,770.237012287085,furniture,NEPC,2025-04-27 17:46:44.614294,20,True,4.0,974,32,https://www.nepc.com/products/78536
-Sample Product 3386,3022.87119110887,food,ParktelOnline,2025-05-06 17:46:44.614309,0,False,3.4,266,88,https://www.parktelonline.com/products/95228
-Sample Product 5258,8054.116411037142,books,PointekOnline,2025-05-01 17:46:44.614319,0,True,4.0,32,63,https://www.pointekonline.com/products/12712
-Sample Product 2065,4222.843938933494,food,SuperMart,2025-04-18 17:46:44.614328,0,False,4.4,115,62,https://www.supermart.com/products/96283
-Sample Product 7488,8322.550259390551,food,Jumia,2025-04-14 17:46:44.614337,15,False,4.3,915,77,https://www.jumia.com/products/14265
-Sample Product 1350,5491.230812710306,automotive,DreamsFurnitures,2025-04-26 17:46:44.614348,15,False,4.2,207,14,https://www.dreamsfurnitures.com/products/74388
-Sample Product 6864,3829.8026048133097,electronics,AvenueMall,2025-05-03 17:46:44.614358,10,True,2.5,538,18,https://www.avenuemall.com/products/36279
-Sample Product 5584,7587.748499892125,electronics,SuperMart,2025-04-25 17:46:44.614367,15,False,3.8,340,80,https://www.supermart.com/products/72424
-Sample Product 9882,7281.842640036674,beverages,SMEdenMarket,2025-04-23 17:46:44.614376,5,True,4.7,52,43,https://www.smedenmarket.com/products/71816
-Sample Product 6052,823.6199696055671,beverages,ChrisVicMall,2025-04-20 17:46:44.614385,5,True,3.5,312,99,https://www.chrisvicmall.com/products/72706
-Sample Product 9846,8096.655183421929,automotive,MedPlusNig,2025-04-30 17:46:44.614393,5,True,3.8,104,59,https://www.medplusnig.com/products/30284
-Sample Product 8413,2409.6209040738763,detergents,BusinessDay,2025-04-30 17:46:44.614404,15,False,2.0,212,28,https://www.businessday.com/products/39720
-Sample Product 2580,964.9048180364398,health,PoloAvenue,2025-05-08 17:46:44.614413,0,True,1.9,440,44,https://www.poloavenue.com/products/42463
-Sample Product 4759,3856.9034957678973,books,TheLadyMaker,2025-04-14 17:46:44.614421,5,True,2.3,654,40,https://www.theladymaker.com/products/34734
-Sample Product 8368,8976.601825381256,furniture,Fouani,2025-05-07 17:46:44.614433,0,True,4.5,67,32,https://www.fouani.com/products/71912
-Sample Product 6194,9621.081012229795,soft-drinks,ZRTales,2025-04-23 17:46:44.614445,0,True,3.0,478,99,https://www.zrtales.com/products/39966
-Sample Product 3647,4459.9790393896965,health,TechpointMarketplace,2025-04-29 17:46:44.614454,5,False,2.4,879,27,https://www.techpointmarketplace.com/products/48470
-Sample Product 1276,6775.854309790647,detergents,HealthPlusNigeria,2025-04-22 17:46:44.614463,15,True,2.1,677,78,https://www.healthplusnigeria.com/products/21597
-Sample Product 7277,3281.5970196770177,books,Jiji,2025-05-06 17:46:44.614471,5,True,4.5,886,95,https://www.jiji.com/products/62147
-Sample Product 6179,5677.126995191467,food,PointekOnline,2025-04-16 17:46:44.614480,10,False,3.0,847,71,https://www.pointekonline.com/products/20568
-Sample Product 1024,1436.5750618891173,beverages,MyMedicines,2025-04-28 17:46:44.614490,0,True,4.2,823,52,https://www.mymedicines.com/products/98777
-Sample Product 2419,4172.609257965009,automotive,BookvilleWorld,2025-05-06 17:46:44.614499,5,False,3.2,126,40,https://www.bookvilleworld.com/products/72312
-Sample Product 7185,4625.198850235523,fashion,JijiCars,2025-05-05 17:46:44.614508,5,True,1.7,816,1,https://www.jijicars.com/products/77941
-Sample Product 3574,893.0653781910034,personal-care,PoloAvenue,2025-05-04 17:46:44.614517,20,False,3.1,555,51,https://www.poloavenue.com/products/89557
-Sample Product 2633,5350.220859711672,soft-drinks,SuperMart,2025-04-16 17:46:44.614525,5,False,3.9,388,7,https://www.supermart.com/products/41668
-Sample Product 3136,4299.529539973335,health,PayPorte,2025-05-02 17:46:44.614539,20,False,4.3,588,44,https://www.payporte.com/products/20328
-Sample Product 8025,899.1155633954689,personal-care,LifemateNigeria,2025-04-23 17:46:44.614548,0,True,3.3,230,75,https://www.lifematenigeria.com/products/63522
-Sample Product 7512,1315.3001669259297,fashion,Slot,2025-04-27 17:46:44.614557,5,True,3.1,62,23,https://www.slot.com/products/80464
-Sample Product 4660,4420.93086485084,books,Proshare,2025-04-26 17:46:44.614566,5,True,3.7,76,46,https://www.proshare.com/products/64007
-Sample Product 2484,7019.116124697437,electronics,ZRTales,2025-05-07 17:46:44.614576,20,True,1.2,443,100,https://www.zrtales.com/products/47377
-Sample Product 9520,2698.2825225499128,health,Jumia,2025-04-22 17:46:44.614585,10,False,1.1,160,26,https://www.jumia.com/products/80418
-Sample Product 1699,5156.9828306385025,beverages,Tofa,2025-05-07 17:46:44.614594,5,False,1.6,182,28,https://www.tofa.com/products/70660
-Sample Product 6637,1361.2950762897822,health,ParktelOnline,2025-05-05 17:46:44.614603,15,False,2.6,272,80,https://www.parktelonline.com/products/44750
-Sample Product 9759,2874.2176370763423,books,AvenueMall,2025-05-01 17:46:44.614612,0,True,4.2,542,79,https://www.avenuemall.com/products/94891
-Sample Product 7313,2087.098747738154,personal-care,ZikelCosmetics,2025-04-12 17:46:44.614623,0,False,3.5,658,1,https://www.zikelcosmetics.com/products/62080
-Sample Product 3704,3090.308764536482,snacks,PoloAvenue,2025-05-06 17:46:44.614637,5,True,3.0,717,95,https://www.poloavenue.com/products/14658
-Sample Product 8219,4097.384409988637,books,MyMedicines,2025-05-08 17:46:44.614653,15,True,2.5,617,33,https://www.mymedicines.com/products/35876
-Sample Product 7669,1352.355791794962,furniture,TheLadyMaker,2025-05-02 17:46:44.614662,5,False,2.8,960,19,https://www.theladymaker.com/products/33983
-Sample Product 5607,4518.696833139198,electronics,NBS,2025-05-10 17:46:44.614671,0,True,3.2,702,73,https://www.nbs.com/products/11949
-Sample Product 8166,2776.707073713234,electronics,MedPlusNig,2025-04-21 17:46:44.614680,0,True,1.5,190,99,https://www.medplusnig.com/products/26842
-Sample Product 5043,1387.434090587867,fashion,PayPorte,2025-04-23 17:46:44.614689,10,False,1.3,966,1,https://www.payporte.com/products/52541
-Sample Product 5229,748.0889464876772,soft-drinks,MedPlusNig,2025-04-25 17:46:44.614698,10,True,3.1,942,85,https://www.medplusnig.com/products/59095
-Sample Product 9605,723.114019623656,health,CSSBookshops,2025-05-05 17:46:44.614706,0,False,1.8,315,5,https://www.cssbookshops.com/products/82665
-Sample Product 1148,7986.760990930707,books,Jumia,2025-04-26 17:46:44.614715,0,True,4.5,434,22,https://www.jumia.com/products/77233
-Sample Product 8712,9693.498199644866,electronics,MyChopChop,2025-04-27 17:46:44.614724,20,False,3.4,924,12,https://www.mychopchop.com/products/38525
-Sample Product 8592,5021.25937683352,detergents,ParktelOnline,2025-05-10 17:46:44.614736,20,True,2.0,125,84,https://www.parktelonline.com/products/92978
-Sample Product 2641,9781.265429785457,personal-care,TechpointMarketplace,2025-05-02 17:46:44.614745,15,True,2.9,104,58,https://www.techpointmarketplace.com/products/21008
-Sample Product 9546,4049.8542319177454,soft-drinks,BusinessDay,2025-05-08 17:46:44.614755,15,True,2.4,115,71,https://www.businessday.com/products/65408
-Sample Product 8589,8122.973254818863,food,RuffnTumbleKids,2025-05-05 17:46:44.614764,10,False,3.3,972,30,https://www.ruffntumblekids.com/products/91097
-Sample Product 7521,5365.985762130864,fashion,RuffnTumbleKids,2025-04-26 17:46:44.614775,5,False,1.5,162,82,https://www.ruffntumblekids.com/products/20057
-Sample Product 4478,7074.697726833478,electronics,Konga,2025-04-21 17:46:44.614784,10,False,3.8,137,53,https://www.konga.com/products/17253
-Sample Product 8377,6242.8536936825685,fashion,BedmateFurniture,2025-04-12 17:46:44.614793,15,False,4.9,117,42,https://www.bedmatefurniture.com/products/52520
-Sample Product 3322,8729.586112638119,detergents,LaternaBooks,2025-05-03 17:46:44.614802,15,True,1.4,752,97,https://www.laternabooks.com/products/93452
-Sample Product 5105,4518.017182309796,food,MyChopChop,2025-04-21 17:46:44.614811,0,False,4.5,137,14,https://www.mychopchop.com/products/60644
-Sample Product 6013,2231.397081921944,books,JustFones,2025-05-02 17:46:44.614819,15,True,2.9,202,57,https://www.justfones.com/products/80026
-Sample Product 6491,3063.0629895353554,furniture,PricePally,2025-05-12 17:46:44.614830,15,True,1.7,570,12,https://www.pricepally.com/products/65999
-Sample Product 8332,1762.2939541379346,personal-care,ParktelOnline,2025-04-20 17:46:44.614839,10,False,2.1,394,75,https://www.parktelonline.com/products/76558
-Sample Product 3827,4107.224841225153,books,BookvilleWorld,2025-05-09 17:46:44.614848,15,True,1.6,325,29,https://www.bookvilleworld.com/products/35397
-Sample Product 1528,8724.09981735977,personal-care,HealthPlusNigeria,2025-05-04 17:46:44.614857,10,False,2.2,607,42,https://www.healthplusnigeria.com/products/51034
-Sample Product 3803,3017.222169539657,electronics,SuperMart,2025-04-21 17:46:44.614866,20,False,1.8,340,52,https://www.supermart.com/products/53843
-Sample Product 9629,8035.699383671759,fashion,Konga,2025-05-08 17:46:44.614874,20,False,4.0,637,86,https://www.konga.com/products/35499
-Sample Product 2074,5337.127495484231,snacks,Kusnap,2025-05-02 17:46:44.614883,10,True,4.3,834,48,https://www.kusnap.com/products/82030
-Sample Product 3716,6292.453800732654,soft-drinks,FoodCo,2025-04-24 17:46:44.614892,20,False,3.2,530,14,https://www.foodco.com/products/43967
-Sample Product 6285,8882.128661510136,beverages,Fouani,2025-05-09 17:46:44.614901,10,True,2.5,425,74,https://www.fouani.com/products/79087
-Sample Product 4702,2507.155682075995,books,JustFones,2025-05-11 17:46:44.614911,10,True,2.2,665,79,https://www.justfones.com/products/19678
-Sample Product 2683,3756.4155597167605,beverages,PayPorte,2025-04-21 17:46:44.614925,15,False,1.6,331,13,https://www.payporte.com/products/95840
-Sample Product 5813,7840.617692961691,health,Slot,2025-04-17 17:46:44.614938,20,False,3.1,551,83,https://www.slot.com/products/29316
-Sample Product 5237,9895.245681068282,personal-care,Ofadaa,2025-04-17 17:46:44.614948,15,False,3.1,404,59,https://www.ofadaa.com/products/12781
-Sample Product 2858,5522.616721888808,soft-drinks,Tofa,2025-04-14 17:46:44.614958,15,False,3.4,267,14,https://www.tofa.com/products/82487
-Sample Product 3276,794.7491643698277,fashion,Jiji,2025-04-25 17:46:44.614967,5,False,4.0,259,8,https://www.jiji.com/products/81865
-Sample Product 7519,4889.470393725252,soft-drinks,FoodCo,2025-05-12 17:46:44.614988,15,False,4.5,643,75,https://www.foodco.com/products/83165
-Sample Product 9214,5412.659674149762,automotive,OneHealthNG,2025-04-24 17:46:44.614998,0,True,2.4,172,64,https://www.onehealthng.com/products/78099
-Sample Product 8979,3241.292093109983,snacks,ParktelOnline,2025-04-13 17:46:44.615010,20,True,3.9,639,45,https://www.parktelonline.com/products/50243
-Sample Product 8971,6066.834530143817,detergents,LaternaBooks,2025-05-10 17:46:44.615020,15,False,2.2,311,58,https://www.laternabooks.com/products/19204
-Sample Product 7849,5692.678641346424,automotive,TheLadyMaker,2025-04-19 17:46:44.615031,10,False,3.7,261,63,https://www.theladymaker.com/products/53628
-Sample Product 6579,7784.326917898062,soft-drinks,Kara,2025-04-19 17:46:44.615048,5,True,3.9,862,44,https://www.kara.com/products/40712
-Sample Product 2266,4944.172834365791,fashion,FoodCo,2025-04-20 17:46:44.615058,15,True,4.9,521,60,https://www.foodco.com/products/74103
-Sample Product 7775,5256.011235559427,fashion,ChrisVicMall,2025-05-07 17:46:44.615068,5,True,3.1,939,67,https://www.chrisvicmall.com/products/93215
-Sample Product 9469,9281.030718963279,food,SuperMart,2025-05-07 17:46:44.615078,0,True,1.3,743,89,https://www.supermart.com/products/14273
-Sample Product 9404,4751.082668274788,personal-care,MyChopChop,2025-05-08 17:46:44.615183,15,False,1.5,153,49,https://www.mychopchop.com/products/44658
-Sample Product 8818,3164.3499905790163,health,Fouani,2025-04-28 17:46:44.615197,5,False,3.9,742,88,https://www.fouani.com/products/45931
-Sample Product 7127,6437.006537267279,fashion,FoodCo,2025-04-24 17:46:44.615208,10,True,2.6,725,9,https://www.foodco.com/products/78613
-Sample Product 5259,5383.9449367552825,health,BookvilleWorld,2025-04-20 17:46:44.615219,5,True,4.1,60,10,https://www.bookvilleworld.com/products/72383
-Sample Product 8035,8324.798004556502,furniture,Kara,2025-05-02 17:46:44.615229,20,True,2.1,658,5,https://www.kara.com/products/90216
-Sample Product 6840,1586.0844085890292,furniture,ZRTales,2025-04-23 17:46:44.615241,15,False,1.0,352,56,https://www.zrtales.com/products/29581
-Sample Product 4630,7463.462987537901,furniture,MedPlusNig,2025-05-04 17:46:44.615253,5,False,2.3,538,41,https://www.medplusnig.com/products/82488
-Sample Product 2864,8443.731240010162,health,Konga,2025-04-16 17:46:44.615263,15,False,4.3,573,92,https://www.konga.com/products/68530
-Sample Product 4818,9659.64321739354,electronics,HealthPlusNigeria,2025-05-07 17:46:44.615272,15,True,2.6,62,57,https://www.healthplusnigeria.com/products/70571
-Sample Product 3365,6029.430096373063,detergents,HealthPlusNigeria,2025-04-28 17:46:44.615281,5,False,3.2,137,26,https://www.healthplusnigeria.com/products/52515
-Sample Product 9113,7363.154368556178,food,PayPorte,2025-04-14 17:46:44.615291,15,True,1.0,382,57,https://www.payporte.com/products/13209
-Sample Product 4533,957.4080332743804,health,Jiji,2025-05-10 17:46:44.615301,15,False,3.7,619,48,https://www.jiji.com/products/38292
-Sample Product 1747,2802.1702868103516,soft-drinks,SuperMart,2025-04-27 17:46:44.615311,10,True,1.6,894,34,https://www.supermart.com/products/19065
-Sample Product 1250,2249.112717763698,personal-care,GZ-Supplies,2025-04-20 17:46:44.615321,5,True,1.4,978,93,https://www.gz-supplies.com/products/11396
-Sample Product 5089,4492.96939251285,personal-care,ZRTales,2025-04-24 17:46:44.615332,20,True,4.3,484,2,https://www.zrtales.com/products/34309
-Sample Product 8172,1058.3288095299308,electronics,VConnect,2025-04-25 17:46:44.615343,5,False,2.9,898,10,https://www.vconnect.com/products/81469
-Sample Product 4063,2777.1887041753494,personal-care,Nairametrics,2025-04-19 17:46:44.615359,5,False,2.0,508,30,https://www.nairametrics.com/products/73094
-Sample Product 6959,3205.9093561805685,snacks,BookvilleWorld,2025-05-11 17:46:44.615370,5,False,4.0,381,96,https://www.bookvilleworld.com/products/51939
-Sample Product 5617,8052.800525928009,soft-drinks,ZRTales,2025-05-05 17:46:44.615381,0,False,3.9,634,44,https://www.zrtales.com/products/96371
-Sample Product 4315,1574.689447485985,automotive,SuperMart,2025-04-26 17:46:44.615392,20,False,4.4,981,76,https://www.supermart.com/products/99107
-Sample Product 8683,3597.7492466857134,books,LifemateNigeria,2025-05-01 17:46:44.615408,5,False,3.5,14,10,https://www.lifematenigeria.com/products/18217
-Sample Product 6457,1163.407250384228,snacks,PayPorte,2025-04-25 17:46:44.615420,10,False,1.5,21,38,https://www.payporte.com/products/39254
-Sample Product 7691,596.8223689979707,fashion,Shopaholic,2025-05-09 17:46:44.615431,10,True,1.2,694,14,https://www.shopaholic.com/products/11010
-Sample Product 1750,6503.4589408244165,beverages,LaternaBooks,2025-04-22 17:46:44.615440,20,False,1.5,196,77,https://www.laternabooks.com/products/50048
-Sample Product 6423,4509.735291130735,books,DreamsFurnitures,2025-05-01 17:46:44.615450,10,False,2.9,735,61,https://www.dreamsfurnitures.com/products/51238
-Sample Product 5347,3114.891249382611,electronics,Proshare,2025-04-25 17:46:44.615459,10,False,4.2,451,78,https://www.proshare.com/products/87696
-Sample Product 7935,7295.892625004886,electronics,3CHub,2025-04-20 17:46:44.615471,0,True,4.1,597,15,https://www.3chub.com/products/82912
-Sample Product 8640,2755.6557830997913,furniture,Jiji,2025-04-14 17:46:44.615481,0,False,5.0,380,51,https://www.jiji.com/products/35314
-Sample Product 2568,6375.331184851694,detergents,ChrisVicMall,2025-05-10 17:46:44.615492,0,True,1.1,182,97,https://www.chrisvicmall.com/products/34592
-Sample Product 7230,9282.131330246053,health,SuperMart,2025-04-13 17:46:44.615504,0,True,2.5,69,79,https://www.supermart.com/products/80449
-Sample Product 9331,4892.85078649197,snacks,NBS,2025-04-25 17:46:44.615517,10,False,3.5,210,50,https://www.nbs.com/products/85449
-Sample Product 9491,2650.227167986546,electronics,Jiji,2025-04-27 17:46:44.615526,20,True,3.5,26,17,https://www.jiji.com/products/56668
-Sample Product 5501,4368.1489123123665,soft-drinks,Jiji,2025-04-17 17:46:44.615536,15,True,4.3,988,25,https://www.jiji.com/products/52033
-Sample Product 7964,3302.9764813926595,automotive,3CHub,2025-05-04 17:46:44.615546,20,False,3.0,231,14,https://www.3chub.com/products/89238
-Sample Product 3996,6516.795172487814,books,Shopaholic,2025-04-30 17:46:44.615556,10,True,2.3,813,54,https://www.shopaholic.com/products/31911
-Sample Product 3031,5522.114517406681,detergents,GZ-Supplies,2025-04-29 17:46:44.615567,0,True,2.8,98,31,https://www.gz-supplies.com/products/86997
-Sample Product 9165,2480.223878625734,automotive,BookvilleWorld,2025-04-17 17:46:44.615580,15,False,4.2,954,55,https://www.bookvilleworld.com/products/83195
-Sample Product 6697,837.181326308172,furniture,Tofa,2025-05-12 17:46:44.615594,10,True,3.3,702,11,https://www.tofa.com/products/72994
-Sample Product 6623,9182.649888732316,health,ZRTales,2025-04-28 17:46:44.615604,20,False,1.4,15,60,https://www.zrtales.com/products/24226
-Sample Product 1225,1144.652673461334,automotive,DreamsFurnitures,2025-05-09 17:46:44.615614,10,True,4.7,819,70,https://www.dreamsfurnitures.com/products/11898
-Sample Product 7690,5989.643400308065,food,MyChopChop,2025-05-02 17:46:44.615625,15,True,2.4,356,93,https://www.mychopchop.com/products/20793
-Sample Product 1338,3727.417072633772,fashion,DreamsFurnitures,2025-04-19 17:46:44.615636,20,True,5.0,992,53,https://www.dreamsfurnitures.com/products/29427
-Sample Product 2436,9070.924014098964,soft-drinks,Jiji,2025-05-03 17:46:44.615654,15,False,1.8,482,99,https://www.jiji.com/products/79830
-Sample Product 9811,4274.585386783994,snacks,FoodCo,2025-04-12 17:46:44.615664,20,True,2.1,184,99,https://www.foodco.com/products/24084
-Sample Product 6931,3096.100355687034,health,PoloAvenue,2025-04-28 17:46:44.615674,20,True,1.8,730,37,https://www.poloavenue.com/products/42754
-Sample Product 8395,8216.146224457127,personal-care,Obeezi,2025-04-13 17:46:44.615688,5,False,3.1,575,8,https://www.obeezi.com/products/42295
-Sample Product 1362,6097.911039297516,books,Shopaholic,2025-05-11 17:46:44.615704,5,False,1.9,834,73,https://www.shopaholic.com/products/51032
-Sample Product 8009,4965.720446639347,snacks,BookvilleWorld,2025-04-27 17:46:44.615713,10,False,1.5,982,64,https://www.bookvilleworld.com/products/42333
-Sample Product 7132,5737.493743544286,furniture,HealthPlusNigeria,2025-05-12 17:46:44.615723,20,False,4.1,467,32,https://www.healthplusnigeria.com/products/77238
-Sample Product 7934,2382.023870796314,automotive,VConnect,2025-04-14 17:46:44.615733,0,False,1.6,428,10,https://www.vconnect.com/products/15587
-Sample Product 8807,7252.57395364595,food,RuffnTumbleKids,2025-04-16 17:46:44.615742,15,True,3.7,854,71,https://www.ruffntumblekids.com/products/28345
-Sample Product 4904,3798.366790341293,health,MedPlusNig,2025-04-25 17:46:44.615752,10,False,3.7,288,91,https://www.medplusnig.com/products/15292
-Sample Product 7384,5733.544727032778,books,SuperMart,2025-05-11 17:46:44.615763,10,False,1.5,101,44,https://www.supermart.com/products/20019
-Sample Product 8121,9512.710065221052,furniture,JustFones,2025-04-22 17:46:44.615775,5,False,3.0,379,80,https://www.justfones.com/products/58852
-Sample Product 1597,4115.685187481585,detergents,FoodCo,2025-04-22 17:46:44.615787,5,False,2.3,348,77,https://www.foodco.com/products/34517
-Sample Product 8852,4579.346789663785,beverages,FoodCo,2025-04-24 17:46:44.615798,15,False,2.6,889,74,https://www.foodco.com/products/12300
-Sample Product 6415,5979.222753780835,soft-drinks,Proshare,2025-04-12 17:46:44.615813,15,False,2.5,660,25,https://www.proshare.com/products/11150
-Sample Product 3797,8474.037341111372,furniture,RuffnTumbleKids,2025-04-12 17:46:44.615824,0,False,1.3,711,52,https://www.ruffntumblekids.com/products/30985
-Sample Product 8043,1873.451556440306,personal-care,Autochek,2025-05-04 17:46:44.615835,10,False,3.5,418,48,https://www.autochek.com/products/36377
-Sample Product 9819,9420.996073699584,detergents,BookvilleWorld,2025-04-16 17:46:44.615845,20,True,3.3,699,6,https://www.bookvilleworld.com/products/21428
-Sample Product 9936,9753.38533894327,soft-drinks,ZikelCosmetics,2025-04-23 17:46:44.615857,10,False,1.0,503,34,https://www.zikelcosmetics.com/products/29488
-Sample Product 9174,1887.6500629833824,health,MedPlusNig,2025-05-05 17:46:44.615868,15,True,2.8,862,12,https://www.medplusnig.com/products/69608
-Sample Product 4368,7097.782397936648,electronics,Shopaholic,2025-04-23 17:46:44.615881,10,True,3.5,709,20,https://www.shopaholic.com/products/96308
-Sample Product 5947,6872.626964445545,books,TheLadyMaker,2025-04-14 17:46:44.615887,15,False,2.4,492,50,https://www.theladymaker.com/products/69695
-Sample Product 2539,9749.313565459157,beverages,Kusnap,2025-05-05 17:46:44.615892,0,True,2.0,953,100,https://www.kusnap.com/products/82624
-Sample Product 4253,8321.153643313844,beverages,RuffnTumbleKids,2025-04-27 17:46:44.615898,10,False,4.7,175,72,https://www.ruffntumblekids.com/products/15472
-Sample Product 7537,5859.359069723117,automotive,SuperMart,2025-04-14 17:46:44.615905,10,False,1.2,535,49,https://www.supermart.com/products/54327
-Sample Product 5516,731.9785344223376,health,MyMedicines,2025-04-14 17:46:44.615922,20,False,1.8,433,78,https://www.mymedicines.com/products/69599
-Sample Product 8849,5922.099056881364,electronics,Konga,2025-04-19 17:46:44.615933,15,False,3.7,693,49,https://www.konga.com/products/51099
-Sample Product 2803,9339.859079889098,fashion,MyMedicines,2025-04-26 17:46:44.615942,10,False,1.7,204,39,https://www.mymedicines.com/products/20196
-Sample Product 4895,1009.8219445745942,food,PricePally,2025-04-22 17:46:44.615951,20,False,4.9,195,29,https://www.pricepally.com/products/79435
-Sample Product 6602,7852.874805703319,personal-care,NEPC,2025-04-23 17:46:44.615957,10,True,4.2,981,52,https://www.nepc.com/products/76557
-Sample Product 3252,4445.614802175503,personal-care,Tofa,2025-04-21 17:46:44.615963,20,True,1.7,471,12,https://www.tofa.com/products/63167
-Sample Product 7581,8581.202121051185,beverages,ZikelCosmetics,2025-04-13 17:46:44.615968,5,False,4.5,639,53,https://www.zikelcosmetics.com/products/95135
-Sample Product 6811,3500.5252104356073,food,RuffnTumbleKids,2025-05-06 17:46:44.615986,20,False,3.2,79,74,https://www.ruffntumblekids.com/products/67888
-Sample Product 6672,3622.356149410845,soft-drinks,CSSBookshops,2025-04-25 17:46:44.615998,15,False,2.1,773,72,https://www.cssbookshops.com/products/82401
-Sample Product 7846,8556.882242417942,furniture,BusinessDay,2025-04-23 17:46:44.616013,20,True,1.2,492,88,https://www.businessday.com/products/28883
-Sample Product 7803,9170.944894411297,snacks,Proshare,2025-04-23 17:46:44.616023,5,False,1.6,978,69,https://www.proshare.com/products/59697
-Sample Product 9260,4829.546203492306,fashion,GZ-Supplies,2025-05-07 17:46:44.616033,15,False,1.9,142,27,https://www.gz-supplies.com/products/49138
-Sample Product 4499,8607.416145092517,health,CSSBookshops,2025-04-20 17:46:44.616042,0,False,3.0,160,98,https://www.cssbookshops.com/products/33037
-Sample Product 3331,3378.526268995557,health,MyMedicines,2025-05-02 17:46:44.616052,0,False,3.0,361,7,https://www.mymedicines.com/products/33508
-Sample Product 4328,2249.229315153962,detergents,TheLadyMaker,2025-04-12 17:46:44.616062,10,True,1.3,743,99,https://www.theladymaker.com/products/91849
-Sample Product 7964,3351.1033898230917,food,NBS,2025-04-21 17:46:44.616072,0,True,1.5,92,27,https://www.nbs.com/products/78732
-Sample Product 9694,4439.660216262575,health,SuperMart,2025-04-15 17:46:44.616086,10,True,1.0,42,81,https://www.supermart.com/products/49566
-Sample Product 8781,5912.562644153923,fashion,NEPC,2025-04-17 17:46:44.616108,20,False,4.8,837,22,https://www.nepc.com/products/33579
-Sample Product 4956,798.2797799142033,books,JustFones,2025-04-22 17:46:44.616118,10,False,3.6,279,73,https://www.justfones.com/products/99626
-Sample Product 7691,3293.2798018255876,electronics,Fouani,2025-04-24 17:46:44.616130,5,True,4.1,183,22,https://www.fouani.com/products/13110
-Sample Product 6298,4053.6728296471365,automotive,JijiCars,2025-04-30 17:46:44.616139,5,False,4.3,55,31,https://www.jijicars.com/products/21466
-Sample Product 4572,3533.1487339011114,soft-drinks,DreamsFurnitures,2025-04-12 17:46:44.616150,5,True,1.4,261,15,https://www.dreamsfurnitures.com/products/64345
-Sample Product 5303,3026.010006718119,automotive,Nairametrics,2025-05-08 17:46:44.616159,10,True,2.8,212,99,https://www.nairametrics.com/products/38024
-Sample Product 3152,5818.5732436567305,books,GZ-Supplies,2025-05-08 17:46:44.616165,15,False,1.9,228,45,https://www.gz-supplies.com/products/89217
-Sample Product 2301,2814.0025730662696,fashion,SuperMart,2025-04-22 17:46:44.616170,5,False,3.0,383,90,https://www.supermart.com/products/13793
-Sample Product 2883,3481.3879120360516,books,CSSBookshops,2025-04-15 17:46:44.616176,10,False,3.5,288,38,https://www.cssbookshops.com/products/74191
-Sample Product 2177,3403.4093204856963,detergents,OneHealthNG,2025-04-18 17:46:44.616181,20,False,1.6,959,94,https://www.onehealthng.com/products/18199
-Sample Product 2407,3651.183143164361,fashion,ParktelOnline,2025-04-30 17:46:44.616192,15,False,3.3,437,33,https://www.parktelonline.com/products/93672
-Sample Product 9437,9994.73285634729,beverages,NEPC,2025-04-22 17:46:44.616233,10,False,1.0,314,88,https://www.nepc.com/products/43093
-Sample Product 5042,5183.236786544766,furniture,BusinessDay,2025-04-18 17:46:44.616241,15,True,4.7,755,82,https://www.businessday.com/products/95102
-Sample Product 8480,3072.640431253416,soft-drinks,RuffnTumbleKids,2025-04-26 17:46:44.616247,0,True,2.6,927,70,https://www.ruffntumblekids.com/products/13886
-Sample Product 5080,3018.0368185276925,fashion,Proshare,2025-04-17 17:46:44.616253,5,False,2.5,705,82,https://www.proshare.com/products/27267
-Sample Product 2300,9842.951576900052,furniture,Proshare,2025-05-09 17:46:44.616258,15,False,4.8,786,82,https://www.proshare.com/products/12834
-Sample Product 8777,504.93866715522626,health,OneHealthNG,2025-05-03 17:46:44.616264,5,False,2.7,719,5,https://www.onehealthng.com/products/17398
-Sample Product 3708,1117.5676673243138,soft-drinks,RuffnTumbleKids,2025-05-02 17:46:44.616269,15,True,1.4,940,23,https://www.ruffntumblekids.com/products/10066
-Sample Product 8284,649.9690576012528,food,Jumia,2025-04-28 17:46:44.616274,20,True,3.7,825,60,https://www.jumia.com/products/79806
-Sample Product 5151,3935.8328137250696,automotive,ParktelOnline,2025-05-05 17:46:44.616280,20,True,3.1,839,92,https://www.parktelonline.com/products/46461
-Sample Product 1026,2445.6441696273896,books,Kusnap,2025-05-06 17:46:44.616285,20,True,1.9,285,43,https://www.kusnap.com/products/35840
-Sample Product 8295,8762.136665056403,electronics,ZikelCosmetics,2025-05-10 17:46:44.616291,0,False,2.1,476,94,https://www.zikelcosmetics.com/products/68116
-Sample Product 1191,7996.709190265308,fashion,PricePally,2025-04-22 17:46:44.616298,0,True,4.3,571,16,https://www.pricepally.com/products/10665
-Sample Product 2353,3068.255139344341,snacks,Slot,2025-04-20 17:46:44.616303,0,False,4.7,762,16,https://www.slot.com/products/16229
-Sample Product 1629,7285.808335039815,health,Konga,2025-05-05 17:46:44.616309,20,True,3.5,434,19,https://www.konga.com/products/84627
-Sample Product 6201,7429.101237947434,detergents,BookvilleWorld,2025-05-03 17:46:44.616317,0,False,4.5,68,86,https://www.bookvilleworld.com/products/57278
-Sample Product 2967,6024.512240991162,snacks,Tofa,2025-05-01 17:46:44.616323,20,False,1.3,336,61,https://www.tofa.com/products/65250
-Sample Product 8907,1811.1994874084546,automotive,BookvilleWorld,2025-05-12 17:46:44.616329,10,False,1.7,627,45,https://www.bookvilleworld.com/products/15522
-Sample Product 7800,522.6280846420636,beverages,NEPC,2025-04-29 17:46:44.616335,10,True,5.0,976,7,https://www.nepc.com/products/80187
-Sample Product 1871,4942.5367555437115,health,TechpointMarketplace,2025-04-26 17:46:44.616341,10,True,1.3,937,29,https://www.techpointmarketplace.com/products/44745
-Sample Product 3665,6211.289183302659,books,Nairametrics,2025-04-17 17:46:44.616346,15,True,2.3,357,19,https://www.nairametrics.com/products/99847
-Sample Product 3202,8218.726384714082,snacks,Jiji,2025-04-30 17:46:44.616353,5,False,1.3,708,47,https://www.jiji.com/products/28643
-Sample Product 2826,5794.477066178507,personal-care,NEPC,2025-04-26 17:46:44.616359,0,True,1.1,305,50,https://www.nepc.com/products/66432
-Sample Product 5979,922.3738318052854,automotive,CSSBookshops,2025-04-18 17:46:44.616365,5,True,2.0,312,83,https://www.cssbookshops.com/products/84890
-Sample Product 2324,6243.445103197901,beverages,Autochek,2025-05-08 17:46:44.616370,0,False,3.5,956,5,https://www.autochek.com/products/90903
-Sample Product 6777,6135.9624501496,personal-care,Obeezi,2025-04-15 17:46:44.616375,0,True,4.3,439,70,https://www.obeezi.com/products/59888
-Sample Product 8522,5195.0246465681785,automotive,LifemateNigeria,2025-05-09 17:46:44.616381,20,True,1.9,24,48,https://www.lifematenigeria.com/products/16048
-Sample Product 2709,7360.635329365401,electronics,Konga,2025-05-06 17:46:44.616410,5,True,4.8,584,11,https://www.konga.com/products/41653
-Sample Product 5091,9024.802014035986,personal-care,Kusnap,2025-05-05 17:46:44.616429,20,False,2.9,891,97,https://www.kusnap.com/products/43333
-Sample Product 5307,4634.131131831521,automotive,Kara,2025-04-27 17:46:44.616439,0,True,3.5,556,43,https://www.kara.com/products/56929
-Sample Product 6847,5826.964795454918,snacks,AjeboMarket,2025-04-27 17:46:44.616444,0,False,4.8,309,17,https://www.ajebomarket.com/products/41909
-Sample Product 1764,2845.5913203302443,automotive,Jumia,2025-04-14 17:46:44.616450,20,False,3.2,957,35,https://www.jumia.com/products/83756
-Sample Product 2308,9992.73259540405,automotive,GZ-Supplies,2025-04-17 17:46:44.616457,15,True,4.2,219,83,https://www.gz-supplies.com/products/25845
-Sample Product 1890,5783.955993768155,soft-drinks,CSSBookshops,2025-04-12 17:46:44.616463,0,False,4.5,633,30,https://www.cssbookshops.com/products/20391
-Sample Product 7235,7600.08583849682,furniture,3CHub,2025-05-07 17:46:44.616469,15,True,3.1,368,38,https://www.3chub.com/products/24013
-Sample Product 3196,9913.106325974444,soft-drinks,LifemateNigeria,2025-04-20 17:46:44.616474,15,True,2.5,667,28,https://www.lifematenigeria.com/products/22244
-Sample Product 4671,7977.295754826589,furniture,SuperMart,2025-04-27 17:46:44.616479,10,False,4.2,180,43,https://www.supermart.com/products/23477
-Sample Product 5070,6636.336031562877,furniture,LaternaBooks,2025-04-30 17:46:44.616485,10,False,1.5,508,66,https://www.laternabooks.com/products/54589
-Sample Product 7582,6754.8446990007305,health,ZikelCosmetics,2025-05-02 17:46:44.616491,0,False,1.4,230,57,https://www.zikelcosmetics.com/products/45208
-Sample Product 9551,7379.7920224143245,books,3CHub,2025-05-11 17:46:44.616497,20,True,2.4,986,13,https://www.3chub.com/products/19639
-Sample Product 3156,510.62337196502324,fashion,TechpointMarketplace,2025-05-07 17:46:44.616502,10,False,2.0,269,30,https://www.techpointmarketplace.com/products/77489
-Sample Product 6429,4578.401424173346,soft-drinks,Ofadaa,2025-04-25 17:46:44.616507,10,False,1.2,100,55,https://www.ofadaa.com/products/38938
-Sample Product 2273,1067.723385242994,personal-care,NEPC,2025-04-21 17:46:44.616514,0,False,2.6,316,46,https://www.nepc.com/products/53432
-Sample Product 9470,7829.235404403611,personal-care,PayPorte,2025-04-30 17:46:44.616519,10,False,1.3,978,10,https://www.payporte.com/products/95033
-Sample Product 7368,5845.771808033026,automotive,Obeezi,2025-04-24 17:46:44.616528,20,True,2.2,51,16,https://www.obeezi.com/products/96916
-Sample Product 5787,1909.3886553887055,soft-drinks,Autochek,2025-04-16 17:46:44.616539,10,False,3.1,664,12,https://www.autochek.com/products/53239
-Sample Product 5172,5229.7575207458,soft-drinks,Fouani,2025-05-11 17:46:44.616549,5,False,1.3,54,90,https://www.fouani.com/products/15781
-Sample Product 3756,1568.7017693107916,personal-care,LaternaBooks,2025-04-28 17:46:44.616554,10,False,4.8,981,80,https://www.laternabooks.com/products/78095
-Sample Product 6085,1251.7101355898453,beverages,OneHealthNG,2025-04-20 17:46:44.616560,10,False,2.4,503,20,https://www.onehealthng.com/products/22740
-Sample Product 4740,4434.857110952211,beverages,SuperMart,2025-05-05 17:46:44.616566,0,False,4.9,724,99,https://www.supermart.com/products/52974
-Sample Product 6586,5632.636366291032,beverages,Autochek,2025-04-18 17:46:44.616571,5,False,4.3,792,65,https://www.autochek.com/products/22150
-Sample Product 3880,6308.372981959336,books,Tofa,2025-04-30 17:46:44.616576,0,False,3.1,237,79,https://www.tofa.com/products/79611
-Sample Product 7473,9108.342440579949,fashion,Jumia,2025-04-12 17:46:44.616584,0,True,1.7,446,63,https://www.jumia.com/products/62835
-Sample Product 5940,1199.5311808004296,furniture,Obeezi,2025-04-25 17:46:44.616590,0,True,2.6,873,87,https://www.obeezi.com/products/78417
-Sample Product 9013,3432.8784641076986,snacks,Autochek,2025-04-26 17:46:44.616596,15,True,2.1,664,94,https://www.autochek.com/products/96549
-Sample Product 7296,3559.636154179877,health,Kusnap,2025-05-11 17:46:44.616601,20,True,4.4,403,13,https://www.kusnap.com/products/92157
-Sample Product 5227,5580.312339246325,beverages,PricePally,2025-04-19 17:46:44.616606,0,False,3.7,361,4,https://www.pricepally.com/products/95703
-Sample Product 3256,508.21908221132054,food,Tofa,2025-05-05 17:46:44.616611,15,True,4.0,563,10,https://www.tofa.com/products/20604
-Sample Product 3734,2330.3173101524153,snacks,3CHub,2025-04-22 17:46:44.616617,0,False,4.3,586,14,https://www.3chub.com/products/79094
-Sample Product 3845,4425.374124229132,food,AvenueMall,2025-04-22 17:46:44.616622,0,False,2.2,801,6,https://www.avenuemall.com/products/90127
-Sample Product 3413,9819.445987617913,electronics,FoodCo,2025-04-26 17:46:44.616630,5,True,2.8,617,90,https://www.foodco.com/products/46855
-Sample Product 9970,2268.6708110608097,fashion,Shopaholic,2025-05-11 17:46:44.616636,10,True,3.8,548,25,https://www.shopaholic.com/products/46717
-Sample Product 6916,2711.0564730982237,automotive,OneHealthNG,2025-05-06 17:46:44.616642,5,True,2.1,887,97,https://www.onehealthng.com/products/13645
-Sample Product 3530,5795.447469984102,beverages,NBS,2025-05-05 17:46:44.616652,20,True,4.4,729,9,https://www.nbs.com/products/27449
-Sample Product 4938,8570.715337271347,detergents,ZikelCosmetics,2025-04-30 17:46:44.616657,15,False,3.0,285,39,https://www.zikelcosmetics.com/products/98468
-Sample Product 9687,6103.055986289045,beverages,Ofadaa,2025-05-09 17:46:44.616662,20,True,4.2,851,33,https://www.ofadaa.com/products/38368
-Sample Product 9288,6972.332856366733,personal-care,Jumia,2025-04-26 17:46:44.616668,15,False,3.2,204,76,https://www.jumia.com/products/52978
-Sample Product 5264,4332.27541740199,furniture,JijiCars,2025-04-12 17:46:44.616673,5,True,2.0,580,36,https://www.jijicars.com/products/41299
-Sample Product 9342,1021.3430126195824,fashion,ParktelOnline,2025-05-10 17:46:44.616679,10,False,4.0,725,68,https://www.parktelonline.com/products/57291
-Sample Product 1715,5405.611184077417,personal-care,PointekOnline,2025-04-28 17:46:44.616684,20,False,1.9,81,51,https://www.pointekonline.com/products/71849
-Sample Product 6010,4078.6930775700203,food,PoloAvenue,2025-04-26 17:46:44.616689,10,False,4.7,218,6,https://www.poloavenue.com/products/91477
-Sample Product 2974,3807.381974885001,personal-care,Shopaholic,2025-05-09 17:46:44.616694,20,True,3.6,996,10,https://www.shopaholic.com/products/64913
-Sample Product 6222,972.394244786148,books,BookvilleWorld,2025-04-12 17:46:44.616701,5,False,1.2,552,79,https://www.bookvilleworld.com/products/48628
-Sample Product 7953,3177.9565894972866,food,ZikelCosmetics,2025-04-22 17:46:44.616706,10,True,3.5,406,64,https://www.zikelcosmetics.com/products/50851
-Sample Product 4531,4564.208411035101,personal-care,ChrisVicMall,2025-05-08 17:46:44.616712,5,True,3.9,516,34,https://www.chrisvicmall.com/products/42034
-Sample Product 2379,8623.978742934518,fashion,BusinessDay,2025-04-14 17:46:44.616717,10,False,2.7,311,6,https://www.businessday.com/products/34869
-Sample Product 1817,4981.251542160804,personal-care,GZ-Supplies,2025-05-04 17:46:44.616723,15,True,3.3,720,31,https://www.gz-supplies.com/products/78880
-Sample Product 7277,4690.387408458284,soft-drinks,HealthPlusNigeria,2025-04-13 17:46:44.616728,0,True,3.8,669,100,https://www.healthplusnigeria.com/products/99783
-Sample Product 8443,9652.520254362124,books,CSSBookshops,2025-04-21 17:46:44.616733,10,True,4.4,193,40,https://www.cssbookshops.com/products/19866
-Sample Product 2366,9388.480035588622,food,FoodCo,2025-04-28 17:46:44.616738,15,False,1.5,394,17,https://www.foodco.com/products/41768
-Sample Product 3593,2534.7049483559404,furniture,GZ-Supplies,2025-04-19 17:46:44.616745,10,True,4.2,503,82,https://www.gz-supplies.com/products/16027
-Sample Product 2392,3494.033077094607,books,NBS,2025-04-13 17:46:44.616754,15,False,3.0,545,6,https://www.nbs.com/products/81702
-Sample Product 9639,8933.392437548267,automotive,PricePally,2025-05-03 17:46:44.616768,20,False,3.7,336,73,https://www.pricepally.com/products/38455
-Sample Product 8232,2334.153463214331,beverages,Kusnap,2025-04-29 17:46:44.616779,5,False,3.8,679,93,https://www.kusnap.com/products/81960
-Sample Product 5693,7330.856812843571,detergents,LifemateNigeria,2025-05-04 17:46:44.616789,0,False,4.7,326,95,https://www.lifematenigeria.com/products/73004
-Sample Product 1664,802.156931106809,beverages,TheLadyMaker,2025-04-30 17:46:44.616799,10,False,2.9,160,98,https://www.theladymaker.com/products/82096
-Sample Product 8821,6804.120171383771,personal-care,Kusnap,2025-04-30 17:46:44.616811,5,True,3.6,845,23,https://www.kusnap.com/products/30234
-Sample Product 7389,2005.7595304365325,personal-care,MyMedicines,2025-05-06 17:46:44.616819,15,False,3.1,462,18,https://www.mymedicines.com/products/50316
-Sample Product 1346,3269.2613071815467,books,FoodCo,2025-04-18 17:46:44.616825,0,True,1.2,128,70,https://www.foodco.com/products/49414
-Sample Product 6939,2208.7828263596325,health,Autochek,2025-04-27 17:46:44.616830,20,False,2.3,693,57,https://www.autochek.com/products/73375
-Sample Product 1500,500.56318872532887,furniture,OneHealthNG,2025-05-05 17:46:44.616836,5,False,1.6,967,81,https://www.onehealthng.com/products/40725
-Sample Product 9701,7458.536376128903,detergents,PointekOnline,2025-04-28 17:46:44.616843,5,True,4.0,72,68,https://www.pointekonline.com/products/35125
-Sample Product 2973,981.7295169521635,furniture,SuperMart,2025-04-13 17:46:44.616856,10,False,3.9,547,89,https://www.supermart.com/products/83283
-Sample Product 6417,1789.8849975183743,soft-drinks,ZRTales,2025-04-29 17:46:44.616867,15,True,4.1,695,7,https://www.zrtales.com/products/41834
-Sample Product 3352,6369.808381361536,health,MyChopChop,2025-05-12 17:46:44.616877,10,True,2.1,230,2,https://www.mychopchop.com/products/98060
-Sample Product 1816,9816.851490516094,detergents,PointekOnline,2025-04-23 17:46:44.616886,10,True,1.5,317,67,https://www.pointekonline.com/products/13498
-Sample Product 2218,7442.973432233264,health,MyMedicines,2025-05-01 17:46:44.616897,20,True,2.1,607,83,https://www.mymedicines.com/products/70179
-Sample Product 5135,3075.4248368284684,snacks,ChrisVicMall,2025-05-08 17:46:44.616911,20,True,5.0,277,34,https://www.chrisvicmall.com/products/55502
-Sample Product 4090,8950.647780986714,automotive,AjeboMarket,2025-05-02 17:46:44.616921,0,False,4.2,173,62,https://www.ajebomarket.com/products/29882
-Sample Product 6785,5912.599317945595,personal-care,JijiCars,2025-05-10 17:46:44.616930,10,False,3.1,165,21,https://www.jijicars.com/products/85972
-Sample Product 9147,3683.5458818064285,books,TheLadyMaker,2025-04-19 17:46:44.616939,15,False,3.5,164,47,https://www.theladymaker.com/products/94139
-Sample Product 8835,6585.940962299042,automotive,DreamsFurnitures,2025-04-26 17:46:44.616949,15,True,4.1,330,99,https://www.dreamsfurnitures.com/products/99072
-Sample Product 6667,8619.607150829259,soft-drinks,ZikelCosmetics,2025-04-22 17:46:44.616962,15,True,1.9,72,62,https://www.zikelcosmetics.com/products/98218
-Sample Product 1370,1352.095811460436,snacks,MedPlusNig,2025-04-21 17:46:44.616986,15,True,2.7,926,84,https://www.medplusnig.com/products/23277
-Sample Product 6096,8096.906232895805,books,GZ-Supplies,2025-04-17 17:46:44.616993,20,True,3.0,122,98,https://www.gz-supplies.com/products/14630
-Sample Product 2104,8207.685852528932,books,Obeezi,2025-04-22 17:46:44.616999,10,False,2.7,184,42,https://www.obeezi.com/products/45395
-Sample Product 3189,2285.405926032955,detergents,PayPorte,2025-05-06 17:46:44.617007,5,False,1.8,143,37,https://www.payporte.com/products/99603
-Sample Product 8421,4335.767406457586,food,PricePally,2025-04-15 17:46:44.617012,5,False,3.8,729,67,https://www.pricepally.com/products/25534
-Sample Product 2019,3190.925435688373,food,TheLadyMaker,2025-04-30 17:46:44.617019,20,False,4.7,52,7,https://www.theladymaker.com/products/11908
-Sample Product 2646,7824.708327870592,fashion,Kara,2025-05-10 17:46:44.617025,5,True,2.5,215,76,https://www.kara.com/products/80685
-Sample Product 1564,1237.797251448881,food,MyChopChop,2025-05-05 17:46:44.617030,20,True,5.0,60,50,https://www.mychopchop.com/products/20761
-Sample Product 1831,5253.220215110697,health,SuperMart,2025-05-08 17:46:44.617036,15,True,3.7,232,87,https://www.supermart.com/products/27479
-Sample Product 6024,2927.0617613078953,books,SuperMart,2025-04-29 17:46:44.617043,20,True,3.5,422,7,https://www.supermart.com/products/98290
-Sample Product 8706,2564.0521257790833,fashion,CSSBookshops,2025-04-19 17:46:44.617048,0,True,1.2,432,75,https://www.cssbookshops.com/products/76485
-Sample Product 2214,9382.32320671017,health,3CHub,2025-04-15 17:46:44.617054,5,False,3.9,785,9,https://www.3chub.com/products/53442
-Sample Product 2866,4159.090323580607,fashion,BedmateFurniture,2025-04-30 17:46:44.617063,20,True,4.6,348,1,https://www.bedmatefurniture.com/products/46369
-Sample Product 2390,7745.240782750585,books,CSSBookshops,2025-04-21 17:46:44.617072,5,False,1.4,957,75,https://www.cssbookshops.com/products/29805
-Sample Product 3413,7576.197413051277,detergents,MyChopChop,2025-04-22 17:46:44.617084,0,False,1.2,672,74,https://www.mychopchop.com/products/36548
-Sample Product 5134,2400.0649465204783,health,RuffnTumbleKids,2025-05-07 17:46:44.617093,20,False,4.4,804,19,https://www.ruffntumblekids.com/products/40068
-Sample Product 3431,1603.5138686753855,snacks,RuffnTumbleKids,2025-04-17 17:46:44.617103,15,True,3.2,15,63,https://www.ruffntumblekids.com/products/27510
-Sample Product 8283,6546.166984906094,beverages,TechpointMarketplace,2025-04-14 17:46:44.617112,0,True,1.8,473,14,https://www.techpointmarketplace.com/products/23846
-Sample Product 4012,8107.362573403556,books,CSSBookshops,2025-04-25 17:46:44.617118,0,False,4.0,338,97,https://www.cssbookshops.com/products/88870
-Sample Product 1966,7112.778085530398,health,PointekOnline,2025-05-05 17:46:44.617126,20,True,3.1,979,29,https://www.pointekonline.com/products/64388
-Sample Product 1086,9511.842674500886,beverages,Autochek,2025-04-18 17:46:44.617132,0,False,2.1,389,59,https://www.autochek.com/products/27753
-Sample Product 5982,2733.3739246275563,automotive,LifemateNigeria,2025-05-08 17:46:44.617137,20,False,3.8,524,61,https://www.lifematenigeria.com/products/52020
-Sample Product 2469,2886.0022582788474,personal-care,Konga,2025-04-30 17:46:44.617143,10,False,2.1,616,68,https://www.konga.com/products/48648
-Sample Product 6621,6422.807661573401,soft-drinks,Kara,2025-04-19 17:46:44.617149,0,True,4.5,413,75,https://www.kara.com/products/37495
-Sample Product 2222,7607.4905526770035,snacks,AjeboMarket,2025-05-12 17:46:44.617155,0,False,2.3,742,52,https://www.ajebomarket.com/products/78275
-Sample Product 4220,8436.376131624478,books,PointekOnline,2025-04-23 17:46:44.617160,0,True,2.9,957,8,https://www.pointekonline.com/products/73368
-Sample Product 5565,5809.68738523256,soft-drinks,ZikelCosmetics,2025-04-26 17:46:44.617166,0,False,2.5,485,16,https://www.zikelcosmetics.com/products/31342
-Sample Product 1869,8674.289330719716,furniture,Autochek,2025-04-20 17:46:44.617171,5,False,1.2,572,69,https://www.autochek.com/products/98945
-Sample Product 6933,9014.68166176516,books,BedmateFurniture,2025-04-18 17:46:44.617177,10,False,4.1,365,7,https://www.bedmatefurniture.com/products/89570
-Sample Product 7755,3144.85450966759,food,TechpointMarketplace,2025-04-27 17:46:44.617183,10,True,2.2,125,75,https://www.techpointmarketplace.com/products/48970
-Sample Product 6248,5687.07958387392,furniture,MyMedicines,2025-04-27 17:46:44.617189,20,False,4.8,457,42,https://www.mymedicines.com/products/68675
-Sample Product 1865,7913.284915697768,furniture,HealthPlusNigeria,2025-05-10 17:46:44.617194,10,True,1.8,184,97,https://www.healthplusnigeria.com/products/40391
-Sample Product 4702,2661.0427981552807,books,PricePally,2025-04-28 17:46:44.617199,0,False,3.7,661,81,https://www.pricepally.com/products/30222
-Sample Product 9642,4606.115082653745,electronics,PayPorte,2025-04-13 17:46:44.617205,20,True,4.1,527,7,https://www.payporte.com/products/51938
-Sample Product 5995,8330.041638077884,soft-drinks,MedPlusNig,2025-04-19 17:46:44.617220,20,True,4.5,517,64,https://www.medplusnig.com/products/28552
-Sample Product 8136,8481.075740570965,electronics,TheLadyMaker,2025-04-12 17:46:44.617230,5,False,3.4,745,96,https://www.theladymaker.com/products/19983
-Sample Product 9356,4498.269221087244,beverages,TheLadyMaker,2025-05-09 17:46:44.617241,15,True,2.1,117,79,https://www.theladymaker.com/products/49044
-Sample Product 8710,2034.4112071559105,soft-drinks,TheLadyMaker,2025-05-07 17:46:44.617247,0,False,4.5,45,43,https://www.theladymaker.com/products/27716
-Sample Product 6681,1045.4690062515836,food,PointekOnline,2025-04-30 17:46:44.617252,0,True,1.4,897,45,https://www.pointekonline.com/products/28260
-Sample Product 4535,2325.310462937913,beverages,Autochek,2025-05-03 17:46:44.617261,0,False,1.4,256,6,https://www.autochek.com/products/95488
-Sample Product 9490,8251.951169879521,snacks,ZikelCosmetics,2025-05-12 17:46:44.617267,0,True,3.6,830,81,https://www.zikelcosmetics.com/products/15889
-Sample Product 2206,7206.408803267421,automotive,NBS,2025-05-12 17:46:44.617303,10,False,3.4,986,25,https://www.nbs.com/products/51682
-Sample Product 3973,8248.432621507429,books,HealthPlusNigeria,2025-04-22 17:46:44.617317,10,True,3.8,701,91,https://www.healthplusnigeria.com/products/86724
-Sample Product 2568,1970.2400938819808,soft-drinks,MyMedicines,2025-04-20 17:46:44.617330,10,True,4.2,402,69,https://www.mymedicines.com/products/37286
-Sample Product 1016,3489.1867887637877,automotive,BookvilleWorld,2025-04-24 17:46:44.617336,0,True,1.5,827,76,https://www.bookvilleworld.com/products/58297
-Sample Product 2842,1705.4921784566445,health,NEPC,2025-04-30 17:46:44.617342,5,False,4.9,824,18,https://www.nepc.com/products/12953
-Sample Product 6574,5201.741928677076,furniture,HealthPlusNigeria,2025-05-08 17:46:44.617347,0,False,3.1,198,97,https://www.healthplusnigeria.com/products/44478
-Sample Product 8081,9284.061534671542,automotive,Nairametrics,2025-04-21 17:46:44.617353,15,True,4.6,306,83,https://www.nairametrics.com/products/21941
-Sample Product 4889,6618.933680182338,electronics,AvenueMall,2025-05-07 17:46:44.617358,15,True,2.5,538,4,https://www.avenuemall.com/products/26308
-Sample Product 4695,1619.7941632139416,books,SMEdenMarket,2025-04-29 17:46:44.617365,15,False,1.8,950,76,https://www.smedenmarket.com/products/28218
-Sample Product 6914,2152.9414400593887,personal-care,RuffnTumbleKids,2025-04-26 17:46:44.617371,10,False,3.6,299,5,https://www.ruffntumblekids.com/products/76496
-Sample Product 1554,9540.17048520627,automotive,AjeboMarket,2025-04-17 17:46:44.617377,10,True,4.2,980,54,https://www.ajebomarket.com/products/36373
-Sample Product 7956,7295.915715954096,detergents,PoloAvenue,2025-05-04 17:46:44.617383,20,True,1.3,672,63,https://www.poloavenue.com/products/65620
-Sample Product 3701,4664.235449075684,soft-drinks,SuperMart,2025-05-01 17:46:44.617388,5,True,4.0,972,23,https://www.supermart.com/products/32025
-Sample Product 9727,6874.919213521755,furniture,ZikelCosmetics,2025-04-14 17:46:44.617393,10,False,2.4,302,64,https://www.zikelcosmetics.com/products/90798
-Sample Product 9559,4890.941496062687,soft-drinks,Shopaholic,2025-04-13 17:46:44.617403,15,False,1.6,688,95,https://www.shopaholic.com/products/43259
-Sample Product 4085,8476.0388742675,beverages,Nairametrics,2025-04-27 17:46:44.617408,20,False,2.3,58,49,https://www.nairametrics.com/products/21943
-Sample Product 3610,8078.526720855021,detergents,SMEdenMarket,2025-04-29 17:46:44.617416,10,False,4.3,216,47,https://www.smedenmarket.com/products/30147
-Sample Product 7824,2464.9848758164135,food,Obeezi,2025-04-26 17:46:44.617421,0,False,2.3,861,28,https://www.obeezi.com/products/43375
-Sample Product 1715,4679.207614379796,snacks,ZikelCosmetics,2025-04-20 17:46:44.617428,10,True,1.1,796,91,https://www.zikelcosmetics.com/products/16027
-Sample Product 2827,9420.920035486866,detergents,Kusnap,2025-04-22 17:46:44.617433,15,True,3.8,750,98,https://www.kusnap.com/products/65184
-Sample Product 4096,7476.84428342011,furniture,GZ-Supplies,2025-04-20 17:46:44.617439,20,False,3.0,346,68,https://www.gz-supplies.com/products/15122
-Sample Product 4261,7841.144865149392,food,Jumia,2025-04-24 17:46:44.617444,10,False,1.4,960,44,https://www.jumia.com/products/39453
-Sample Product 7024,756.3377915756555,food,LifemateNigeria,2025-05-07 17:46:44.617450,10,False,3.2,369,94,https://www.lifematenigeria.com/products/86764
-Sample Product 7102,3704.201150007832,furniture,NEPC,2025-05-02 17:46:44.617455,15,False,2.6,799,11,https://www.nepc.com/products/63987
-Sample Product 2276,6337.4346167781705,furniture,JijiCars,2025-04-18 17:46:44.617460,15,False,2.8,776,96,https://www.jijicars.com/products/63345
-Sample Product 8327,4501.65933404192,books,ZRTales,2025-05-12 17:46:44.617465,5,False,1.3,634,75,https://www.zrtales.com/products/72000
-Sample Product 4336,5287.54392649532,food,JustFones,2025-04-28 17:46:44.617470,0,False,3.5,280,61,https://www.justfones.com/products/84667
-Sample Product 6165,5656.409949727161,fashion,GZ-Supplies,2025-05-11 17:46:44.617476,10,True,5.0,89,3,https://www.gz-supplies.com/products/95904
-Sample Product 1862,1150.909513805418,soft-drinks,MedPlusNig,2025-05-09 17:46:44.617482,10,False,2.1,971,12,https://www.medplusnig.com/products/81234
+Kitchen Cabinet Set,93201.57529152272,furniture,Jumia,2025-04-13 12:56:28.379580,15,False,2.7,586,17,https://www.jumia.com/products/35178
+Harpic Toilet Cleaner 10L,5651.856800584751,detergents,Jumia,2025-05-13 12:56:28.379626,25,False,1.2,894,66,https://www.jumia.com/products/79995
+Children's School Uniform Set,3993.6165558932194,fashion,Jumia,2025-04-25 12:56:28.379648,10,False,2.3,602,44,https://www.jumia.com/products/92970
+LG 1000-Inch Smart TV,101424.33260000075,electronics,Jumia,2025-04-18 12:56:28.379659,20,False,3.6,46,34,https://www.jumia.com/products/40303
+Car Battery,67437.24739239184,automotive,Jumia,2025-04-16 12:56:28.379673,0,False,4.1,817,99,https://www.jumia.com/products/83259
+Windshield Wipers Set,99104.5282900578,automotive,Jumia,2025-05-11 12:56:28.379681,5,True,3.1,571,21,https://www.jumia.com/products/61622
+Bookshelf 500 Tiers,14529.158114102822,furniture,Jumia,2025-04-14 12:56:28.379689,15,False,1.6,512,97,https://www.jumia.com/products/14924
+Pepsi 10L,8203.105823564048,soft-drinks,Jumia,2025-04-15 12:56:28.379702,5,False,4.8,320,35,https://www.jumia.com/products/67714
+Fanta Orange 55L,4748.227153922497,soft-drinks,Jumia,2025-05-11 12:56:28.379715,10,False,3.0,575,39,https://www.jumia.com/products/55693
+Morning Fresh Dishwashing Liquid 15L,5929.74438757518,detergents,Jumia,2025-05-07 12:56:28.379725,5,False,3.0,890,47,https://www.jumia.com/products/16617
+Nivea Body Lotion 1000ml,2958.8726704464275,personal-care,Konga,2025-05-02 12:56:28.379735,0,False,4.7,79,28,https://www.konga.com/products/20040
+Coca-Cola 50L,8403.081068647944,soft-drinks,Konga,2025-04-23 12:56:28.379743,20,False,2.3,691,75,https://www.konga.com/products/61145
+Oral-B Toothbrush,9014.231016366679,personal-care,Konga,2025-05-06 12:56:28.379750,15,False,1.3,48,24,https://www.konga.com/products/39599
+Holy Bible King James Version,7976.565869435906,books,Konga,2025-05-12 12:56:28.379756,0,False,4.2,824,35,https://www.konga.com/products/62253
+Head & Shoulders Shampoo 32ml,3247.0671571245684,personal-care,Konga,2025-04-14 12:56:28.379763,0,False,1.7,535,22,https://www.konga.com/products/57727
+Tecno Spark 200 Smartphone,108428.9363311401,electronics,Konga,2025-05-05 12:56:28.379770,10,True,3.1,212,66,https://www.konga.com/products/44517
+iPhone 10 Pro Max,221037.7548313998,electronics,Konga,2025-04-21 12:56:28.379777,0,False,1.9,712,62,https://www.konga.com/products/53669
+Indomie Noodles Spicy 100g,1998.8077992827323,food,Konga,2025-04-30 12:56:28.379784,25,False,4.4,714,47,https://www.konga.com/products/66169
+University Textbook Set,9058.574049160754,books,Konga,2025-05-13 12:56:28.379793,25,False,4.6,262,39,https://www.konga.com/products/81953
+Face Masks Pack of 500,4886.630187223501,health,Konga,2025-05-10 12:56:28.379800,15,True,3.7,73,79,https://www.konga.com/products/69317
+Lenovo Laptop 500GB RAM,212853.83986490496,electronics,Jiji,2025-04-20 12:56:28.379807,25,False,3.6,97,57,https://www.jiji.com/products/78862
+Tecno Spark 40 Smartphone,344278.4962950031,electronics,Jiji,2025-04-21 12:56:28.379814,5,False,3.0,128,99,https://www.jiji.com/products/81828
+Windshield Wipers Set,7588.524797627888,automotive,Jiji,2025-04-14 12:56:28.379821,5,True,4.0,482,42,https://www.jiji.com/products/52317
+Hypo Bleach 1000L,2477.1923388390396,detergents,Jiji,2025-04-14 12:56:28.379827,0,False,3.0,188,64,https://www.jiji.com/products/80556
+JBL Bluetooth Speaker,359879.4682494673,electronics,Jiji,2025-05-04 12:56:28.379834,25,True,4.6,539,22,https://www.jiji.com/products/59098
+iPhone 32 Pro Max,362967.12311541016,electronics,Jiji,2025-04-30 12:56:28.379840,25,False,2.8,919,98,https://www.jiji.com/products/75583
+Ovaltine Malted Drink 2000g,9827.082005233917,beverages,Jiji,2025-04-25 12:56:28.379848,10,False,4.7,389,4,https://www.jiji.com/products/20805
+Digestive Biscuits 20g,9485.551133276878,snacks,Jiji,2025-05-05 12:56:28.379855,20,False,2.1,623,43,https://www.jiji.com/products/44912
+Men's Cotton T-Shirt Size 20,5770.98086805485,fashion,Jiji,2025-04-24 12:56:28.379863,25,False,2.6,908,90,https://www.jiji.com/products/20693
+Dashboard Camera,80141.21274902321,automotive,Jiji,2025-05-08 12:56:28.379869,10,False,3.2,610,29,https://www.jiji.com/products/31086
+Buttermint Sweets 20g,7309.636519503601,snacks,PayPorte,2025-04-16 12:56:28.379876,25,False,2.2,957,74,https://www.payporte.com/products/49562
+Things Fall Apart by Chinua Achebe,2104.7634957834753,books,PayPorte,2025-04-22 12:56:28.379883,5,False,4.6,54,71,https://www.payporte.com/products/63118
+Seat Covers Set,35262.42462382862,automotive,PayPorte,2025-05-03 12:56:28.379889,20,False,2.7,32,47,https://www.payporte.com/products/77863
+Men's Cotton T-Shirt Size 1000,9730.17837079718,fashion,PayPorte,2025-05-09 12:56:28.379896,30,False,4.8,51,8,https://www.payporte.com/products/69431
+Lipton Yellow Label Tea 250g,6248.7063457847735,beverages,PayPorte,2025-04-26 12:56:28.379903,20,False,3.1,622,73,https://www.payporte.com/products/41973
+iPhone 500 Pro Max,233257.6298015492,electronics,PayPorte,2025-04-19 12:56:28.379910,5,False,2.1,162,90,https://www.payporte.com/products/96730
+Digestive Biscuits 5g,2145.1800073048494,snacks,PayPorte,2025-04-30 12:56:28.379916,30,True,3.0,83,81,https://www.payporte.com/products/28238
+Orbit Chewing Gum 32g,6720.772154147762,snacks,PayPorte,2025-04-19 12:56:28.379923,0,False,2.7,263,33,https://www.payporte.com/products/93852
+McVitie's Digestive 2000g,9354.318715790543,snacks,PayPorte,2025-04-30 12:56:28.379932,0,False,3.5,78,29,https://www.payporte.com/products/60280
+Knorr Seasoning Cubes 10g,6262.6503662729065,food,PayPorte,2025-04-18 12:56:28.379939,25,False,3.2,704,31,https://www.payporte.com/products/61761
+Sunlight Detergent 200kg,9228.614776659835,detergents,Kara,2025-05-05 12:56:28.379947,15,False,2.0,363,45,https://www.kara.com/products/49780
+Lux Soap 20g,9611.899372054184,personal-care,Kara,2025-05-01 12:56:28.379953,0,False,4.7,839,60,https://www.kara.com/products/45052
+Titus Sardines 20g,6841.577556230185,food,Kara,2025-05-08 12:56:28.379960,10,False,4.7,599,95,https://www.kara.com/products/33263
+Coca-Cola 32L,4380.613194550577,soft-drinks,Kara,2025-04-20 12:56:28.379966,5,False,4.2,323,19,https://www.kara.com/products/83466
+Digestive Biscuits 65g,5229.899414949451,snacks,Kara,2025-04-29 12:56:28.379973,0,True,1.4,729,12,https://www.kara.com/products/93389
+Milo Energy Drink 40g,7247.147374200138,beverages,Kara,2025-05-08 12:56:28.379979,10,False,4.4,843,82,https://www.kara.com/products/65668
+Buttermint Sweets 250g,5397.4408998882345,snacks,Kara,2025-04-17 12:56:28.379985,10,False,2.9,210,63,https://www.kara.com/products/11941
+Michelin Tires Size 100,76411.95096267115,automotive,Kara,2025-04-19 12:56:28.379992,30,False,1.6,731,12,https://www.kara.com/products/89892
+Milo Energy Drink 100g,1585.4178038949544,beverages,Kara,2025-05-12 12:56:28.380001,5,False,4.2,816,8,https://www.kara.com/products/74033
+Dettol Surface Cleaner 65L,3876.4371781979435,detergents,Kara,2025-05-03 12:56:28.380007,30,False,1.5,553,50,https://www.kara.com/products/85667
+Golden Penny Spaghetti 15g,7428.746673695913,food,Slot,2025-05-11 12:56:28.380014,20,False,2.9,128,46,https://www.slot.com/products/80502
+Children's School Uniform Set,6276.009926129062,fashion,Slot,2025-04-24 12:56:28.380020,5,False,1.6,875,43,https://www.slot.com/products/48061
+Surf Excel Detergent 250kg,837.3633077822908,detergents,Slot,2025-04-13 12:56:28.380028,5,True,2.4,760,98,https://www.slot.com/products/71637
+Nivea Body Lotion 15ml,8758.022264391022,personal-care,Slot,2025-04-28 12:56:28.380035,25,False,1.3,628,51,https://www.slot.com/products/61411
+Hisense 40-Inch Flat Screen TV,261958.45168100815,electronics,Slot,2025-04-28 12:56:28.380041,0,True,3.3,460,84,https://www.slot.com/products/18359
+Nike Sports Shoes Size 55,9838.808886252711,fashion,Slot,2025-04-27 12:56:28.380048,20,True,2.3,165,69,https://www.slot.com/products/55851
+Michelin Tires Size 50,33074.915708836474,automotive,Slot,2025-04-29 12:56:28.380056,20,False,4.5,531,23,https://www.slot.com/products/87382
+Indomie Noodles Original 50g,4965.799524375265,food,Slot,2025-05-02 12:56:28.380090,0,True,2.7,738,63,https://www.slot.com/products/66275
+Seat Covers Set,99119.99451470669,automotive,Slot,2025-05-06 12:56:28.380102,25,False,2.6,917,54,https://www.slot.com/products/92972
+McVitie's Digestive 15g,4658.891521854467,snacks,Slot,2025-05-11 12:56:28.380108,0,True,1.1,175,46,https://www.slot.com/products/66203
+Dining Table with 20 Chairs,73037.75437294098,furniture,AjeboMarket,2025-04-28 12:56:28.380116,0,False,4.7,61,27,https://www.ajebomarket.com/products/46832
+WAEC Examination Prep Book,4562.505906459402,books,AjeboMarket,2025-04-26 12:56:28.380124,30,False,1.5,233,91,https://www.ajebomarket.com/products/29699
+Bookshelf 65 Tiers,54138.98838421784,furniture,AjeboMarket,2025-04-25 12:56:28.380131,15,False,2.3,660,42,https://www.ajebomarket.com/products/24841
+Ovaltine Malted Drink 20g,4277.288381370814,beverages,AjeboMarket,2025-04-17 12:56:28.380137,10,True,4.1,412,24,https://www.ajebomarket.com/products/80358
+Knorr Seasoning Cubes 100g,7078.967909858701,food,AjeboMarket,2025-04-30 12:56:28.380144,15,False,2.4,833,79,https://www.ajebomarket.com/products/32641
+Bournvita Chocolate Drink 250g,5923.862048784503,beverages,AjeboMarket,2025-05-06 12:56:28.380151,15,False,2.9,807,81,https://www.ajebomarket.com/products/59368
+Gold Plated Necklace,3295.541887100399,fashion,AjeboMarket,2025-04-13 12:56:28.380158,0,False,4.4,965,73,https://www.ajebomarket.com/products/76911
+Women's Summer Dress Size 40,7246.547263880231,fashion,AjeboMarket,2025-05-06 12:56:28.380164,15,False,2.4,65,85,https://www.ajebomarket.com/products/20310
+Samsung Galaxy A55 Smartphone,161779.78521994475,electronics,AjeboMarket,2025-04-18 12:56:28.380172,5,False,4.5,888,94,https://www.ajebomarket.com/products/82098
+Office Desk,23284.744432935924,furniture,AjeboMarket,2025-04-29 12:56:28.380179,15,False,2.3,304,69,https://www.ajebomarket.com/products/70409
+Car Air Freshener,30771.440678671603,automotive,Obeezi,2025-05-08 12:56:28.380185,5,True,3.2,181,79,https://www.obeezi.com/products/39747
+Michelin Tires Size 500,43280.34536553617,automotive,Obeezi,2025-05-01 12:56:28.380191,25,False,2.7,953,10,https://www.obeezi.com/products/23704
+Gold Plated Necklace,8320.017889240658,fashion,Obeezi,2025-04-23 12:56:28.380198,5,False,4.1,359,45,https://www.obeezi.com/products/92775
+Hand Sanitizer 1000ml,8271.899485309279,health,Obeezi,2025-04-26 12:56:28.380204,20,False,2.8,957,18,https://www.obeezi.com/products/18176
+TV Stand with Storage,146667.5784981005,furniture,Obeezi,2025-05-09 12:56:28.380210,30,False,4.3,453,7,https://www.obeezi.com/products/68575
+Oral-B Toothbrush,5697.380938964967,personal-care,Obeezi,2025-04-27 12:56:28.380227,20,False,3.4,200,84,https://www.obeezi.com/products/17128
+Women's Summer Dress Size 15,5313.451821808683,fashion,Obeezi,2025-05-11 12:56:28.380234,15,False,2.7,695,45,https://www.obeezi.com/products/16683
+Vitamin C Supplements 40mg,5196.117135423248,health,Obeezi,2025-05-11 12:56:28.380241,0,False,2.3,952,93,https://www.obeezi.com/products/17992
+Honeywell Semolina 20kg,3278.510034508376,food,Obeezi,2025-05-04 12:56:28.380249,20,True,4.4,621,39,https://www.obeezi.com/products/81329
+Car Battery,33264.98635998528,automotive,Obeezi,2025-04-24 12:56:28.380256,10,True,4.3,800,39,https://www.obeezi.com/products/44841
+Hypo Bleach 200L,6843.47264058784,detergents,ChrisVicMall,2025-04-27 12:56:28.380268,5,True,3.4,460,46,https://www.chrisvicmall.com/products/29603
+Ariel Detergent Powder 10kg,5257.7335346884265,detergents,ChrisVicMall,2025-04-13 12:56:28.380283,30,False,2.3,401,53,https://www.chrisvicmall.com/products/32581
+Face Masks Pack of 15,6151.961217218118,health,ChrisVicMall,2025-04-23 12:56:28.380299,30,True,4.0,637,8,https://www.chrisvicmall.com/products/96625
+Surf Excel Detergent 200kg,9296.449259499912,detergents,ChrisVicMall,2025-04-27 12:56:28.380311,25,False,4.2,306,76,https://www.chrisvicmall.com/products/34835
+Queen Size Bed Frame,133134.4658317885,furniture,ChrisVicMall,2025-05-05 12:56:28.380324,25,False,3.9,898,70,https://www.chrisvicmall.com/products/61002
+Titus Sardines 5g,3193.1815470616075,food,ChrisVicMall,2025-05-10 12:56:28.380332,25,False,4.7,463,39,https://www.chrisvicmall.com/products/18085
+Hypo Bleach 55L,5943.7748822478725,detergents,ChrisVicMall,2025-04-18 12:56:28.380339,30,False,2.5,372,7,https://www.chrisvicmall.com/products/33173
+Tecno Spark 32 Smartphone,210289.89101571278,electronics,ChrisVicMall,2025-04-28 12:56:28.380351,25,True,3.4,98,91,https://www.chrisvicmall.com/products/54782
+Sprite 32L,9033.862359809273,soft-drinks,ChrisVicMall,2025-04-13 12:56:28.380368,25,False,4.5,360,10,https://www.chrisvicmall.com/products/16894
+Hand Sanitizer 1000ml,4585.846231499978,health,ChrisVicMall,2025-04-21 12:56:28.380382,30,False,4.1,740,46,https://www.chrisvicmall.com/products/77283
+Gold Plated Necklace,769.1274416993149,fashion,SuperMart,2025-05-03 12:56:28.380394,20,False,2.7,518,2,https://www.supermart.com/products/86732
+JBL Bluetooth Speaker,167343.8389742039,electronics,SuperMart,2025-05-11 12:56:28.380405,30,False,2.1,211,86,https://www.supermart.com/products/80538
+Seat Covers Set,93240.58315439781,automotive,SuperMart,2025-05-06 12:56:28.380417,25,False,1.4,873,27,https://www.supermart.com/products/34916
+McVitie's Digestive 55g,1544.3427150917025,snacks,SuperMart,2025-05-06 12:56:28.380429,0,False,3.9,525,53,https://www.supermart.com/products/65772
+Dining Table with 65 Chairs,42955.11695777396,furniture,SuperMart,2025-04-26 12:56:28.380441,15,False,3.2,403,85,https://www.supermart.com/products/35534
+Dining Table with 200 Chairs,162668.62855935868,furniture,SuperMart,2025-05-04 12:56:28.380453,10,True,2.0,459,3,https://www.supermart.com/products/77665
+Buttermint Sweets 200g,5006.411566970773,snacks,SuperMart,2025-04-21 12:56:28.380464,5,False,1.9,120,54,https://www.supermart.com/products/13904
+Schweppes Tonic Water 200L,2327.315488551129,soft-drinks,SuperMart,2025-05-07 12:56:28.380472,30,False,2.7,506,13,https://www.supermart.com/products/65818
+Tecno Spark 250 Smartphone,282122.3387357335,electronics,SuperMart,2025-05-01 12:56:28.380488,15,True,1.4,973,74,https://www.supermart.com/products/62701
+McVitie's Digestive 2000g,2262.419926319146,snacks,SuperMart,2025-04-19 12:56:28.380501,0,False,3.2,505,67,https://www.supermart.com/products/84353
+Gino Tomato Paste 40g,722.6111397203658,food,Fouani,2025-04-20 12:56:28.380522,25,False,2.6,151,4,https://www.fouani.com/products/78126
+Gino Tomato Paste 15g,4117.795756450783,food,Fouani,2025-04-30 12:56:28.380536,30,True,3.5,167,50,https://www.fouani.com/products/71278
+Bookshelf 65 Tiers,30243.977772767703,furniture,Fouani,2025-04-30 12:56:28.380543,20,False,2.2,181,31,https://www.fouani.com/products/53177
+Nivea Body Lotion 100ml,2558.1107045149856,personal-care,Fouani,2025-04-26 12:56:28.380550,0,False,3.0,360,88,https://www.fouani.com/products/66148
+Cowbell Milk Powder 50g,4923.460897944897,beverages,Fouani,2025-04-26 12:56:28.380556,20,False,2.8,575,36,https://www.fouani.com/products/53282
+Children's Story Book Collection,685.1801056981376,books,Fouani,2025-05-10 12:56:28.380563,25,False,1.9,538,30,https://www.fouani.com/products/86027
+Pure Bliss Wafers 1000g,1586.9600815306833,snacks,Fouani,2025-05-08 12:56:28.380569,20,True,3.1,894,29,https://www.fouani.com/products/83795
+Seat Covers Set,50372.286099922196,automotive,Fouani,2025-04-14 12:56:28.380576,0,False,1.2,553,77,https://www.fouani.com/products/43137
+Gino Tomato Paste 15g,7738.220719081428,food,Fouani,2025-04-22 12:56:28.380587,5,True,2.1,965,79,https://www.fouani.com/products/41332
+Windshield Wipers Set,27309.844125738153,automotive,Fouani,2025-04-15 12:56:28.380601,10,False,1.2,613,29,https://www.fouani.com/products/29568
+Lux Soap 5g,3958.498048528305,personal-care,3CHub,2025-05-02 12:56:28.380612,10,True,2.5,810,20,https://www.3chub.com/products/51609
+Hisense 1000-Inch Flat Screen TV,152484.03215195952,electronics,3CHub,2025-04-19 12:56:28.380619,30,False,2.9,913,68,https://www.3chub.com/products/59453
+Hypo Bleach 10L,5686.688407865378,detergents,3CHub,2025-04-18 12:56:28.380626,0,True,1.4,831,69,https://www.3chub.com/products/14921
+Lux Soap 1000g,8724.228741532817,personal-care,3CHub,2025-04-27 12:56:28.380632,10,False,4.7,588,34,https://www.3chub.com/products/77341
+Car Air Freshener,97368.27107683758,automotive,3CHub,2025-04-26 12:56:28.380639,30,False,1.8,957,45,https://www.3chub.com/products/62430
+Harpic Toilet Cleaner 250L,8005.342203751621,detergents,3CHub,2025-05-11 12:56:28.380645,25,True,3.7,76,9,https://www.3chub.com/products/91764
+WAEC Examination Prep Book,2925.996523771791,books,3CHub,2025-04-16 12:56:28.380651,30,False,4.6,252,93,https://www.3chub.com/products/44077
+Pure Bliss Wafers 250g,6301.600097948962,snacks,3CHub,2025-04-21 12:56:28.380657,20,False,4.3,522,32,https://www.3chub.com/products/83591
+Women's Summer Dress Size 32,6508.518870066653,fashion,3CHub,2025-04-18 12:56:28.386193,10,False,3.6,138,13,https://www.3chub.com/products/90165
+Digital Thermometer,6622.129964216934,health,3CHub,2025-05-06 12:56:28.386226,30,True,2.2,868,6,https://www.3chub.com/products/93643
+Hand Sanitizer 5ml,8115.909600044008,health,ParktelOnline,2025-05-11 12:56:28.386244,30,False,2.2,660,88,https://www.parktelonline.com/products/28516
+Titus Sardines 32g,4616.4867630572735,food,ParktelOnline,2025-04-17 12:56:28.386258,5,False,1.6,768,26,https://www.parktelonline.com/products/63707
+Michelin Tires Size 65,73444.57270442366,automotive,ParktelOnline,2025-04-13 12:56:28.386272,25,False,1.4,955,62,https://www.parktelonline.com/products/84317
+Hisense 65-Inch Flat Screen TV,486155.5461834677,electronics,ParktelOnline,2025-05-01 12:56:28.386290,20,False,1.5,193,90,https://www.parktelonline.com/products/81774
+First Aid Kit,542.2623355717229,health,ParktelOnline,2025-04-28 12:56:28.386305,0,False,2.0,569,9,https://www.parktelonline.com/products/36171
+Golden Penny Rice 2000kg,5680.782182183626,food,ParktelOnline,2025-04-14 12:56:28.386331,5,False,4.5,278,8,https://www.parktelonline.com/products/58757
+Windshield Wipers Set,6783.38047151896,automotive,ParktelOnline,2025-05-08 12:56:28.386344,20,False,2.1,675,100,https://www.parktelonline.com/products/86514
+Dettol Soap 2000g,2312.8713316257804,personal-care,ParktelOnline,2025-05-02 12:56:28.386357,25,False,3.6,528,47,https://www.parktelonline.com/products/88683
+Ankara Fabric 10 Yards,4474.0025753401205,fashion,ParktelOnline,2025-05-08 12:56:28.386383,0,True,1.2,868,80,https://www.parktelonline.com/products/52278
+WAEC Examination Prep Book,5428.399886240489,books,ParktelOnline,2025-05-02 12:56:28.386399,25,False,1.8,252,42,https://www.parktelonline.com/products/22850
+TV Stand with Storage,34466.95007041792,furniture,JustFones,2025-05-10 12:56:28.386412,15,True,2.2,756,49,https://www.justfones.com/products/79892
+Oraimo Wireless Earbuds,264552.2628354203,electronics,JustFones,2025-05-05 12:56:28.386424,30,True,4.2,360,65,https://www.justfones.com/products/33670
+Mosquito Repellent Spray 15ml,1917.081665614321,health,JustFones,2025-04-19 12:56:28.386437,20,False,1.5,852,38,https://www.justfones.com/products/98496
+250-Seater Sofa Set,33576.45040156931,furniture,JustFones,2025-04-30 12:56:28.386449,20,False,5.0,861,26,https://www.justfones.com/products/39504
+Kings Oil Vegetable Oil 65L,3870.9226952916915,food,JustFones,2025-05-04 12:56:28.386461,5,False,1.1,211,37,https://www.justfones.com/products/89991
+Holy Bible King James Version,8979.410706096336,books,JustFones,2025-04-24 12:56:28.386474,25,False,4.0,178,82,https://www.justfones.com/products/50913
+Wardrobe 200 Doors,144721.9120163417,furniture,JustFones,2025-04-29 12:56:28.386487,0,False,2.9,845,44,https://www.justfones.com/products/83872
+McVitie's Digestive 100g,4181.384712655083,snacks,JustFones,2025-04-14 12:56:28.386505,25,True,2.5,238,32,https://www.justfones.com/products/20358
+Ovaltine Malted Drink 2000g,1557.397021841802,beverages,JustFones,2025-05-05 12:56:28.386644,0,False,3.3,363,4,https://www.justfones.com/products/94041
+McVitie's Digestive 100g,4895.359710312081,snacks,JustFones,2025-04-26 12:56:28.386660,20,False,1.0,369,46,https://www.justfones.com/products/63454
+Office Desk,39121.04487116351,furniture,PointekOnline,2025-05-03 12:56:28.386674,30,False,1.6,258,82,https://www.pointekonline.com/products/38431
+Sony 55-Inch LED TV,168337.62995608817,electronics,PointekOnline,2025-05-07 12:56:28.386688,20,True,4.6,174,20,https://www.pointekonline.com/products/51370
+Head & Shoulders Shampoo 20ml,2635.87698411986,personal-care,PointekOnline,2025-05-11 12:56:28.386702,30,False,4.9,296,6,https://www.pointekonline.com/products/97312
+Car Engine Oil 500L,38854.925072978425,automotive,PointekOnline,2025-05-10 12:56:28.386715,10,False,4.3,48,3,https://www.pointekonline.com/products/85658
+Digestive Biscuits 2000g,1942.8433236174,snacks,PointekOnline,2025-04-28 12:56:28.386727,0,False,4.3,889,68,https://www.pointekonline.com/products/98903
+Men's Cotton T-Shirt Size 250,4379.231301200307,fashion,PointekOnline,2025-04-20 12:56:28.386742,5,False,4.5,595,40,https://www.pointekonline.com/products/33446
+Golden Penny Spaghetti 100g,3044.489703137183,food,PointekOnline,2025-04-17 12:56:28.386754,15,False,1.6,638,40,https://www.pointekonline.com/products/11835
+Nescafé Classic Coffee 200g,7850.935387205232,beverages,PointekOnline,2025-04-25 12:56:28.386767,0,False,4.1,775,66,https://www.pointekonline.com/products/41033
+Teem Bitter Lemon 15L,3656.9419974319076,soft-drinks,PointekOnline,2025-04-21 12:56:28.386782,0,False,1.3,384,48,https://www.pointekonline.com/products/24027
+Nike Sports Shoes Size 500,822.0959855722142,fashion,PointekOnline,2025-05-05 12:56:28.386795,0,False,2.0,461,22,https://www.pointekonline.com/products/36566
+Mosquito Repellent Spray 200ml,8833.686751525847,health,FoodCo,2025-05-07 12:56:28.386809,25,True,3.2,555,35,https://www.foodco.com/products/28198
+Fanta Orange 65L,5512.5560477105255,soft-drinks,FoodCo,2025-04-21 12:56:28.386822,5,False,3.4,956,35,https://www.foodco.com/products/87605
+Vitamin C Supplements 100mg,3381.856281501545,health,FoodCo,2025-04-18 12:56:28.386834,15,False,2.1,294,52,https://www.foodco.com/products/93191
+Women's Summer Dress Size 10,8220.213088738457,fashion,FoodCo,2025-04-18 12:56:28.386846,25,False,2.5,740,39,https://www.foodco.com/products/57301
+Dettol Soap 10g,5952.10407349186,personal-care,FoodCo,2025-04-17 12:56:28.386858,0,False,1.9,819,28,https://www.foodco.com/products/76693
+Teem Bitter Lemon 1000L,8918.326311790577,soft-drinks,FoodCo,2025-05-06 12:56:28.386871,25,False,4.9,819,1,https://www.foodco.com/products/76024
+Bournvita Chocolate Drink 55g,9678.386472640545,beverages,FoodCo,2025-04-27 12:56:28.386884,10,False,3.3,253,97,https://www.foodco.com/products/96131
+Sunlight Detergent 5kg,1843.3413973556558,detergents,FoodCo,2025-05-11 12:56:28.386896,0,True,2.5,61,4,https://www.foodco.com/products/71864
+Gino Tomato Paste 250g,8109.793338748378,food,FoodCo,2025-04-18 12:56:28.386911,20,False,1.8,357,62,https://www.foodco.com/products/65577
+Oral-B Toothbrush,4938.335209926975,personal-care,FoodCo,2025-04-24 12:56:28.386925,15,False,1.9,193,28,https://www.foodco.com/products/41550
+Children's Story Book Collection,1789.9272905489674,books,PricePally,2025-04-20 12:56:28.386938,10,False,3.0,718,60,https://www.pricepally.com/products/17718
+Business Management Guide,7777.6200587289695,books,PricePally,2025-04-16 12:56:28.386951,0,False,4.1,985,81,https://www.pricepally.com/products/62949
+Lipton Yellow Label Tea 40g,2743.4705986073955,beverages,PricePally,2025-05-06 12:56:28.386963,15,False,1.4,470,97,https://www.pricepally.com/products/85707
+Dettol Soap 5g,5829.138239182597,personal-care,PricePally,2025-04-13 12:56:28.386976,10,False,1.5,439,34,https://www.pricepally.com/products/55390
+Children's School Uniform Set,8482.394774082193,fashion,PricePally,2025-05-08 12:56:28.386988,5,True,4.6,536,10,https://www.pricepally.com/products/14591
+Women's Summer Dress Size 32,2388.432608167416,fashion,PricePally,2025-04-20 12:56:28.387002,5,False,1.1,405,87,https://www.pricepally.com/products/23630
+Titus Sardines 32g,7100.512664478018,food,PricePally,2025-04-24 12:56:28.387014,15,False,4.7,990,69,https://www.pricepally.com/products/11893
+Car Wash Kit,12955.860529532538,automotive,PricePally,2025-05-03 12:56:28.387026,25,False,1.3,430,28,https://www.pricepally.com/products/86711
+McVitie's Digestive 20g,5385.545130467024,snacks,PricePally,2025-04-18 12:56:28.387039,5,True,3.8,278,63,https://www.pricepally.com/products/64455
+Pure Bliss Wafers 100g,5239.979336060153,snacks,PricePally,2025-05-06 12:56:28.387051,5,False,3.2,352,58,https://www.pricepally.com/products/55196
+Sprite 2000L,6008.847341268333,soft-drinks,SuperMart,2025-04-13 12:56:28.387079,5,False,1.4,729,74,https://www.supermart.com/products/27586
+Car Wash Kit,84010.77183858892,automotive,SuperMart,2025-05-08 12:56:28.387093,10,False,2.2,388,81,https://www.supermart.com/products/97235
+500-Seater Sofa Set,18635.806747810624,furniture,SuperMart,2025-04-25 12:56:28.387105,25,False,2.5,259,35,https://www.supermart.com/products/14940
+Cowbell Milk Powder 100g,6964.859400315568,beverages,SuperMart,2025-05-07 12:56:28.387117,5,False,3.5,68,30,https://www.supermart.com/products/82730
+Car Engine Oil 500L,49291.21279454042,automotive,SuperMart,2025-04-17 12:56:28.387129,25,False,4.3,962,22,https://www.supermart.com/products/58037
+Samsung Galaxy A20 Smartphone,116484.89799232151,electronics,SuperMart,2025-05-08 12:56:28.387141,20,True,3.0,812,86,https://www.supermart.com/products/13033
+LG 2000-Inch Smart TV,486539.1873311804,electronics,SuperMart,2025-05-12 12:56:28.387153,25,True,3.3,244,95,https://www.supermart.com/products/60345
+Ankara Fabric 100 Yards,3536.227770966381,fashion,SuperMart,2025-05-06 12:56:28.387166,20,True,3.6,140,83,https://www.supermart.com/products/31663
+Oral-B Toothbrush,9613.29529025826,personal-care,SuperMart,2025-04-30 12:56:28.387181,5,False,3.2,979,39,https://www.supermart.com/products/22296
+WAEC Examination Prep Book,1914.8304448536398,books,SuperMart,2025-04-13 12:56:28.387192,10,False,2.2,116,35,https://www.supermart.com/products/56987
+Mosquito Repellent Spray 1000ml,1624.2703554888938,health,MyChopChop,2025-04-26 12:56:28.387204,15,False,4.6,418,58,https://www.mychopchop.com/products/96414
+Ariel Detergent Powder 10kg,2027.968605584528,detergents,MyChopChop,2025-04-30 12:56:28.387217,30,False,2.4,96,50,https://www.mychopchop.com/products/88686
+Tecno Spark 500 Smartphone,19262.324914443798,electronics,MyChopChop,2025-05-03 12:56:28.387230,10,False,3.9,129,87,https://www.mychopchop.com/products/18286
+Hisense 100-Inch Flat Screen TV,318233.1495814864,electronics,MyChopChop,2025-04-28 12:56:28.387242,20,False,4.8,50,76,https://www.mychopchop.com/products/63422
+Indomie Noodles Chicken 40g,4185.641396449497,food,MyChopChop,2025-05-04 12:56:28.387255,20,False,2.1,31,27,https://www.mychopchop.com/products/23209
+Mosquito Repellent Spray 100ml,2386.1501892131328,health,MyChopChop,2025-04-26 12:56:28.387268,5,False,1.8,640,25,https://www.mychopchop.com/products/86763
+University Textbook Set,7834.181265997804,books,MyChopChop,2025-04-28 12:56:28.387280,20,False,4.6,676,59,https://www.mychopchop.com/products/41746
+Nivea Body Lotion 20ml,7190.242580347198,personal-care,MyChopChop,2025-04-20 12:56:28.387291,30,True,3.3,125,35,https://www.mychopchop.com/products/61487
+Car Wash Kit,24205.59208442603,automotive,MyChopChop,2025-04-28 12:56:28.387306,25,True,1.6,418,9,https://www.mychopchop.com/products/45148
+Close-Up Toothpaste 20g,2788.9889312210607,personal-care,MyChopChop,2025-05-05 12:56:28.387318,0,False,1.2,478,34,https://www.mychopchop.com/products/24068
+iPhone 32 Pro Max,170157.1234268046,electronics,Ofadaa,2025-05-01 12:56:28.387331,0,False,4.5,388,96,https://www.ofadaa.com/products/24491
+Vitamin C Supplements 200mg,2203.533397301746,health,Ofadaa,2025-04-21 12:56:28.387347,30,False,4.9,564,13,https://www.ofadaa.com/products/98711
+Bournvita Chocolate Drink 500g,7331.488506703594,beverages,Ofadaa,2025-04-28 12:56:28.387360,15,False,1.4,519,2,https://www.ofadaa.com/products/59817
+Samsung Galaxy A10 Smartphone,392778.58157779975,electronics,Ofadaa,2025-05-05 12:56:28.387372,30,False,4.4,454,10,https://www.ofadaa.com/products/99216
+Titus Sardines 15g,8986.971659304027,food,Ofadaa,2025-04-24 12:56:28.387384,15,True,3.3,35,58,https://www.ofadaa.com/products/72909
+Gino Tomato Paste 1000g,6684.669890066847,food,Ofadaa,2025-05-02 12:56:28.387396,10,False,2.1,136,35,https://www.ofadaa.com/products/45561
+Designer Wristwatch,5616.781307069009,fashion,Ofadaa,2025-04-27 12:56:28.387408,15,False,2.0,499,22,https://www.ofadaa.com/products/82676
+Mosquito Repellent Spray 15ml,3149.315376724561,health,Ofadaa,2025-05-09 12:56:28.387419,5,False,4.1,124,55,https://www.ofadaa.com/products/98328
+Dining Table with 50 Chairs,123015.55941729186,furniture,Ofadaa,2025-05-02 12:56:28.387434,15,True,3.7,615,34,https://www.ofadaa.com/products/65489
+Close-Up Toothpaste 100g,3543.9117660101574,personal-care,Ofadaa,2025-05-06 12:56:28.387446,25,False,3.5,942,46,https://www.ofadaa.com/products/33079
+Blood Pressure Monitor,3110.6454626704754,health,ZikelCosmetics,2025-04-28 12:56:28.387459,10,False,4.2,194,33,https://www.zikelcosmetics.com/products/47602
+Nike Sports Shoes Size 200,8586.366653535111,fashion,ZikelCosmetics,2025-04-30 12:56:28.387471,20,True,3.5,488,81,https://www.zikelcosmetics.com/products/75821
+Bookshelf 40 Tiers,17438.121515042487,furniture,ZikelCosmetics,2025-04-23 12:56:28.387483,0,False,2.3,171,86,https://www.zikelcosmetics.com/products/75532
+Pepsi 20L,2619.010893906572,soft-drinks,ZikelCosmetics,2025-04-25 12:56:28.387500,15,False,1.4,916,9,https://www.zikelcosmetics.com/products/26329
+TV Stand with Storage,125928.47569539162,furniture,ZikelCosmetics,2025-04-24 12:56:28.387513,15,True,2.5,140,85,https://www.zikelcosmetics.com/products/46548
+Nestlé Pure Life Water 15L,4896.271159793997,beverages,ZikelCosmetics,2025-05-02 12:56:28.387525,20,False,1.4,232,34,https://www.zikelcosmetics.com/products/86474
+Car Air Freshener,6517.580468959184,automotive,ZikelCosmetics,2025-05-01 12:56:28.387538,25,False,3.1,65,80,https://www.zikelcosmetics.com/products/75832
+Car Air Freshener,52135.16620882174,automotive,ZikelCosmetics,2025-05-10 12:56:28.387552,10,False,3.0,916,87,https://www.zikelcosmetics.com/products/10244
+Peak Milk Powder 50g,2994.059461964311,beverages,ZikelCosmetics,2025-04-21 12:56:28.387565,25,False,4.4,492,62,https://www.zikelcosmetics.com/products/14136
+Lux Soap 55g,3366.1803499831303,personal-care,ZikelCosmetics,2025-04-14 12:56:28.387577,0,False,4.1,427,97,https://www.zikelcosmetics.com/products/24963
+Things Fall Apart by Chinua Achebe,9153.544342739566,books,RuffnTumbleKids,2025-05-13 12:56:28.387590,15,True,4.0,179,63,https://www.ruffntumblekids.com/products/30312
+Michelin Tires Size 55,99465.82257613204,automotive,RuffnTumbleKids,2025-04-24 12:56:28.387601,0,False,2.3,646,31,https://www.ruffntumblekids.com/products/51657
+Dettol Surface Cleaner 10L,8076.951137494579,detergents,RuffnTumbleKids,2025-05-02 12:56:28.387613,0,False,4.6,988,93,https://www.ruffntumblekids.com/products/50860
+Ovaltine Malted Drink 32g,4385.343300525835,beverages,RuffnTumbleKids,2025-04-17 12:56:28.387625,20,False,1.1,18,12,https://www.ruffntumblekids.com/products/82753
+Mountain Dew 50L,6706.80445080918,soft-drinks,RuffnTumbleKids,2025-04-15 12:56:28.387639,25,False,4.7,400,4,https://www.ruffntumblekids.com/products/87525
+Sunlight Detergent 200kg,5595.428095771757,detergents,RuffnTumbleKids,2025-05-05 12:56:28.387651,20,True,4.0,240,34,https://www.ruffntumblekids.com/products/23960
+Designer Wristwatch,9297.419261305331,fashion,RuffnTumbleKids,2025-05-05 12:56:28.387663,25,False,4.6,759,70,https://www.ruffntumblekids.com/products/84658
+Car Battery,94487.60804900753,automotive,RuffnTumbleKids,2025-04-29 12:56:28.387675,5,False,4.4,422,7,https://www.ruffntumblekids.com/products/11273
+Kitchen Cabinet Set,114504.70505655532,furniture,RuffnTumbleKids,2025-04-15 12:56:28.387689,5,False,1.8,78,71,https://www.ruffntumblekids.com/products/91099
+Children's School Uniform Set,9387.26808567527,fashion,RuffnTumbleKids,2025-04-27 12:56:28.387701,15,False,3.4,800,3,https://www.ruffntumblekids.com/products/25696
+Gold Plated Necklace,9218.06183999738,fashion,TheLadyMaker,2025-05-01 12:56:28.387713,30,False,3.9,777,99,https://www.theladymaker.com/products/90147
+Honeywell Semolina 50kg,2685.0486701823656,food,TheLadyMaker,2025-05-02 12:56:28.387724,5,True,4.5,946,54,https://www.theladymaker.com/products/44137
+Men's Cotton T-Shirt Size 40,5354.075131164218,fashion,TheLadyMaker,2025-04-29 12:56:28.387736,20,True,3.7,727,33,https://www.theladymaker.com/products/54294
+Men's Cotton T-Shirt Size 2000,528.7840156406685,fashion,TheLadyMaker,2025-04-15 12:56:28.387748,30,True,1.2,130,42,https://www.theladymaker.com/products/24097
+Tecno Spark 32 Smartphone,451364.7983169443,electronics,TheLadyMaker,2025-05-07 12:56:28.387760,20,True,2.6,328,83,https://www.theladymaker.com/products/36769
+Ankara Fabric 15 Yards,9719.380882881893,fashion,TheLadyMaker,2025-05-08 12:56:28.387772,20,False,1.7,149,94,https://www.theladymaker.com/products/34493
+Women's Summer Dress Size 1000,4100.3321487975345,fashion,TheLadyMaker,2025-04-20 12:56:28.387786,30,False,1.1,658,3,https://www.theladymaker.com/products/51104
+Wardrobe 65 Doors,92587.36085787044,furniture,TheLadyMaker,2025-04-19 12:56:28.387814,15,False,1.9,959,54,https://www.theladymaker.com/products/21354
+Buttermint Sweets 32g,6482.461847882009,snacks,TheLadyMaker,2025-04-30 12:56:28.387829,25,False,1.9,669,100,https://www.theladymaker.com/products/98300
+Car Air Freshener,9666.716911720814,automotive,TheLadyMaker,2025-04-20 12:56:28.387841,0,False,4.3,859,70,https://www.theladymaker.com/products/17915
+Digital Thermometer,3615.4833391299358,health,PoloAvenue,2025-04-16 12:56:28.387854,5,False,1.6,430,26,https://www.poloavenue.com/products/34930
+Things Fall Apart by Chinua Achebe,4414.110017262448,books,PoloAvenue,2025-05-13 12:56:28.387865,15,False,2.9,735,45,https://www.poloavenue.com/products/70993
+Children's Story Book Collection,6403.06706222182,books,PoloAvenue,2025-05-02 12:56:28.387877,20,False,4.8,897,23,https://www.poloavenue.com/products/87286
+Dettol Surface Cleaner 50L,8971.662563840811,detergents,PoloAvenue,2025-04-22 12:56:28.387889,20,False,2.7,977,97,https://www.poloavenue.com/products/12891
+Bookshelf 55 Tiers,142375.69383348708,furniture,PoloAvenue,2025-04-23 12:56:28.387902,0,False,1.9,221,41,https://www.poloavenue.com/products/60576
+Morning Fresh Dishwashing Liquid 250L,7568.656550172936,detergents,PoloAvenue,2025-05-10 12:56:28.387914,20,False,2.0,435,5,https://www.poloavenue.com/products/87550
+Lipton Yellow Label Tea 40g,3353.070290986019,beverages,PoloAvenue,2025-04-13 12:56:28.387926,30,False,2.6,88,32,https://www.poloavenue.com/products/31895
+Car Wash Kit,26464.729000555923,automotive,PoloAvenue,2025-04-30 12:56:28.387938,5,False,3.3,273,74,https://www.poloavenue.com/products/67904
+Gold Plated Necklace,573.7393224274895,fashion,PoloAvenue,2025-04-23 12:56:28.387952,10,True,1.7,520,30,https://www.poloavenue.com/products/11157
+Mirinda 250L,7213.7505348243,soft-drinks,PoloAvenue,2025-05-10 12:56:28.387965,0,False,3.2,147,47,https://www.poloavenue.com/products/62014
+Mosquito Repellent Spray 55ml,2778.481050813224,health,Shopaholic,2025-05-12 12:56:28.387978,25,False,1.8,266,98,https://www.shopaholic.com/products/33096
+Pringles Extra 32g,1454.5118005507884,snacks,Shopaholic,2025-04-26 12:56:28.387990,15,False,3.3,979,23,https://www.shopaholic.com/products/38869
+LG 15-Inch Smart TV,267612.9433103664,electronics,Shopaholic,2025-04-15 12:56:28.388003,15,True,5.0,165,90,https://www.shopaholic.com/products/86106
+Hand Sanitizer 15ml,5015.256890833771,health,Shopaholic,2025-04-23 12:56:28.388017,30,False,3.9,489,4,https://www.shopaholic.com/products/93447
+Leather Handbag,7857.7485179805335,fashion,Shopaholic,2025-04-16 12:56:28.388029,25,True,2.2,462,46,https://www.shopaholic.com/products/69396
+Mosquito Repellent Spray 5ml,9272.73754505121,health,Shopaholic,2025-05-05 12:56:28.388041,20,False,1.9,327,77,https://www.shopaholic.com/products/19646
+McVitie's Digestive 32g,1911.5498111218367,snacks,Shopaholic,2025-04-18 12:56:28.388053,30,False,2.0,110,22,https://www.shopaholic.com/products/43055
+Lenovo Laptop 55GB RAM,356823.45813372574,electronics,Shopaholic,2025-04-28 12:56:28.388078,25,False,2.2,972,84,https://www.shopaholic.com/products/88229
+Men's Cotton T-Shirt Size 20,9127.575635574985,fashion,Shopaholic,2025-05-11 12:56:28.388093,0,False,1.7,314,16,https://www.shopaholic.com/products/50209
+Knorr Seasoning Cubes 10g,1829.8567162312786,food,Shopaholic,2025-05-03 12:56:28.388107,20,False,1.2,306,54,https://www.shopaholic.com/products/93574
+Tom Tom Sweet 200g,9863.028085229269,snacks,BedmateFurniture,2025-04-29 12:56:28.388120,0,True,4.6,838,31,https://www.bedmatefurniture.com/products/89581
+Nivea Body Lotion 65ml,1066.5682555616665,personal-care,BedmateFurniture,2025-04-26 12:56:28.388131,15,False,1.1,200,54,https://www.bedmatefurniture.com/products/11135
+Paracetamol Tablets 20mg,6322.788754857382,health,BedmateFurniture,2025-05-05 12:56:28.388143,25,False,1.2,375,55,https://www.bedmatefurniture.com/products/69777
+7UP 10L,980.2636413466624,soft-drinks,BedmateFurniture,2025-05-08 12:56:28.388155,25,False,2.6,793,100,https://www.bedmatefurniture.com/products/78336
+Things Fall Apart by Chinua Achebe,4074.4257819415056,books,BedmateFurniture,2025-05-05 12:56:28.388168,0,False,1.1,60,2,https://www.bedmatefurniture.com/products/82931
+University Textbook Set,6608.762116077903,books,BedmateFurniture,2025-05-05 12:56:28.388180,30,False,2.8,164,30,https://www.bedmatefurniture.com/products/49254
+Windshield Wipers Set,99135.84829445215,automotive,BedmateFurniture,2025-05-12 12:56:28.388191,25,False,4.1,226,42,https://www.bedmatefurniture.com/products/98505
+Men's Cotton T-Shirt Size 55,6832.469129761179,fashion,BedmateFurniture,2025-04-25 12:56:28.388203,10,True,2.2,696,74,https://www.bedmatefurniture.com/products/95702
+Leather Handbag,2549.1224078098307,fashion,BedmateFurniture,2025-04-16 12:56:28.388217,15,False,4.1,918,85,https://www.bedmatefurniture.com/products/35966
+Morning Fresh Dishwashing Liquid 250L,9878.185011205287,detergents,BedmateFurniture,2025-04-19 12:56:28.388229,0,False,4.5,769,62,https://www.bedmatefurniture.com/products/29237
+Dining Table with 1000 Chairs,87784.86918627204,furniture,LifemateNigeria,2025-05-04 12:56:28.388242,15,False,2.1,963,1,https://www.lifematenigeria.com/products/21299
+Mountain Dew 20L,4287.392775145227,soft-drinks,LifemateNigeria,2025-04-18 12:56:28.388254,5,False,3.6,895,70,https://www.lifematenigeria.com/products/25086
+Mosquito Repellent Spray 65ml,1075.1161809158752,health,LifemateNigeria,2025-04-30 12:56:28.388278,30,False,1.3,192,16,https://www.lifematenigeria.com/products/16738
+Mountain Dew 500L,3411.9670996071495,soft-drinks,LifemateNigeria,2025-04-27 12:56:28.388291,25,True,2.7,271,63,https://www.lifematenigeria.com/products/19854
+Pure Bliss Wafers 1000g,2595.527789910986,snacks,LifemateNigeria,2025-05-12 12:56:28.388304,10,False,4.8,571,26,https://www.lifematenigeria.com/products/39152
+Samsung Galaxy A50 Smartphone,368574.70488167,electronics,LifemateNigeria,2025-05-03 12:56:28.388316,0,False,4.2,36,74,https://www.lifematenigeria.com/products/10141
+Pepsi 250L,5254.742231414416,soft-drinks,LifemateNigeria,2025-04-24 12:56:28.388328,0,False,3.6,479,64,https://www.lifematenigeria.com/products/22913
+Teem Bitter Lemon 32L,3471.3491408003997,soft-drinks,LifemateNigeria,2025-04-20 12:56:28.388341,30,False,3.8,73,79,https://www.lifematenigeria.com/products/19842
+First Aid Kit,4890.993244392946,health,LifemateNigeria,2025-05-01 12:56:28.388356,20,False,1.4,800,85,https://www.lifematenigeria.com/products/81893
+Pure Bliss Wafers 10g,5893.9557472944325,snacks,LifemateNigeria,2025-05-08 12:56:28.388368,30,True,3.0,443,55,https://www.lifematenigeria.com/products/67629
+Pure Bliss Wafers 15g,7904.47264369706,snacks,AvenueMall,2025-04-30 12:56:28.388382,20,True,4.4,201,54,https://www.avenuemall.com/products/95702
+Titus Sardines 1000g,810.8853873386084,food,AvenueMall,2025-05-07 12:56:28.388394,0,False,3.8,265,9,https://www.avenuemall.com/products/27746
+JBL Bluetooth Speaker,396819.4352416025,electronics,AvenueMall,2025-04-19 12:56:28.388406,10,False,2.2,876,40,https://www.avenuemall.com/products/12824
+TV Stand with Storage,24330.77117150065,furniture,AvenueMall,2025-04-13 12:56:28.388417,20,True,1.2,747,12,https://www.avenuemall.com/products/96753
+Ariel Detergent Powder 65kg,1069.434931741368,detergents,AvenueMall,2025-04-17 12:56:28.388429,15,False,4.7,133,36,https://www.avenuemall.com/products/29659
+Face Masks Pack of 5,8318.277851597888,health,AvenueMall,2025-04-28 12:56:28.388446,20,False,3.9,549,74,https://www.avenuemall.com/products/55421
+Paracetamol Tablets 100mg,9812.072228322908,health,AvenueMall,2025-04-26 12:56:28.388459,25,True,3.3,208,37,https://www.avenuemall.com/products/21691
+Rexona Deodorant 10ml,9890.209076588957,personal-care,AvenueMall,2025-05-09 12:56:28.388471,10,True,3.0,273,36,https://www.avenuemall.com/products/21862
+Business Management Guide,6639.497038622291,books,AvenueMall,2025-04-25 12:56:28.388485,10,False,2.0,436,57,https://www.avenuemall.com/products/41383
+Schweppes Tonic Water 1000L,9041.143713578304,soft-drinks,AvenueMall,2025-04-26 12:56:28.388512,15,False,1.6,202,69,https://www.avenuemall.com/products/53576
+Mosquito Repellent Spray 55ml,2978.2344579851847,health,DreamsFurnitures,2025-04-24 12:56:28.388525,30,True,4.1,357,47,https://www.dreamsfurnitures.com/products/84413
+Kings Oil Vegetable Oil 250L,4835.571282413977,food,DreamsFurnitures,2025-04-29 12:56:28.388537,0,False,4.1,466,18,https://www.dreamsfurnitures.com/products/63499
+Nestlé Pure Life Water 15L,9147.033306445706,beverages,DreamsFurnitures,2025-05-06 12:56:28.388550,15,False,1.1,334,30,https://www.dreamsfurnitures.com/products/90694
+Hand Sanitizer 20ml,3785.2280779538496,health,DreamsFurnitures,2025-05-10 12:56:28.388562,30,True,4.3,163,40,https://www.dreamsfurnitures.com/products/33889
+Vitamin C Supplements 250mg,6356.803205976399,health,DreamsFurnitures,2025-04-28 12:56:28.388575,10,False,3.7,864,23,https://www.dreamsfurnitures.com/products/20517
+Children's Story Book Collection,8896.701144271368,books,DreamsFurnitures,2025-05-11 12:56:28.388586,15,False,3.0,335,51,https://www.dreamsfurnitures.com/products/72576
+TV Stand with Storage,148230.63794209415,furniture,DreamsFurnitures,2025-04-15 12:56:28.388598,10,True,2.4,672,37,https://www.dreamsfurnitures.com/products/87502
+55-Seater Sofa Set,42554.76116863775,furniture,DreamsFurnitures,2025-04-26 12:56:28.388612,30,False,2.5,425,80,https://www.dreamsfurnitures.com/products/58068
+Car Wash Kit,83158.99929821382,automotive,DreamsFurnitures,2025-04-19 12:56:28.388626,25,False,4.8,100,14,https://www.dreamsfurnitures.com/products/52250
+Queen Size Bed Frame,113029.91277491815,furniture,DreamsFurnitures,2025-05-03 12:56:28.388637,5,False,2.3,763,100,https://www.dreamsfurnitures.com/products/30467
+McVitie's Digestive 40g,6921.816571190629,snacks,ZRTales,2025-04-13 12:56:28.388650,30,False,2.3,339,2,https://www.zrtales.com/products/96610
+Teem Bitter Lemon 55L,3458.1413748334658,soft-drinks,ZRTales,2025-04-27 12:56:28.388664,10,False,4.0,436,50,https://www.zrtales.com/products/73061
+Rexona Deodorant 40ml,6475.878309909196,personal-care,ZRTales,2025-05-01 12:56:28.388676,30,False,4.7,759,33,https://www.zrtales.com/products/15029
+Hisense 20-Inch Flat Screen TV,434690.09047703363,electronics,ZRTales,2025-04-29 12:56:28.388688,10,True,2.3,850,75,https://www.zrtales.com/products/32379
+Golden Penny Rice 65kg,7433.039883252901,food,ZRTales,2025-04-24 12:56:28.388700,25,True,3.2,798,39,https://www.zrtales.com/products/63421
+Men's Cotton T-Shirt Size 250,2260.235252430055,fashion,ZRTales,2025-04-23 12:56:28.388713,30,False,2.3,165,50,https://www.zrtales.com/products/11221
+Orbit Chewing Gum 55g,4043.5946290042734,snacks,ZRTales,2025-04-26 12:56:28.388725,15,False,2.0,629,91,https://www.zrtales.com/products/70250
+Kitchen Cabinet Set,150865.29597373735,furniture,ZRTales,2025-04-27 12:56:28.388737,10,False,2.9,771,48,https://www.zrtales.com/products/32215
+Teem Bitter Lemon 250L,5294.358448200647,soft-drinks,ZRTales,2025-04-13 12:56:28.388751,20,False,1.5,537,25,https://www.zrtales.com/products/72013
+Honeywell Semolina 1000kg,3520.7607611090684,food,ZRTales,2025-04-17 12:56:28.388763,10,True,1.9,711,45,https://www.zrtales.com/products/44025
+Sony 55-Inch LED TV,316744.0085411373,electronics,LaternaBooks,2025-05-06 12:56:28.388776,5,False,1.1,482,40,https://www.laternabooks.com/products/48676
+Lipton Yellow Label Tea 500g,1203.997547059883,beverages,LaternaBooks,2025-04-26 12:56:28.388789,30,False,1.7,930,74,https://www.laternabooks.com/products/52364
+Hisense 50-Inch Flat Screen TV,298116.0075371842,electronics,LaternaBooks,2025-05-02 12:56:28.388801,15,False,2.7,272,73,https://www.laternabooks.com/products/29660
+Harpic Toilet Cleaner 15L,2131.5322536290537,detergents,LaternaBooks,2025-04-30 12:56:28.388812,30,False,4.0,490,93,https://www.laternabooks.com/products/39738
+Dettol Surface Cleaner 20L,8944.479806410662,detergents,LaternaBooks,2025-05-02 12:56:28.388825,10,False,2.5,44,50,https://www.laternabooks.com/products/16579
+Designer Wristwatch,2823.8018454363664,fashion,LaternaBooks,2025-05-04 12:56:28.388837,10,False,3.8,897,47,https://www.laternabooks.com/products/19844
+Michelin Tires Size 32,43463.253822861196,automotive,LaternaBooks,2025-04-20 12:56:28.388848,10,False,2.3,110,15,https://www.laternabooks.com/products/10288
+Pringles Special 15g,3279.242174813155,snacks,LaternaBooks,2025-04-17 12:56:28.388860,30,False,1.5,938,15,https://www.laternabooks.com/products/52197
+Cowbell Milk Powder 32g,9678.659781876371,beverages,LaternaBooks,2025-04-24 12:56:28.388874,5,False,4.3,477,54,https://www.laternabooks.com/products/24635
+First Aid Kit,528.4735699765811,health,LaternaBooks,2025-05-13 12:56:28.388887,10,False,4.8,618,41,https://www.laternabooks.com/products/81773
+Hypo Bleach 20L,3558.492320222118,detergents,CSSBookshops,2025-04-22 12:56:28.388898,15,False,4.3,233,95,https://www.cssbookshops.com/products/47177
+Tom Tom Sweet 500g,2316.8677738044544,snacks,CSSBookshops,2025-05-12 12:56:28.388911,10,False,2.5,200,25,https://www.cssbookshops.com/products/62292
+Dettol Soap 100g,3435.245826469524,personal-care,CSSBookshops,2025-05-06 12:56:28.388925,25,False,3.4,315,71,https://www.cssbookshops.com/products/63400
+Lipton Yellow Label Tea 200g,2373.764892652942,beverages,CSSBookshops,2025-05-13 12:56:28.388937,25,True,4.6,222,32,https://www.cssbookshops.com/products/77441
+Golden Penny Spaghetti 32g,3621.606687120079,food,CSSBookshops,2025-04-16 12:56:28.388949,5,False,1.1,32,63,https://www.cssbookshops.com/products/89442
+Lux Soap 100g,9351.378267837033,personal-care,CSSBookshops,2025-04-23 12:56:28.388963,5,False,4.8,566,93,https://www.cssbookshops.com/products/13450
+Dettol Soap 50g,9076.0264733421,personal-care,CSSBookshops,2025-04-24 12:56:28.388975,20,False,3.4,297,82,https://www.cssbookshops.com/products/58030
+Digital Thermometer,5023.141588354936,health,CSSBookshops,2025-04-27 12:56:28.388987,20,False,3.9,925,35,https://www.cssbookshops.com/products/29446
+65-Seater Sofa Set,116591.67347817366,furniture,CSSBookshops,2025-04-23 12:56:28.389001,25,False,3.5,589,70,https://www.cssbookshops.com/products/66449
+Sony 200-Inch LED TV,74620.87852689052,electronics,CSSBookshops,2025-05-04 12:56:28.389012,20,False,4.2,183,91,https://www.cssbookshops.com/products/31020
+Paracetamol Tablets 55mg,4939.540777358942,health,BookvilleWorld,2025-05-05 12:56:28.389025,25,False,3.8,628,11,https://www.bookvilleworld.com/products/12097
+Rexona Deodorant 10ml,5949.545805302515,personal-care,BookvilleWorld,2025-05-02 12:56:28.389037,5,False,2.6,601,66,https://www.bookvilleworld.com/products/59393
+250-Seater Sofa Set,77110.17444789478,furniture,BookvilleWorld,2025-05-04 12:56:28.389048,0,False,1.1,381,12,https://www.bookvilleworld.com/products/97129
+Mirinda 15L,7082.933950580606,soft-drinks,BookvilleWorld,2025-04-15 12:56:28.389131,30,False,2.8,743,53,https://www.bookvilleworld.com/products/95704
+Dano Milk Powder 500g,6106.24256023048,beverages,BookvilleWorld,2025-04-25 12:56:28.389145,25,False,1.8,440,98,https://www.bookvilleworld.com/products/90546
+Sprite 5L,9152.936815860181,soft-drinks,BookvilleWorld,2025-05-08 12:56:28.389158,10,False,4.9,302,75,https://www.bookvilleworld.com/products/49589
+Sprite 500L,3674.565565825107,soft-drinks,BookvilleWorld,2025-04-22 12:56:28.389170,25,False,2.4,549,44,https://www.bookvilleworld.com/products/95717
+Pure Bliss Wafers 65g,3071.889039950428,snacks,BookvilleWorld,2025-04-20 12:56:28.389182,10,False,2.2,864,13,https://www.bookvilleworld.com/products/22694
+Surf Excel Detergent 5kg,4536.36004418348,detergents,BookvilleWorld,2025-04-21 12:56:28.389197,0,True,2.8,147,11,https://www.bookvilleworld.com/products/40142
+Hypo Bleach 15L,3775.230170322131,detergents,BookvilleWorld,2025-04-22 12:56:28.389209,25,False,4.0,332,66,https://www.bookvilleworld.com/products/54472
+Oral-B Toothbrush,2579.296343955419,personal-care,OneHealthNG,2025-04-29 12:56:28.389222,30,False,2.3,94,84,https://www.onehealthng.com/products/32187
+Dashboard Camera,26017.47126887671,automotive,OneHealthNG,2025-05-06 12:56:28.389236,5,False,1.9,993,85,https://www.onehealthng.com/products/85625
+Holy Bible King James Version,2706.9070019194164,books,OneHealthNG,2025-05-05 12:56:28.389248,15,False,3.1,283,72,https://www.onehealthng.com/products/44555
+McVitie's Digestive 1000g,6769.307374755319,snacks,OneHealthNG,2025-04-30 12:56:28.389264,25,False,2.0,995,48,https://www.onehealthng.com/products/34999
+Queen Size Bed Frame,168208.64476532832,furniture,OneHealthNG,2025-04-15 12:56:28.389277,20,False,2.3,285,49,https://www.onehealthng.com/products/25038
+Seat Covers Set,58802.345703551844,automotive,OneHealthNG,2025-04-19 12:56:28.389289,5,False,2.5,33,48,https://www.onehealthng.com/products/80220
+Holy Bible King James Version,4380.274070539488,books,OneHealthNG,2025-05-08 12:56:28.389300,30,False,4.4,602,35,https://www.onehealthng.com/products/86458
+Samsung Galaxy A55 Smartphone,334599.1393934786,electronics,OneHealthNG,2025-04-30 12:56:28.389311,25,True,3.3,253,30,https://www.onehealthng.com/products/23030
+TV Stand with Storage,141074.5701663826,furniture,OneHealthNG,2025-05-13 12:56:28.389325,30,True,2.9,623,35,https://www.onehealthng.com/products/33677
+Gino Tomato Paste 20g,3020.077677047668,food,OneHealthNG,2025-05-10 12:56:28.389336,30,False,2.9,292,71,https://www.onehealthng.com/products/25342
+Hand Sanitizer 250ml,8653.014838559786,health,MyMedicines,2025-05-07 12:56:28.389350,5,False,3.9,532,30,https://www.mymedicines.com/products/19501
+Car Wash Kit,35847.974626226205,automotive,MyMedicines,2025-04-16 12:56:28.389362,15,False,1.3,421,24,https://www.mymedicines.com/products/56946
+Mosquito Repellent Spray 20ml,2166.53045571619,health,MyMedicines,2025-04-13 12:56:28.389373,5,False,4.2,76,42,https://www.mymedicines.com/products/75291
+Nike Sports Shoes Size 40,6606.550635615146,fashion,MyMedicines,2025-04-24 12:56:28.389386,0,False,4.2,186,72,https://www.mymedicines.com/products/65249
+Mosquito Repellent Spray 32ml,1733.5034088204802,health,MyMedicines,2025-04-22 12:56:28.389397,25,False,3.0,68,60,https://www.mymedicines.com/products/68076
+Office Desk,64969.25506737474,furniture,MyMedicines,2025-04-19 12:56:28.389410,5,False,2.1,309,73,https://www.mymedicines.com/products/75937
+Half of a Yellow Sun by Chimamanda Adichie,7936.754019880642,books,MyMedicines,2025-04-25 12:56:28.389421,30,False,4.0,346,51,https://www.mymedicines.com/products/97062
+WAEC Examination Prep Book,8881.721259545606,books,MyMedicines,2025-04-30 12:56:28.389433,30,False,3.1,504,43,https://www.mymedicines.com/products/71341
+Children's School Uniform Set,4132.297287033274,fashion,MyMedicines,2025-04-26 12:56:28.389449,30,False,2.1,829,69,https://www.mymedicines.com/products/47388
+Leather Handbag,3914.6753043605663,fashion,MyMedicines,2025-04-30 12:56:28.389461,30,False,1.5,31,95,https://www.mymedicines.com/products/76248
+Nescafé Classic Coffee 250g,7535.636914592643,beverages,HealthPlusNigeria,2025-04-22 12:56:28.389473,25,False,4.6,791,57,https://www.healthplusnigeria.com/products/76263
+Close-Up Toothpaste 40g,8348.291259772708,personal-care,HealthPlusNigeria,2025-04-19 12:56:28.389485,0,False,2.5,651,12,https://www.healthplusnigeria.com/products/51049
+Wardrobe 50 Doors,190551.65099324915,furniture,HealthPlusNigeria,2025-04-18 12:56:28.389502,0,False,4.2,546,59,https://www.healthplusnigeria.com/products/93207
+Leather Handbag,5710.563727266482,fashion,HealthPlusNigeria,2025-04-30 12:56:28.389516,25,False,3.8,590,94,https://www.healthplusnigeria.com/products/35730
+University Textbook Set,2324.592745955962,books,HealthPlusNigeria,2025-04-25 12:56:28.389528,30,True,2.9,747,18,https://www.healthplusnigeria.com/products/81095
+Lux Soap 40g,8733.030327594475,personal-care,HealthPlusNigeria,2025-04-20 12:56:28.389539,15,False,4.6,46,98,https://www.healthplusnigeria.com/products/63262
+Fanta Orange 65L,811.6129390486944,soft-drinks,HealthPlusNigeria,2025-04-30 12:56:28.389551,0,False,2.3,640,5,https://www.healthplusnigeria.com/products/29545
+University Textbook Set,4911.918874757013,books,HealthPlusNigeria,2025-05-10 12:56:28.389563,10,True,2.9,320,89,https://www.healthplusnigeria.com/products/47513
+Dettol Surface Cleaner 500L,9329.609094090616,detergents,HealthPlusNigeria,2025-05-03 12:56:28.389591,20,False,1.1,42,20,https://www.healthplusnigeria.com/products/61399
+Half of a Yellow Sun by Chimamanda Adichie,8657.976465290332,books,HealthPlusNigeria,2025-05-05 12:56:28.389604,30,False,2.6,437,30,https://www.healthplusnigeria.com/products/28575
+Gold Plated Necklace,6381.554411397847,fashion,MedPlusNig,2025-05-04 12:56:28.389617,0,False,3.2,784,42,https://www.medplusnig.com/products/18592
+Ariel Detergent Powder 55kg,9665.940723292284,detergents,MedPlusNig,2025-04-22 12:56:28.389628,30,False,3.8,587,71,https://www.medplusnig.com/products/52856
+Hand Sanitizer 50ml,7824.240304012125,health,MedPlusNig,2025-04-27 12:56:28.389640,20,False,4.6,328,92,https://www.medplusnig.com/products/23364
+Head & Shoulders Shampoo 65ml,7657.305822685289,personal-care,MedPlusNig,2025-04-30 12:56:28.389652,15,False,3.2,198,87,https://www.medplusnig.com/products/73985
+Peak Milk Powder 100g,8908.380916482938,beverages,MedPlusNig,2025-05-10 12:56:28.389664,5,False,1.2,15,17,https://www.medplusnig.com/products/98011
+Hand Sanitizer 2000ml,5415.041912842209,health,MedPlusNig,2025-05-05 12:56:28.389677,10,False,4.4,581,55,https://www.medplusnig.com/products/40856
+Nivea Body Lotion 15ml,5839.212980967554,personal-care,MedPlusNig,2025-04-18 12:56:28.389689,0,True,4.1,48,48,https://www.medplusnig.com/products/99252
+Dashboard Camera,38952.146684151056,automotive,MedPlusNig,2025-04-22 12:56:28.389701,15,False,2.5,665,47,https://www.medplusnig.com/products/74579
+First Aid Kit,2035.669505462629,health,MedPlusNig,2025-05-04 12:56:28.389715,5,True,2.4,956,48,https://www.medplusnig.com/products/91559
+Head & Shoulders Shampoo 20ml,8752.502484644523,personal-care,MedPlusNig,2025-04-15 12:56:28.389727,5,True,2.3,338,32,https://www.medplusnig.com/products/57420
+Dettol Soap 500g,746.8787558195171,personal-care,GZ-Supplies,2025-05-04 12:56:28.389739,0,False,4.0,746,76,https://www.gz-supplies.com/products/26480
+Orbit Chewing Gum 200g,7498.373928286221,snacks,GZ-Supplies,2025-05-06 12:56:28.389751,5,False,4.2,675,44,https://www.gz-supplies.com/products/34926
+Windshield Wipers Set,67072.01983137321,automotive,GZ-Supplies,2025-05-13 12:56:28.389763,0,True,3.0,971,100,https://www.gz-supplies.com/products/83781
+LG 500-Inch Smart TV,103106.89375356263,electronics,GZ-Supplies,2025-04-14 12:56:28.389775,0,False,2.2,730,53,https://www.gz-supplies.com/products/87673
+Golden Penny Spaghetti 55g,4760.542327673163,food,GZ-Supplies,2025-04-13 12:56:28.389788,0,True,4.7,379,74,https://www.gz-supplies.com/products/23648
+Samsung Galaxy A65 Smartphone,459989.5060803342,electronics,GZ-Supplies,2025-04-28 12:56:28.389801,20,False,2.4,742,95,https://www.gz-supplies.com/products/32573
+Hisense 20-Inch Flat Screen TV,148734.2296378362,electronics,GZ-Supplies,2025-04-17 12:56:28.389812,20,False,3.6,499,12,https://www.gz-supplies.com/products/75889
+Close-Up Toothpaste 1000g,3109.405825425475,personal-care,GZ-Supplies,2025-04-28 12:56:28.389824,10,True,1.0,464,77,https://www.gz-supplies.com/products/69692
+First Aid Kit,4715.483569725205,health,GZ-Supplies,2025-05-05 12:56:28.389850,5,True,3.0,788,59,https://www.gz-supplies.com/products/87226
+Holy Quran with Translation,6369.274806688125,books,GZ-Supplies,2025-05-06 12:56:28.389865,5,False,3.7,224,41,https://www.gz-supplies.com/products/36404
+Harpic Toilet Cleaner 65L,7963.80569072812,detergents,Autochek,2025-04-21 12:56:28.389877,20,True,2.7,193,68,https://www.autochek.com/products/93035
+Gino Tomato Paste 32g,7143.876598540093,food,Autochek,2025-05-04 12:56:28.389889,10,False,1.6,972,18,https://www.autochek.com/products/64775
+Face Masks Pack of 15,6959.490453213209,health,Autochek,2025-04-14 12:56:28.389901,5,True,4.8,212,96,https://www.autochek.com/products/51465
+Milo Energy Drink 5g,5767.139281545847,beverages,Autochek,2025-04-25 12:56:28.389914,20,True,2.2,511,91,https://www.autochek.com/products/71903
+Ovaltine Malted Drink 40g,5912.396522591396,beverages,Autochek,2025-05-12 12:56:28.389926,10,False,4.2,14,81,https://www.autochek.com/products/13333
+500-Seater Sofa Set,102354.37632010995,furniture,Autochek,2025-05-03 12:56:28.389940,30,True,3.3,973,39,https://www.autochek.com/products/43785
+WAEC Examination Prep Book,8521.322966283686,books,Autochek,2025-04-19 12:56:28.389953,15,False,4.7,421,46,https://www.autochek.com/products/90592
+TV Stand with Storage,171695.59035815846,furniture,Autochek,2025-05-06 12:56:28.389964,5,False,1.4,612,85,https://www.autochek.com/products/60549
+Harpic Toilet Cleaner 20L,8002.365151866786,detergents,Autochek,2025-04-29 12:56:28.389977,20,False,3.8,307,1,https://www.autochek.com/products/86884
+Office Desk,139798.49055833637,furniture,Autochek,2025-05-02 12:56:28.389989,25,False,1.8,623,26,https://www.autochek.com/products/12004
+Dove Soap 40g,2714.2451560838904,personal-care,JijiCars,2025-05-05 12:56:28.390001,15,False,2.6,40,93,https://www.jijicars.com/products/69352
+Golden Penny Rice 20kg,7310.070617754018,food,JijiCars,2025-04-23 12:56:28.390013,15,False,4.2,947,36,https://www.jijicars.com/products/39478
+Dettol Surface Cleaner 55L,1952.8334201298542,detergents,JijiCars,2025-04-19 12:56:28.390026,15,False,2.0,232,63,https://www.jijicars.com/products/91952
+Oral-B Toothbrush,5224.062323555395,personal-care,JijiCars,2025-04-20 12:56:28.390040,0,False,1.1,879,52,https://www.jijicars.com/products/92412
+Dove Soap 55g,1977.0848925265161,personal-care,JijiCars,2025-04-13 12:56:28.390052,20,False,3.9,433,35,https://www.jijicars.com/products/70566
+Dano Milk Powder 2000g,6709.379375092669,beverages,JijiCars,2025-05-10 12:56:28.390078,30,False,4.5,732,36,https://www.jijicars.com/products/58075
+Vitamin C Supplements 1000mg,6508.482705000432,health,JijiCars,2025-05-06 12:56:28.390094,20,True,1.3,213,78,https://www.jijicars.com/products/27460
+Blood Pressure Monitor,2453.732960565709,health,JijiCars,2025-04-23 12:56:28.390107,20,True,3.4,498,43,https://www.jijicars.com/products/17948
+Seat Covers Set,54363.856572587996,automotive,JijiCars,2025-04-22 12:56:28.390120,30,False,4.2,96,83,https://www.jijicars.com/products/54496
+Bookshelf 200 Tiers,170965.8124749326,furniture,JijiCars,2025-05-11 12:56:28.390132,0,True,1.2,445,96,https://www.jijicars.com/products/62621
+Office Desk,112952.20860087156,furniture,Kusnap,2025-05-12 12:56:28.390144,30,False,1.5,139,19,https://www.kusnap.com/products/93822
+Samsung Galaxy A40 Smartphone,384452.8401641208,electronics,Kusnap,2025-05-09 12:56:28.390157,30,False,1.6,180,23,https://www.kusnap.com/products/88969
+Tecno Spark 50 Smartphone,92875.2359166933,electronics,Kusnap,2025-04-23 12:56:28.390169,25,False,4.7,308,3,https://www.kusnap.com/products/24336
+Hisense 50-Inch Flat Screen TV,28685.234838187076,electronics,Kusnap,2025-05-06 12:56:28.390181,10,False,4.3,144,61,https://www.kusnap.com/products/97909
+Dove Soap 40g,3379.1068734805917,personal-care,Kusnap,2025-04-25 12:56:28.390193,0,True,3.4,233,100,https://www.kusnap.com/products/15932
+Nestlé Pure Life Water 40L,7023.256999727189,beverages,Kusnap,2025-05-10 12:56:28.390205,20,False,2.3,631,51,https://www.kusnap.com/products/11434
+Nike Sports Shoes Size 250,6858.233052720105,fashion,Kusnap,2025-04-16 12:56:28.390217,15,False,3.9,229,79,https://www.kusnap.com/products/27589
+Windshield Wipers Set,16684.95597986131,automotive,Kusnap,2025-04-13 12:56:28.390229,5,False,4.9,806,13,https://www.kusnap.com/products/83260
+Wardrobe 2000 Doors,40298.68782456736,furniture,Kusnap,2025-05-12 12:56:28.390244,5,False,4.8,85,87,https://www.kusnap.com/products/64471
+Seat Covers Set,95568.029664534,automotive,Kusnap,2025-05-07 12:56:28.390257,5,False,4.8,461,66,https://www.kusnap.com/products/64730
+Seat Covers Set,51671.97799741152,automotive,VConnect,2025-05-06 12:56:28.390269,30,False,4.4,139,14,https://www.vconnect.com/products/63667
+Rexona Deodorant 200ml,7721.025238799114,personal-care,VConnect,2025-04-17 12:56:28.390281,20,False,1.7,191,55,https://www.vconnect.com/products/37848
+Office Desk,41042.01827432941,furniture,VConnect,2025-05-04 12:56:28.390294,10,False,2.5,910,7,https://www.vconnect.com/products/17785
+Things Fall Apart by Chinua Achebe,989.0969269935646,books,VConnect,2025-05-04 12:56:28.390306,20,False,1.9,720,7,https://www.vconnect.com/products/28579
+Ovaltine Malted Drink 250g,9095.469537000745,beverages,VConnect,2025-04-17 12:56:28.390317,20,False,4.2,462,71,https://www.vconnect.com/products/10962
+Holy Bible King James Version,8454.790529192618,books,VConnect,2025-04-17 12:56:28.390329,10,False,4.1,40,100,https://www.vconnect.com/products/94285
+Hand Sanitizer 10ml,5204.672255791619,health,VConnect,2025-04-15 12:56:28.390341,0,False,2.4,101,94,https://www.vconnect.com/products/37999
+Fanta Orange 15L,3938.292564471453,soft-drinks,VConnect,2025-05-10 12:56:28.390402,20,False,1.2,907,73,https://www.vconnect.com/products/47227
+Head & Shoulders Shampoo 20ml,1524.018933335014,personal-care,VConnect,2025-05-09 12:56:28.390420,5,True,4.0,313,27,https://www.vconnect.com/products/70297
+Car Engine Oil 100L,26265.871560589792,automotive,VConnect,2025-05-12 12:56:28.390433,20,False,4.1,412,63,https://www.vconnect.com/products/26468
+Digestive Biscuits 200g,8373.1785334148,snacks,Tofa,2025-04-14 12:56:28.390445,10,True,2.8,817,15,https://www.tofa.com/products/94242
+Titus Sardines 15g,4401.573535917591,food,Tofa,2025-05-12 12:56:28.390457,20,True,4.2,728,86,https://www.tofa.com/products/19951
+Indomie Noodles Special 55g,1770.5329874318495,food,Tofa,2025-04-18 12:56:28.390470,20,False,2.5,391,41,https://www.tofa.com/products/64041
+Pepsi 10L,8075.9160654773505,soft-drinks,Tofa,2025-04-22 12:56:28.390482,20,False,1.5,976,99,https://www.tofa.com/products/25320
+Sony 50-Inch LED TV,291505.07341792545,electronics,Tofa,2025-05-03 12:56:28.390494,25,False,1.9,686,59,https://www.tofa.com/products/56524
+Ovaltine Malted Drink 250g,4063.869958634281,beverages,Tofa,2025-05-01 12:56:28.390514,0,False,4.2,864,66,https://www.tofa.com/products/57034
+Lux Soap 10g,2910.91915434184,personal-care,Tofa,2025-05-08 12:56:28.390526,25,False,2.8,970,37,https://www.tofa.com/products/49036
+Half of a Yellow Sun by Chimamanda Adichie,4079.2404018920456,books,Tofa,2025-04-19 12:56:28.390538,0,True,4.5,343,86,https://www.tofa.com/products/84542
+Lux Soap 10g,7479.372383869883,personal-care,Tofa,2025-05-08 12:56:28.390558,10,False,1.7,470,81,https://www.tofa.com/products/30651
+Lux Soap 1000g,2411.2172354374766,personal-care,Tofa,2025-04-29 12:56:28.390571,15,False,1.8,840,70,https://www.tofa.com/products/81381
+Car Air Freshener,57139.21808706046,automotive,NBS,2025-04-14 12:56:28.390584,5,True,3.8,321,41,https://www.nbs.com/products/95761
+Lux Soap 5g,4241.632821931181,personal-care,NBS,2025-04-30 12:56:28.390595,10,True,4.7,242,68,https://www.nbs.com/products/30821
+Men's Cotton T-Shirt Size 65,2228.429961553491,fashion,NBS,2025-05-06 12:56:28.390608,25,False,5.0,705,71,https://www.nbs.com/products/53144
+Vitamin C Supplements 250mg,8606.673714026929,health,NBS,2025-04-21 12:56:28.390620,30,False,3.6,74,69,https://www.nbs.com/products/53837
+Digestive Biscuits 500g,2541.526327041932,snacks,NBS,2025-04-26 12:56:28.390632,25,True,2.3,567,61,https://www.nbs.com/products/25485
+Windshield Wipers Set,31299.24204383036,automotive,NBS,2025-04-15 12:56:28.390644,30,True,1.5,571,52,https://www.nbs.com/products/58604
+Tom Tom Sweet 55g,2154.227599482545,snacks,NBS,2025-04-29 12:56:28.390656,30,False,4.0,404,65,https://www.nbs.com/products/25866
+Pringles Spicy 500g,6322.41935043124,snacks,NBS,2025-04-27 12:56:28.390668,10,False,3.6,85,11,https://www.nbs.com/products/71837
+Designer Wristwatch,6434.466959274318,fashion,NBS,2025-05-02 12:56:28.390682,0,True,3.5,520,60,https://www.nbs.com/products/71167
+Knorr Seasoning Cubes 10g,2340.5576423678885,food,NBS,2025-04-20 12:56:28.390693,30,False,3.5,716,5,https://www.nbs.com/products/60397
+Surf Excel Detergent 65kg,3354.1663311519023,detergents,SMEdenMarket,2025-04-22 12:56:28.390706,0,False,2.8,368,38,https://www.smedenmarket.com/products/81334
+Children's School Uniform Set,2347.093297126801,fashion,SMEdenMarket,2025-05-05 12:56:28.390719,25,False,3.8,997,34,https://www.smedenmarket.com/products/46618
+Car Engine Oil 40L,68156.38946302337,automotive,SMEdenMarket,2025-04-30 12:56:28.390731,5,False,2.0,33,50,https://www.smedenmarket.com/products/42961
+Head & Shoulders Shampoo 40ml,2006.6532612496933,personal-care,SMEdenMarket,2025-04-29 12:56:28.390743,30,False,3.0,707,24,https://www.smedenmarket.com/products/42358
+JBL Bluetooth Speaker,424826.9473697965,electronics,SMEdenMarket,2025-04-30 12:56:28.390755,0,False,1.9,229,53,https://www.smedenmarket.com/products/70213
+Office Desk,128843.7891172037,furniture,SMEdenMarket,2025-04-21 12:56:28.390767,30,True,1.8,751,90,https://www.smedenmarket.com/products/35009
+Pringles Beef 40g,2589.21309820585,snacks,SMEdenMarket,2025-04-23 12:56:28.390778,5,False,1.6,659,91,https://www.smedenmarket.com/products/55536
+Cowbell Milk Powder 1000g,7140.253191181641,beverages,SMEdenMarket,2025-05-01 12:56:28.390790,10,True,2.4,425,61,https://www.smedenmarket.com/products/64858
+Ovaltine Malted Drink 2000g,4179.065078082351,beverages,SMEdenMarket,2025-05-06 12:56:28.390804,30,False,2.6,522,51,https://www.smedenmarket.com/products/95305
+Michelin Tires Size 55,86084.9866377054,automotive,SMEdenMarket,2025-04-19 12:56:28.390816,25,False,3.2,401,26,https://www.smedenmarket.com/products/45534
+Digital Thermometer,3680.880121888316,health,NEPC,2025-04-15 12:56:28.390830,25,False,1.2,470,83,https://www.nepc.com/products/93807
+Ankara Fabric 2000 Yards,8631.588017930375,fashion,NEPC,2025-05-11 12:56:28.390842,30,False,2.3,435,13,https://www.nepc.com/products/26170
+Designer Wristwatch,4904.11427356024,fashion,NEPC,2025-05-09 12:56:28.390854,25,False,1.6,94,75,https://www.nepc.com/products/58451
+Dano Milk Powder 250g,7217.260945515246,beverages,NEPC,2025-04-30 12:56:28.390865,10,False,3.6,308,53,https://www.nepc.com/products/31668
+Windshield Wipers Set,46423.73172070435,automotive,NEPC,2025-04-22 12:56:28.390877,10,False,3.3,334,5,https://www.nepc.com/products/76256
+Holy Quran with Translation,7598.667114366491,books,NEPC,2025-05-05 12:56:28.390889,0,False,4.4,88,24,https://www.nepc.com/products/73274
+Dettol Surface Cleaner 15L,4313.299090177985,detergents,NEPC,2025-05-11 12:56:28.390900,25,False,4.5,887,15,https://www.nepc.com/products/14706
+Schweppes Tonic Water 10L,4217.710216038667,soft-drinks,NEPC,2025-05-07 12:56:28.390913,25,False,4.1,419,36,https://www.nepc.com/products/20776
+Seat Covers Set,62375.07109751998,automotive,NEPC,2025-04-21 12:56:28.390927,0,False,1.5,148,70,https://www.nepc.com/products/71896
+Tom Tom Sweet 1000g,2495.1912303962517,snacks,NEPC,2025-04-16 12:56:28.390938,15,False,1.6,948,60,https://www.nepc.com/products/40407
+Titus Sardines 250g,7811.282555373148,food,Nairametrics,2025-05-10 12:56:28.390951,20,True,4.9,441,44,https://www.nairametrics.com/products/24387
+Business Management Guide,2642.212382078253,books,Nairametrics,2025-05-12 12:56:28.390962,0,False,1.0,477,50,https://www.nairametrics.com/products/12152
+Nescafé Classic Coffee 20g,4756.0520117897095,beverages,Nairametrics,2025-05-07 12:56:28.390974,30,True,4.1,216,45,https://www.nairametrics.com/products/19754
+Things Fall Apart by Chinua Achebe,8447.326259532536,books,Nairametrics,2025-04-25 12:56:28.390986,30,True,1.5,842,34,https://www.nairametrics.com/products/27259
+Things Fall Apart by Chinua Achebe,8502.462291411164,books,Nairametrics,2025-05-11 12:56:28.390998,5,False,1.0,270,14,https://www.nairametrics.com/products/86709
+Dove Soap 50g,3283.927610492328,personal-care,Nairametrics,2025-04-26 12:56:28.391009,30,False,2.9,936,44,https://www.nairametrics.com/products/65844
+Nestlé Pure Life Water 250L,4222.713937703923,beverages,Nairametrics,2025-05-04 12:56:28.391022,20,True,4.2,836,6,https://www.nairametrics.com/products/41850
+Peak Milk Powder 15g,6667.1701702856635,beverages,Nairametrics,2025-05-08 12:56:28.391034,5,True,1.3,975,96,https://www.nairametrics.com/products/76417
+Wardrobe 1000 Doors,98507.9887343054,furniture,Nairametrics,2025-05-11 12:56:28.391049,10,True,4.4,854,8,https://www.nairametrics.com/products/96875
+Leather Handbag,7849.791222015328,fashion,Nairametrics,2025-04-14 12:56:28.391074,30,True,4.3,371,61,https://www.nairametrics.com/products/70820
+Blood Pressure Monitor,844.8514254425695,health,Proshare,2025-05-07 12:56:28.391087,5,True,2.2,869,74,https://www.proshare.com/products/83810
+Digital Thermometer,4235.630330588065,health,Proshare,2025-04-27 12:56:28.391102,15,True,1.8,21,14,https://www.proshare.com/products/29920
+Nike Sports Shoes Size 500,6373.681110369451,fashion,Proshare,2025-04-25 12:56:28.391113,15,True,1.5,138,18,https://www.proshare.com/products/78817
+LG 50-Inch Smart TV,307895.5575572744,electronics,Proshare,2025-04-28 12:56:28.391126,10,True,4.3,309,46,https://www.proshare.com/products/67236
+Michelin Tires Size 40,14121.306842396549,automotive,Proshare,2025-05-04 12:56:28.391140,5,False,4.1,402,31,https://www.proshare.com/products/84332
+Harpic Toilet Cleaner 10L,2613.663009998095,detergents,Proshare,2025-05-10 12:56:28.391153,20,False,4.2,557,47,https://www.proshare.com/products/49071
+Titus Sardines 40g,6128.211988741197,food,Proshare,2025-04-20 12:56:28.391166,15,False,3.5,302,87,https://www.proshare.com/products/46509
+Golden Penny Rice 100kg,8338.962627913774,food,Proshare,2025-05-06 12:56:28.391178,25,False,2.5,527,58,https://www.proshare.com/products/81692
+Surf Excel Detergent 200kg,9174.373435933623,detergents,Proshare,2025-05-08 12:56:28.391192,30,False,1.2,970,24,https://www.proshare.com/products/32750
+Pure Bliss Wafers 1000g,1872.4514647791152,snacks,Proshare,2025-04-24 12:56:28.391204,25,False,3.4,626,98,https://www.proshare.com/products/43916
+Tom Tom Sweet 50g,9431.375416957675,snacks,BusinessDay,2025-05-13 12:56:28.391217,30,False,1.4,884,76,https://www.businessday.com/products/89066
+100-Seater Sofa Set,31807.53199864358,furniture,BusinessDay,2025-05-12 12:56:28.391231,20,True,2.8,585,74,https://www.businessday.com/products/74169
+Bookshelf 5 Tiers,162244.84351285652,furniture,BusinessDay,2025-04-17 12:56:28.391243,10,False,4.0,427,67,https://www.businessday.com/products/85425
+Oral-B Toothbrush,4417.788689319905,personal-care,BusinessDay,2025-04-22 12:56:28.391256,20,False,4.6,121,7,https://www.businessday.com/products/65339
+Nivea Body Lotion 20ml,5976.602176622807,personal-care,BusinessDay,2025-05-02 12:56:28.391267,30,True,4.3,224,86,https://www.businessday.com/products/17081
+Omo Multi-Active Detergent 10kg,9485.787011951032,detergents,BusinessDay,2025-04-27 12:56:28.391280,30,False,3.8,676,24,https://www.businessday.com/products/55230
+Sony 65-Inch LED TV,41820.72374935788,electronics,BusinessDay,2025-04-14 12:56:28.391292,5,True,2.5,246,50,https://www.businessday.com/products/13038
+Rexona Deodorant 200ml,4065.9142910752403,personal-care,BusinessDay,2025-05-04 12:56:28.391304,25,True,3.9,273,77,https://www.businessday.com/products/80514
+Pepsi 55L,6933.043978270166,soft-drinks,BusinessDay,2025-04-17 12:56:28.391318,20,False,2.0,736,76,https://www.businessday.com/products/41421
+Digital Thermometer,9512.11234303528,health,BusinessDay,2025-05-12 12:56:28.391331,15,False,4.9,574,18,https://www.businessday.com/products/43768
+Gold Plated Necklace,575.3500924476482,fashion,TechpointMarketplace,2025-04-20 12:56:28.391344,20,False,4.1,973,89,https://www.techpointmarketplace.com/products/51986
+Indomie Noodles Extra 32g,8855.178631843672,food,TechpointMarketplace,2025-04-27 12:56:28.391355,10,False,2.4,699,65,https://www.techpointmarketplace.com/products/57886
+Mirinda 50L,2969.1937929305454,soft-drinks,TechpointMarketplace,2025-04-20 12:56:28.391368,25,False,1.4,585,14,https://www.techpointmarketplace.com/products/77108
+Rexona Deodorant 65ml,7518.939006933021,personal-care,TechpointMarketplace,2025-04-25 12:56:28.391380,0,False,4.4,122,99,https://www.techpointmarketplace.com/products/94417
+Pure Bliss Wafers 50g,7479.395196194811,snacks,TechpointMarketplace,2025-04-15 12:56:28.391392,15,True,1.1,168,66,https://www.techpointmarketplace.com/products/71938
+Women's Summer Dress Size 5,1692.3937976923683,fashion,TechpointMarketplace,2025-04-19 12:56:28.391404,30,True,3.6,67,49,https://www.techpointmarketplace.com/products/35205
+Holy Quran with Translation,2943.3662028420763,books,TechpointMarketplace,2025-05-13 12:56:28.391417,0,True,1.6,219,43,https://www.techpointmarketplace.com/products/78695
+Face Masks Pack of 15,5914.357369700019,health,TechpointMarketplace,2025-04-23 12:56:28.391429,5,False,1.3,420,41,https://www.techpointmarketplace.com/products/74809
+Morning Fresh Dishwashing Liquid 50L,6569.682518520598,detergents,TechpointMarketplace,2025-04-28 12:56:28.391446,0,False,2.7,421,56,https://www.techpointmarketplace.com/products/52979
+Wardrobe 200 Doors,117559.16788179209,furniture,TechpointMarketplace,2025-05-08 12:56:28.391460,20,True,1.1,531,95,https://www.techpointmarketplace.com/products/19109

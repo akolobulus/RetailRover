@@ -519,14 +519,14 @@ else:
             # Assuming "sales_rank" or "popularity" field exists in the dataset
             # If not available, we can use other metrics as proxy for popularity
             if "sales_rank" in filtered_df.columns:
-                top_products = filtered_df.sort_values("sales_rank").head(10)
+                top_products = filtered_df.sort_values("sales_rank").head(20)  # Increased to 20
             else:
                 # Use view count or another proxy metric
                 if "view_count" in filtered_df.columns:
-                    top_products = filtered_df.sort_values("view_count", ascending=False).head(10)
+                    top_products = filtered_df.sort_values("view_count", ascending=False).head(20)  # Increased to 20
                 else:
                     # If no proxy available, just show some products
-                    top_products = filtered_df.head(10)
+                    top_products = filtered_df.head(20)  # Increased to 20
             
             st.dataframe(
                 top_products[["product_name", "category", "price", "source"]],
@@ -537,11 +537,11 @@ else:
             st.subheader("Recommended Products")
             
             # Generate recommendations using the recommendation engine
-            # Ensure we get a good number of recommendations per category (top 5 per category)
-            recommendations = get_top_recommendations(filtered_df, top_n=5)
+            # Ensure we get a good number of recommendations per category (increased from top 5 to top 10 per category)
+            recommendations = get_top_recommendations(filtered_df, top_n=10)
             
             # Add info banner to explain recommendations
-            st.info("Showing top 5 products for each category with recommended retail prices (5% markup from average market price)")
+            st.info("Showing top 10 products for each category with recommended retail prices (5% markup from average market price)")
             
             if not recommendations.empty:
                 # Group recommendations by category for better display
@@ -695,10 +695,10 @@ else:
                             # Sort by view count change to show trending products
                             trending_df = trending_df.sort_values('view_count_change_percent', ascending=False)
                             
-                            # Display the trending products
+                            # Display the trending products (increased to 20)
                             st.dataframe(
                                 trending_df[['product_name', 'category', 'source', 'price_current', 
-                                           'price_change_percent', 'view_count_change_percent']].head(10),
+                                           'price_change_percent', 'view_count_change_percent']].head(20),
                                 column_config={
                                     "product_name": "Product",
                                     "category": "Category",
